@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "babel-node ./node_modules/webpack/bin/webpack",
-    "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix"
+    "start:dev": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open",
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "eslint src/*.js && eslin src/*.jsx --fix"
   },
   "repository": {
     "type": "git",
@@ -27,9 +27,11 @@
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.4.3",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "css-loader": "^2.1.1",
     "eslint": "^5.15.2",
     "eslint-config-airbnb": "^17.1.0",
@@ -47,8 +49,17 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.4.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "bootstrap": "^4.3.1",
+    "i": "^0.3.6",
+    "normalize.css": "^8.0.1",
+    "npm": "^6.9.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-router-dom": "^4.4.0"
+    "react-router-dom": "^4.4.0",
+    "reactstrap": "^7.1.0"
   }
 }
