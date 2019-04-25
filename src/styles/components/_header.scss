@@ -1,0 +1,17 @@
+.nav_header{
+    display: flex;
+    justify-content: space-between;
+    padding: $s-size 0;
+    background: $dark-blue;
+    align-items: center;
+}
+.header_link{
+    padding-left: $m-size;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: $m-size;
+    color: white;
+}
+.header_icon{
+    padding-right: $m-size;
+}
