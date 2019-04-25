@@ -1,40 +1,19 @@
 import React from 'react';
 import Header from '../components/Landingheader.component';
+import Steps from '../components/utils/steps';
 
 const LandingPage = () => (
   <div>
-    <Header />
+    <Header
+      page="landingpage"
+      navClass="nav_header"
+    />
     <div className="landingContainer">
       <div className="topLanding">
         <div className="top">
           <img src="../Assets/svg/undraw_teaching_f1cm.svg" alt="landingimage" className="top_img" />
         </div>
-        <div className="steps">
-          <div className="step">
-            <span><img src="../Assets/svg/register.svg" alt="" width="70px" height="90px" /></span>
-            <p className="step_text">
-        Register as a Questioner user
-            </p>
-          </div>
-          <div className="step">
-            <span><img src="../Assets/svg/sign-in.svg" alt="" width="70px" height="90px" /></span>
-            <p className="step_text">
-      Register as a Questioner user
-            </p>
-          </div>
-          <div className="step">
-            <span><img src="../Assets/svg/conference.svg" alt="" width="70px" height="90px" /></span>
-            <p className="step_text">
-    Register as a Questioner user
-            </p>
-          </div>
-          <div className="step">
-            <span><img src="../Assets/svg/asking.svg" alt="" width="70px" height="90px" /></span>
-            <p className="step_text">
-      Register as a Questioner user
-            </p>
-          </div>
-        </div>
+        <Steps />
       </div>
       <div className="bottomLanding">
         <div className="detail">

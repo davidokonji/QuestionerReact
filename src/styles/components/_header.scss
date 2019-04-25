@@ -5,6 +5,20 @@
     background: $dark-blue;
     align-items: center;
 }
+.nav_header_light {
+    display: flex;
+    justify-content: space-between;
+    padding: $s-size 0;
+    background: $white;
+    align-items: center;
+    .header_link{
+        padding-left: $m-size;
+        font-family: 'Montserrat', sans-serif;
+        text-decoration: none;
+        font-size: $m-size;
+        color: $dark-blue;
+    }
+}
 .header_link{
     padding-left: $m-size;
     font-family: 'Montserrat', sans-serif;
