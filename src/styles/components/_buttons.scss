@@ -1,0 +1,28 @@
+.button {
+    border: none;
+    background-color: $dark-blue;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: white;
+    margin-right: $m-size;
+    outline: none;
+    font-size: 1.4rem;
+    font-family: 'Raleway', sans-serif;
+}
+.rn_button {
+    border-radius: $s-20;
+}
+.sm_button {
+    padding: .625rem $s-20;
+}
+.nav_btn{
+    width:80px;
+    padding:10px 20px;
+    background-color: #25274d;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .nav_btn:hover{
+    transform: scale(1.1);
+  }
