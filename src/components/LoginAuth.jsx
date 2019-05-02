@@ -16,14 +16,14 @@ class Login extends Component {
     };
   }
 
-  onEmailChange = (e) => {
-    const email = e.target.value;
-    this.setState({ email });
-  }
+  handleInputChange = (event) => {
+    const { target } = event;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const { name } = target;
 
-  onPasswordChange = (e) => {
-    const password = e.target.value;
-    this.setState({ password });
+    this.setState({
+      [name]: value,
+    });
   }
 
   handleSignin = async (e) => {
@@ -76,7 +76,7 @@ class Login extends Component {
               type="text"
               name="email"
               value={email}
-              onChange={this.onEmailChange}
+              onChange={this.handleInputChange}
               placeholder="Email or Username"
               className="input form_lg"
               required
@@ -85,7 +85,7 @@ class Login extends Component {
               type="password"
               name="password"
               value={password}
-              onChange={this.onPasswordChange}
+              onChange={this.handleInputChange}
               placeholder="Password"
               id="password"
               className="input form_lg"
