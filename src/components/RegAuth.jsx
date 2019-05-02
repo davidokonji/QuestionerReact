@@ -19,26 +19,6 @@ class Register extends Component {
     };
   }
 
-  onFirstnameChange = (e) => {
-    const firstname = e.target.value;
-    this.setState({ firstname });
-  };
-
-  onLastnameChange = (e) => {
-    const lastname = e.target.value;
-    this.setState({ lastname });
-  };
-
-  onUsernameChange = (e) => {
-    const username = e.target.value;
-    this.setState({ username });
-  };
-
-  onEmailChange = (e) => {
-    const email = e.target.value;
-    this.setState({ email });
-  };
-
   onPasswordChange = (e) => {
     const password = e.target.value;
     if (password && password.match(/^(?=.*[a-zA-Z])(?=.*[0-9])/)) {
@@ -89,7 +69,7 @@ class Register extends Component {
     }
   }
 
-  handleInputChange(event) {
+  handleInputChange = (event) => {
     const { target } = event;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const { name } = target;
@@ -126,7 +106,7 @@ class Register extends Component {
                 placeholder="First Name"
                 name="firstname"
                 value={firstname}
-                onChange={this.onFirstnameChange}
+                onChange={this.handleInputChange}
                 className="input form_sm"
                 required
               />
@@ -135,7 +115,7 @@ class Register extends Component {
                 placeholder="Last Name"
                 name="lastname"
                 value={lastname}
-                onChange={this.onLastnameChange}
+                onChange={this.handleInputChange}
                 className="input form_sm"
                 required
               />
@@ -145,7 +125,7 @@ class Register extends Component {
                 type="text"
                 placeholder="Username"
                 value={username}
-                onChange={this.onUsernameChange}
+                onChange={this.handleInputChange}
                 name="username"
                 className="input form_sm"
                 required
@@ -156,7 +136,7 @@ class Register extends Component {
               placeholder="Email Address"
               name="email"
               value={email}
-              onChange={this.onEmailChange}
+              onChange={this.handleInputChange}
               className="input form_lg"
               required
             />
