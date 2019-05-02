@@ -1,6 +1,8 @@
 import { Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import axios from '../config/axios';
+import LoginUser from '../actions/UserAction';
 
 class Register extends Component {
   constructor(props) {
@@ -60,6 +62,8 @@ class Register extends Component {
       password: { value: password },
     } = e.target;
 
+    const { dispatch } = this.props;
+
     const res = await axios.post('/auth/signup', {
       firstname,
       lastname,
@@ -70,6 +74,13 @@ class Register extends Component {
     if (res.status === 201) {
       window.localStorage.setItem('token', res.data.data[0].token);
       this.setState({ message: `Thank you for registering ${res.data.data[0].user.username}` });
+      dispatch(LoginUser({
+        id: res.data.data[0].user.id,
+        firstname: res.data.data[0].user.firstname,
+        lastname: res.data.data[0].user.lastname,
+        username: res.data.data[0].user.username,
+        email: res.data.data[0].user.email,
+      }));
       setTimeout(() => {
         this.setState({ redirect: true });
       }, 2000);
@@ -170,4 +181,4 @@ class Register extends Component {
   }
 }
 
-export default Register;
+export default connect()(Register);
