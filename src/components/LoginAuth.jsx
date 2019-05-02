@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 import axios from '../config/axios';
-
+import LoginUser from '../actions/UserAction';
 
 class Login extends Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class Login extends Component {
   handleSignin = async (e) => {
     e.preventDefault();
     const { email: { value: email }, password: { value: password } } = e.target;
+    const { dispatch } = this.props;
 
     const res = await axios.post('/auth/login', {
       email,
@@ -36,6 +38,13 @@ class Login extends Component {
     if (res.status === 200) {
       window.localStorage.setItem('token', res.data.data[0].token);
       this.setState({ message: `Welcome back ${res.data.data[0].user.username}` });
+      dispatch(LoginUser({
+        id: res.data.data[0].user.id,
+        firstname: res.data.data[0].user.firstname,
+        lastname: res.data.data[0].user.lastname,
+        username: res.data.data[0].user.username,
+        email: res.data.data[0].user.email,
+      }));
       setTimeout(() => {
         this.setState({ redirect: true });
       }, 2000);
@@ -92,4 +101,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default connect()(Login);
