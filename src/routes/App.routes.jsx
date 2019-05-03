@@ -3,6 +3,7 @@ import React from 'react';
 import LandingPage from '../containers/LandingPage.component';
 import AuthPage from '../containers/AuthPage.container';
 import Footer from '../components/footer.component';
+import NotFound from '../components/404page';
 
 const Routes = () => (
   <BrowserRouter>
@@ -10,6 +11,7 @@ const Routes = () => (
       <Switch>
         <Route path="/" component={LandingPage} exact />
         <Route path="/auth" component={AuthPage} />
+        <Route component={NotFound} />
       </Switch>
       <Footer />
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Landingheader.component';
+import Header from '../components/Landingheader';
 import Steps from '../components/utils/steps';
 
 const LandingPage = () => (

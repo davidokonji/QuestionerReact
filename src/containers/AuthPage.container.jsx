@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../components/Landingheader.component';
+import Header from '../components/Landingheader';
 import Login from '../components/LoginAuth';
 import Register from '../components/RegAuth';
 
