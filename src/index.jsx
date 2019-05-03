@@ -7,21 +7,10 @@ import 'normalize.css/normalize.css';
 import storeConfig from './store/store.config';
 import Route from './routes/App.routes';
 import './styles/styles.scss';
-import LoginUser from './actions/UserAction';
 
 library.add(faStroopwafel, faUser, faHeart);
 
 const store = storeConfig();
-
-store.dispatch(LoginUser({
-  id: 1234,
-  firstname: 'david',
-  lastname: 'okonji',
-  username: 'devlen',
-  email: 'davidokonji@gmail.com',
-}));
-
-console.log(store.getState());
 
 const app = (
   <Provider store={store}>
