@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`404 page should render 404 page correctly 1`] = `
+<Fragment>
+  <Header
+    navClass="nav_header"
+    page="landingpage"
+  />
+  <div
+    id="notfound"
+  >
+    <div
+      className="notfound"
+    >
+      <div
+        className="notfound-404"
+      >
+        <h3>
+          Oops!
+           Page 
+          not found
+        </h3>
+        <h1>
+          <span>
+            4
+          </span>
+          <span>
+            0
+          </span>
+          <span>
+            4
+          </span>
+        </h1>
+      </div>
+      <h2>
+        we are sorry, page you requested was not found
+      </h2>
+      <a
+        className="homeLink"
+        href="/"
+      >
+        home
+      </a>
+    </div>
+  </div>
+</Fragment>
+`;

@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import React from 'react';
-import LandingPage from '../containers/LandingPage.component';
+import LandingPage from '../containers/LandingPage.container';
 import AuthPage from '../containers/AuthPage.container';
 import Footer from '../components/footer.component';
 import NotFound from '../components/404page';
