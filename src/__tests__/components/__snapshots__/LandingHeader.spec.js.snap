@@ -4,7 +4,7 @@ exports[`Landing Header component should render header component correctly 1`] =
 <div>
   <nav>
     <NavLink
-      className="header_link"
+      className="header_link nav-title"
       exact={true}
       to="/"
     >
@@ -28,7 +28,7 @@ exports[`Landing Header component should render header component with props 1`] 
     className="landing"
   >
     <NavLink
-      className="header_link"
+      className="header_link nav-title"
       exact={true}
       to="/"
     >
@@ -37,24 +37,22 @@ exports[`Landing Header component should render header component with props 1`] 
     <NavLink
       to="/auth"
     >
-      <FontAwesomeIcon
-        border={false}
-        className="header_icon"
-        color="white"
-        fixedWidth={false}
-        flip={null}
-        icon="user"
-        inverse={false}
-        listItem={false}
-        mask={null}
-        pull={null}
-        pulse={false}
-        rotation={null}
-        size="2x"
-        spin={false}
-        symbol={false}
-        title=""
-        transform={null}
+      <img
+        alt="user"
+        src={
+          Object {
+            "canInstrument": true,
+            "createTransformer": [Function],
+            "getCacheKey": [Function],
+            "process": [Function],
+          }
+        }
+        style={
+          Object {
+            "marginRight": "3rem",
+            "width": "3rem",
+          }
+        }
       />
     </NavLink>
   </nav>

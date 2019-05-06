@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard container should  render dashboard container 1`] = `
+<Fragment>
+  <NavBar />
+  <div
+    className=""
+  >
+    <ConnectFunction />
+  </div>
+</Fragment>
+`;

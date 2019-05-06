@@ -1,10 +1,9 @@
 import { Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import axios from '../config/axios';
-import LoginUser from '../actions/UserAction';
+import { RegisterAction } from '../actions/UserAction';
 
-class Register extends Component {
+export class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,8 +12,8 @@ class Register extends Component {
       email: '',
       username: '',
       password: '',
-      error: '',
-      redirect: false,
+      // error: '',
+      // redirect: false,
       message: '',
     };
   }
@@ -22,11 +21,10 @@ class Register extends Component {
   onPasswordChange = (e) => {
     const password = e.target.value;
     if (password && password.match(/^(?=.*[a-zA-Z])(?=.*[0-9])/)) {
-      this.setState({ password, error: '' });
+      this.setState({ password });
     } else {
       this.setState({
         password,
-        error: <div>Password should be alphanumeric</div>,
       });
     }
   };
@@ -35,43 +33,27 @@ class Register extends Component {
     e.preventDefault();
 
     const {
-      firstname: { value: firstname },
-      lastname: { value: lastname },
-      username: { value: username },
-      email: { value: email },
-      password: { value: password },
-    } = e.target;
-
-    const { dispatch } = this.props;
-
-    const res = await axios.post('/auth/signup', {
       firstname,
       lastname,
       username,
       email,
       password,
-    });
-    if (res.status === 201) {
-      window.localStorage.setItem('token', res.data.data[0].token);
-      this.setState({ message: `Thank you for registering ${res.data.data[0].user.username}` });
-      dispatch(LoginUser({
-        id: res.data.data[0].user.id,
-        firstname: res.data.data[0].user.firstname,
-        lastname: res.data.data[0].user.lastname,
-        username: res.data.data[0].user.username,
-        email: res.data.data[0].user.email,
-      }));
-      setTimeout(() => {
-        this.setState({ redirect: true });
-      }, 2000);
-    } else {
-      this.setState({ error: 'Error in registration' });
-    }
+    } = this.state;
+    const { userRegister } = this.props;
+
+    const data = {
+      firstname,
+      lastname,
+      username,
+      email,
+      password,
+    };
+    await userRegister(data);
   }
 
   handleInputChange = (event) => {
     const { target } = event;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const { value } = target;
     const { name } = target;
 
     this.setState({
@@ -86,71 +68,71 @@ class Register extends Component {
       email,
       username,
       password,
-      error,
+      // error,
       message,
     } = this.state;
-    const { redirect } = this.state;
+    // const { redirect } = this.state;
 
-    if (redirect) {
-      return <Redirect to="/" />;
-    }
+    // if (redirect) {
+    //   return <Redirect to='/dashboard' />;
+    // }
     return (
       <React.Fragment>
-        {error.length === 0 ? '' : <div>{error}</div>}
-        {message.length === 0 ? '' : <div>{message}</div>}
-        <form method="post" onSubmit={this.handleSignup}>
-          <div className="signup-form" id="signup-form">
-            <div className="double">
+        {/* error.length === 0 ? '' : <div>{error}</div> */}
+        {/* message.length === 0 ? '' : <div>{message}</div> */}
+        <form method='post' onSubmit={this.handleSignup}>
+          <div className='signup-form' id='signup-form'>
+            <div className='double'>
               <input
-                type="text"
-                placeholder="First Name"
-                name="firstname"
+                type='text'
+                placeholder='First Name'
+                name='firstname'
                 value={firstname}
                 onChange={this.handleInputChange}
-                className="input form_sm"
+                className='input form_sm'
                 required
               />
               <input
-                type="text"
-                placeholder="Last Name"
-                name="lastname"
+                type='text'
+                placeholder='Last Name'
+                name='lastname'
                 value={lastname}
                 onChange={this.handleInputChange}
-                className="input form_sm"
+                className='input form_sm'
                 required
               />
             </div>
-            <div className="double">
+            <div className='double'>
               <input
-                type="text"
-                placeholder="Username"
+                type='text'
+                placeholder='Username'
                 value={username}
                 onChange={this.handleInputChange}
-                name="username"
-                className="input form_sm"
+                name='username'
+                className='input form_sm'
                 required
               />
             </div>
             <input
-              type="email"
-              placeholder="Email Address"
-              name="email"
+              type='email'
+              placeholder='Email Address'
+              name='email'
               value={email}
               onChange={this.handleInputChange}
-              className="input form_lg"
+              className='input form_lg'
               required
             />
             <input
-              type="password"
-              placeholder="Password"
-              name="password"
+              type='password'
+              placeholder='Password'
+              name='password'
               value={password}
               onChange={this.onPasswordChange}
-              className="input form_lg"
+              className='input form_lg'
               required
             />
-            <div className="btn">
-              <button className="btn" type="submit">
+            <div>
+              <button className='btn' type='submit'>
                     Create account
               </button>
             </div>
@@ -161,4 +143,8 @@ class Register extends Component {
   }
 }
 
-export default connect()(Register);
+const mapDispatchToProps = {
+  userRegister: RegisterAction
+};
+
+export default connect(null, mapDispatchToProps)(Register);

@@ -1,14 +1,14 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { like } from '../Assets';
 
 const Footer = () => (
-  <footer className="footer">
-    <div className="footerBottom">
-      <p>
-       Created with
-        {<FontAwesomeIcon icon="heart" size="sm" color="red" style={{ paddingLeft: '1rem', paddingRight: '1rem' }} />}
+  <footer id='sticky-footer' className='py-4 footer page-footer fixed-bottom mt-5'>
+    <div className='container text-center'>
+      <small>
+      Created with
+        <img src={like} alt='love' style={{ width: '12px', marginLeft: '5px', marginRight: '5px' }} />
        by Okonji Chukwunonso
-      </p>
+      </small>
     </div>
   </footer>
 );

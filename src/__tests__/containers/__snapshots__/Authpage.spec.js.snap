@@ -37,7 +37,7 @@ exports[`Auth page should render auth page correctly 1`] = `
       >
         Sign In
       </div>
-      <ConnectFunction />
+      <Register />
     </div>
   </div>
 </Fragment>

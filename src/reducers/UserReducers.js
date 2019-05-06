@@ -1,10 +1,12 @@
+import { USER_LOGIN } from '../action-types';
+
 const defaultUserState = {};
 
 const UserReducer = (state = defaultUserState, action) => {
   const { type } = action;
 
   switch (type) {
-    case 'USER_LOGIN':
+    case USER_LOGIN:
       return {
         ...state,
         ...action.user,

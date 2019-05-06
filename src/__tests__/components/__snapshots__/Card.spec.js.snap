@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component should render card component 1`] = `
+<div
+  className="card col-md-3 col-lg-3 my-3 shadow-sm p-0 mx-3"
+  onKeyDown={null}
+  role="button"
+  tabIndex="-1"
+>
+  <div
+    className="card-body p-0"
+  >
+    <div
+      className="card-img"
+    >
+      <img
+        alt=""
+        className="card-img-top card-img"
+      />
+    </div>
+    <div
+      className="row col-12 h-auto"
+    >
+      <div
+        className="col-2 col-md-2 d-flex flex-column side-card p-0"
+      >
+        <span
+          className="mt-5 side-card-value mx-auto"
+        >
+          May
+        </span>
+        <span
+          className="mt-2 side-card-value mx-auto"
+        >
+          18
+        </span>
+      </div>
+      <div
+        className="col-10 col-md-10"
+      >
+        <div
+          className="col-12 my-3"
+        >
+          <Link
+            className="stretched-link card-link"
+            to="/meetup/undefined"
+          />
+        </div>
+        <div
+          className="col-12 my-3"
+        >
+          Saturday, May 18th 2019
+        </div>
+        <div
+          className="col-12 my-3"
+        />
+        <div
+          className="col-12 my-3"
+        >
+          <span
+            className=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card component should render card component with props 1`] = `
+<div
+  className="card col-md-3 col-lg-3 my-3 shadow-sm p-0 mx-3"
+  onKeyDown={null}
+  role="button"
+  tabIndex="-1"
+>
+  <div
+    className="card-body p-0"
+  >
+    <div
+      className="card-img"
+    >
+      <img
+        alt=""
+        className="card-img-top card-img"
+        src=""
+      />
+    </div>
+    <div
+      className="row col-12 h-auto"
+    >
+      <div
+        className="col-2 col-md-2 d-flex flex-column side-card p-0"
+      >
+        <span
+          className="mt-5 side-card-value mx-auto"
+        >
+          Invalid date
+        </span>
+        <span
+          className="mt-2 side-card-value mx-auto"
+        >
+          Invalid date
+        </span>
+      </div>
+      <div
+        className="col-10 col-md-10"
+      >
+        <div
+          className="col-12 my-3"
+        >
+          <Link
+            className="stretched-link card-link"
+            to="/meetup/1"
+          >
+            this is a test
+          </Link>
+        </div>
+        <div
+          className="col-12 my-3"
+        >
+          Invalid date
+        </div>
+        <div
+          className="col-12 my-3"
+        >
+          lagos
+        </div>
+        <div
+          className="col-12 my-3"
+        >
+          <span
+            className=""
+          >
+            test
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

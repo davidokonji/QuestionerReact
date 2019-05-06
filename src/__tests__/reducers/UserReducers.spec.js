@@ -1,4 +1,4 @@
-import UserReducers from '../../reducers/UserReducers';
+import { userReducer } from '../../reducers';
 import UserMocks from '../../Fixtures/User.fixture';
 
 test('should return default reducer', () => {
@@ -6,7 +6,7 @@ test('should return default reducer', () => {
     type: '@@INIT',
   };
 
-  const state = UserReducers(undefined, action);
+  const state = userReducer(undefined, action);
 
   expect(state).toEqual({});
 });
@@ -17,7 +17,7 @@ test('should return default reducer', () => {
     user: UserMocks[0],
   };
 
-  const state = UserReducers(undefined, action);
+  const state = userReducer(undefined, action);
 
   expect(state).toEqual(UserMocks[0]);
 });

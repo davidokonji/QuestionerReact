@@ -4,13 +4,15 @@ import LandingPage from '../containers/LandingPage.container';
 import AuthPage from '../containers/AuthPage.container';
 import Footer from '../components/footer.component';
 import NotFound from '../components/404page';
+import Dashboard from '../containers/Dashboard.container';
 
 const Routes = () => (
   <BrowserRouter>
     <div>
       <Switch>
-        <Route path="/" component={LandingPage} exact />
-        <Route path="/auth" component={AuthPage} />
+        <Route path='/' component={LandingPage} exact />
+        <Route path='/auth' component={AuthPage} exact />
+        <Route path='/dashboard' component={Dashboard} />
         <Route component={NotFound} />
       </Switch>
       <Footer />

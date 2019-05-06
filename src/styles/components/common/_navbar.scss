@@ -1,0 +1,16 @@
+.nav-bar {
+    background-color: $dark-blue;
+    text-transform: uppercase;
+    .nav-title {
+        color: $white;
+        font: {
+            family: 'Montserrat', sans-serif;
+            size: 2rem;
+        }
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .nav-link{
+        color: $white;
+    }
+}

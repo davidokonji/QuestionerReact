@@ -1,14 +1,45 @@
-import { createStore, combineReducers } from 'redux';
-import UserReducers from '../reducers/UserReducers';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
+import { encrypto, decrypto } from './encryptStore';
+import { reducers } from '../reducers';
+
+
+const saveToLocalStorage = (state) => {
+  try {
+    localStorage.setItem('state', encrypto(state));
+  } catch (e) {
+    throw Error(e);
+  }
+};
+
+const loadFromLocalStorage = () => {
+  try {
+    const serializedState = localStorage.getItem('state');
+    if (serializedState === null) return undefined;
+    return decrypto(serializedState);
+  } catch (e) {
+    return undefined;
+  }
+};
+
+const persistedState = loadFromLocalStorage();
 
 export default () => {
+  const middlewares = applyMiddleware(thunk);
+  const storeEnhancers = [middlewares];
+  const composedEnhancer = composeWithDevTools(...storeEnhancers);
   const store = createStore(
-    combineReducers({
-      user: UserReducers,
-    }),
-    // eslint-disable-next-line no-underscore-dangle
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    reducers,
+    persistedState,
+    composedEnhancer,
   );
+
+  store.subscribe(() => {
+    saveToLocalStorage({
+      auth: store.getState().auth
+    });
+  });
 
   return store;
 };
