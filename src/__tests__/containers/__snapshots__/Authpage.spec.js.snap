@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth page should render auth page correctly 1`] = `
+<Fragment>
+  <Header
+    navClass="nav_header_light"
+  />
+  <div
+    className="wrapper"
+  >
+    <div
+      className="wrapper_container"
+    >
+      <div
+        className="signup"
+        id="signup"
+        onClick={[Function]}
+        role="presentation"
+        style={
+          Object {
+            "backgroundColor": "#fff",
+          }
+        }
+      >
+        Sign Up
+      </div>
+      <div
+        className="login"
+        id="login"
+        onClick={[Function]}
+        role="presentation"
+        style={
+          Object {
+            "backgroundColor": "#e9eaea",
+          }
+        }
+      >
+        Sign In
+      </div>
+      <ConnectFunction />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`Auth page should render with state changes 1`] = `
+<Fragment>
+  <Header
+    navClass="nav_header_light"
+  />
+  <div
+    className="wrapper"
+  >
+    <div
+      className="wrapper_container"
+    >
+      <div
+        className="signup"
+        id="signup"
+        onClick={[Function]}
+        role="presentation"
+        style={
+          Object {
+            "backgroundColor": "#e9eaea",
+          }
+        }
+      >
+        Sign Up
+      </div>
+      <div
+        className="login"
+        id="login"
+        onClick={[Function]}
+        role="presentation"
+        style={
+          Object {
+            "backgroundColor": "#fff",
+          }
+        }
+      >
+        Sign In
+      </div>
+      <ConnectFunction />
+    </div>
+  </div>
+</Fragment>
+`;

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component should render footer component correctly  1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="footerBottom"
+  >
+    <p>
+      Created with
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        color="red"
+        fixedWidth={false}
+        flip={null}
+        icon="heart"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size="sm"
+        spin={false}
+        style={
+          Object {
+            "paddingLeft": "1rem",
+            "paddingRight": "1rem",
+          }
+        }
+        symbol={false}
+        title=""
+        transform={null}
+      />
+      by Okonji Chukwunonso
+    </p>
+  </div>
+</footer>
+`;

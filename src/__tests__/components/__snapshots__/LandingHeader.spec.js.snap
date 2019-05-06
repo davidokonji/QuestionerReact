@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing Header component should render header component correctly 1`] = `
+<div>
+  <nav>
+    <NavLink
+      className="header_link"
+      exact={true}
+      to="/"
+    >
+      Questioner
+    </NavLink>
+    <NavLink
+      to="/auth"
+    >
+      <Button
+        styles="button rn_button sm_button"
+        text="ADMIN"
+      />
+    </NavLink>
+  </nav>
+</div>
+`;
+
+exports[`Landing Header component should render header component with props 1`] = `
+<div>
+  <nav
+    className="landing"
+  >
+    <NavLink
+      className="header_link"
+      exact={true}
+      to="/"
+    >
+      Questioner
+    </NavLink>
+    <NavLink
+      to="/auth"
+    >
+      <FontAwesomeIcon
+        border={false}
+        className="header_icon"
+        color="white"
+        fixedWidth={false}
+        flip={null}
+        icon="user"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size="2x"
+        spin={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+    </NavLink>
+  </nav>
+</div>
+`;

@@ -5,6 +5,7 @@ module.exports = {
   entry: path.join(__dirname, 'src', 'index.jsx'),
   output: {
     path: path.join(__dirname, 'build'),
+    publicPath: process.env.ASSET_PATH || '/',
     filename: 'index.bundle.js',
   },
   mode: process.env.NODE_ENV || 'development',
@@ -16,6 +17,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'src'),
     compress: true,
     port: process.env.PORT || 3000,
+    publicPath: process.env.ASSET_PATH || '/',
     historyApiFallback: true,
   },
   plugins: [

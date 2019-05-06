@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing Page should render landing page correctly 1`] = `
+<div>
+  <Header
+    navClass="nav_header"
+    page="landingpage"
+  />
+  <div
+    className="landingContainer"
+  >
+    <div
+      className="topLanding"
+    >
+      <div
+        className="top"
+      >
+        <img
+          alt="landingimage"
+          className="top_img"
+          src="../Assets/svg/undraw_teaching_f1cm.svg"
+        />
+      </div>
+      <Steps />
+    </div>
+    <div
+      className="bottomLanding"
+    >
+      <div
+        className="detail"
+      >
+        <div
+          className="detail_img"
+        >
+          <img
+            alt=""
+            src="../Assets/svg/undraw_mind_map_cwng.svg"
+          />
+        </div>
+        <div
+          className="detail_text"
+        >
+          <p
+            className="detail_title"
+          >
+            Questioner
+          </p>
+          <p
+            className="detail_sub_text"
+          >
+            Live your best life. Your One stop for meetup events
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

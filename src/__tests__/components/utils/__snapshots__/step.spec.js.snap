@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render step component correctly 1`] = `
+<div
+  className="step"
+>
+  <span>
+    <img
+      alt=""
+      height="90px"
+      src="../Assets/svg/undefined"
+      width="70px"
+    />
+  </span>
+  <p
+    className="step_text"
+  >
+    step
+  </p>
+</div>
+`;
