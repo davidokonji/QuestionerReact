@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 
 module.exports = {
   entry: path.join(__dirname, 'index.js'),
@@ -8,21 +10,18 @@ module.exports = {
     publicPath: process.env.ASSET_PATH || '/',
     filename: 'index.bundle.js',
   },
-  mode: process.env.NODE_ENV || 'development',
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     extensions: ['*', '.js', '.jsx'],
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'src'),
-    compress: true,
-    port: process.env.PORT || 3000,
-    publicPath: process.env.ASSET_PATH || '/',
-    historyApiFallback: true,
-  },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'public', 'index.html'),
+    }),
+    new CleanWebpackPlugin({
+      dry: true,
+      verbose: true
     }),
   ],
   // adding webpack babel support
@@ -45,10 +44,9 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpg|jpeg|mp3|png|gif|svg)$/,
+        test: /\.(gif|png|jpe?g|woff|woff2|eot|ttf|svg)$/i,
         loaders: ['file-loader'],
       },
     ],
   },
-  devtool: 'cheap-module-eval-source-map',
 };

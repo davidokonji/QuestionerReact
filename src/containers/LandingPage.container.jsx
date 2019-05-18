@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Landingheader';
 import Steps from '../components/utils/steps';
+import { teaching, mindMap } from '../Assets';
 
 const LandingPage = () => (
   <div>
@@ -11,14 +12,14 @@ const LandingPage = () => (
     <div className='landingContainer'>
       <div className='topLanding'>
         <div className='top'>
-          <img src='../Assets/svg/undraw_teaching_f1cm.svg' alt='landingimage' className='top_img' />
+          <img src={teaching} alt='landingimage' className='top_img' />
         </div>
         <Steps />
       </div>
       <div className='bottomLanding'>
         <div className='detail'>
           <div className='detail_img'>
-            <img src='../Assets/svg/undraw_mind_map_cwng.svg' alt='' />
+            <img src={mindMap} alt='' />
           </div>
           <div className='detail_text'>
             <p className='detail_title'>
