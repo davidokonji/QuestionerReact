@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+
 import Header from './Landingheader';
 
 const NotFound = (props) => {
@@ -6,12 +8,12 @@ const NotFound = (props) => {
   return (
     <Fragment>
       <Header
-        page="landingpage"
-        navClass="nav_header"
+        page='landingpage'
+        navClass='nav_header'
       />
-      <div id="notfound">
-        <div className="notfound">
-          <div className="notfound-404">
+      <div id='notfound'>
+        <div className='notfound'>
+          <div className='notfound-404'>
             <h3>
             Oops!
               {
@@ -29,7 +31,7 @@ const NotFound = (props) => {
           <h2>
           we are sorry, page you requested was not found
           </h2>
-          <a href="/" className="homeLink">home</a>
+          <Link to='/' className='homeLink'>Home</Link>
         </div>
       </div>
     </Fragment>

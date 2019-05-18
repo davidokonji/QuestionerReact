@@ -8,7 +8,6 @@ exports[`should render step component correctly 1`] = `
     <img
       alt=""
       height="90px"
-      src="../Assets/svg/undefined"
       width="70px"
     />
   </span>

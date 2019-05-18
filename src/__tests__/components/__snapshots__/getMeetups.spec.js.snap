@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Get meetups Compnent should render get meetups component correctly 1`] = `
+<div
+  className="container-fluid mb-5 mx-md-5 mx-0"
+>
+  <div
+    className="row mb-5"
+  />
+  <div
+    className="mb-5"
+  >
+     button 
+  </div>
+</div>
+`;
+
+exports[`Get meetups Compnent should render get meetups component correctly 2`] = `
+<div
+  className="container-fluid mb-5 mx-md-5 mx-0"
+>
+  <div
+    className="row mb-5"
+  >
+    <Card
+      happeningOn=""
+      id="1"
+      images=""
+      key="1"
+      location="lagos"
+      tags={
+        Array [
+          "test",
+        ]
+      }
+      title="this is a test"
+    />
+  </div>
+  <div
+    className="mb-5"
+  >
+     button 
+  </div>
+</div>
+`;

@@ -35,12 +35,12 @@ exports[`404 page should render 404 page correctly 1`] = `
       <h2>
         we are sorry, page you requested was not found
       </h2>
-      <a
+      <Link
         className="homeLink"
-        href="/"
+        to="/"
       >
-        home
-      </a>
+        Home
+      </Link>
     </div>
   </div>
 </Fragment>

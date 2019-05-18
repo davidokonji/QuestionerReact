@@ -5,19 +5,47 @@ exports[`should render step component correctly 1`] = `
   className="steps"
 >
   <Step
-    image="register.svg"
+    image={
+      Object {
+        "canInstrument": true,
+        "createTransformer": [Function],
+        "getCacheKey": [Function],
+        "process": [Function],
+      }
+    }
     text="Register as a Questioner user"
   />
   <Step
-    image="sign-in.svg"
+    image={
+      Object {
+        "canInstrument": true,
+        "createTransformer": [Function],
+        "getCacheKey": [Function],
+        "process": [Function],
+      }
+    }
     text="Login as a User"
   />
   <Step
-    image="conference.svg"
+    image={
+      Object {
+        "canInstrument": true,
+        "createTransformer": [Function],
+        "getCacheKey": [Function],
+        "process": [Function],
+      }
+    }
     text="You can view Meet Ups and RSVP for any meetup"
   />
   <Step
-    image="asking.svg"
+    image={
+      Object {
+        "canInstrument": true,
+        "createTransformer": [Function],
+        "getCacheKey": [Function],
+        "process": [Function],
+      }
+    }
     text="Ask Question? any information concerning a Meet Up"
   />
 </div>

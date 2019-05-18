@@ -1,27 +1,27 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink } from 'react-router-dom';
 import Button from './Button';
+import { user } from '../Assets';
 
 const Header = (props) => {
   const { navClass, page } = props;
   return (
     <div>
       <nav className={navClass}>
-        <NavLink to="/" className="header_link" exact>Questioner</NavLink>
+        <NavLink to='/' className='header_link nav-title' exact>Questioner</NavLink>
 
         {
         page === 'landingpage' ? (
-          <NavLink to="/auth">
-            <FontAwesomeIcon icon="user" size="2x" color="white" className="header_icon" />
+          <NavLink to='/auth'>
+            <img src={user} alt='user' style={{ width: '3rem', marginRight: '3rem' }} />
           </NavLink>
         )
           : (
             <React.Fragment>
-              <NavLink to="/auth">
+              <NavLink to='/auth'>
                 <Button
-                  text="ADMIN"
-                  styles="button rn_button sm_button"
+                  text='ADMIN'
+                  styles='button rn_button sm_button'
                 />
               </NavLink>
             </React.Fragment>
