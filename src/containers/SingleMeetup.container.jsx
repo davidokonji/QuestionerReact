@@ -22,7 +22,8 @@ export class SingleMeetup extends Component {
       },
       singleMeetup,
     } = this.props;
-    await singleMeetup(id);
+    const token = localStorage.getItem('token');
+    await singleMeetup(id, token);
   }
 
   toggle = () => {

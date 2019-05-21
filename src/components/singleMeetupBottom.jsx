@@ -9,7 +9,7 @@ class SingleMeetupBottom extends Component {
           <h2>Questions</h2>
         </div>
         <div className='py-5'>
-          <p> You have no comments </p>
+          <p> You have no Question </p>
         </div>
       </div>
     );

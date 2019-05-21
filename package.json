@@ -4,7 +4,7 @@
   "description": "questioner app in react",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --colors --config=jest.config.js",
+    "test": "jest --coverage --colors --config=jest.config.js -u",
     "test:watch": "jest --coverage --watchAll --config=jest.config.js",
     "webpack": "babel-node ./node_modules/webpack/bin/webpack",
     "start:dev": "webpack-dev-server --open --config webpack.dev.js",
