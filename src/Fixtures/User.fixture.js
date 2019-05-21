@@ -4,4 +4,7 @@ export default [{
   lastname: 'okonji',
   username: 'david',
   email: 'david@gmail.com',
+}, {
+  email: 'david@gmail.com',
+  password: 'password'
 }];

@@ -1,4 +1,10 @@
-import { allMeetups, getMeetups } from './meetupActions';
+import {
+  allMeetups,
+  getMeetups,
+  singleMeetup,
+  meetupNotFound,
+  getOneMeetup
+} from './meetupActions';
 import {
   LoginAction,
   LoginUser,
@@ -16,5 +22,8 @@ export {
   RegisterAction,
   RegisterUser,
   authFailure,
-  authSuccess
+  authSuccess,
+  singleMeetup,
+  meetupNotFound,
+  getOneMeetup
 };

@@ -1,13 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -34,16 +32,14 @@ class NavBar extends React.Component {
     return (
       <div>
         <Navbar expand='md' dark className='p-3 nav-bar'>
-          <NavbarBrand>
-            <Link to='/' className='nav-title'>
+          <NavLink to='/dashboard' className='nav-title'>
               Questioner
-            </Link>
-          </NavbarBrand>
+          </NavLink>
           <NavbarToggler onClick={this.toggle} className='toggle' />
           <Collapse isOpen={isOpen} navbar>
             <Nav className='ml-auto' navbar>
               <NavItem>
-                <Link to='/dashboard' className='nav-link'>Dashboard</Link>
+                <NavLink to='/dashboard' className='nav-link'>Dashboard</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

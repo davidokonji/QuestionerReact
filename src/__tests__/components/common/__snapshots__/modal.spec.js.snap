@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`modal component should render modal correctly 1`] = `
+<div>
+  <Modal
+    autoFocus={true}
+    backdrop={true}
+    backdropTransition={
+      Object {
+        "mountOnEnter": true,
+        "timeout": 150,
+      }
+    }
+    centered={false}
+    external={
+      <button
+        className="close"
+        style={
+          Object {
+            "position": "absolute",
+            "right": "15px",
+            "top": "15px",
+          }
+        }
+        type="button"
+      >
+        ×
+      </button>
+    }
+    fade={true}
+    isOpen={false}
+    keyboard={true}
+    modalTransition={
+      Object {
+        "timeout": 300,
+      }
+    }
+    onClosed={[Function]}
+    onOpened={[Function]}
+    role="dialog"
+    zIndex={1050}
+  >
+    <ModalBody
+      tag="div"
+    />
+  </Modal>
+</div>
+`;

@@ -8,16 +8,12 @@ exports[`Nav bar component should render nav bar correctly 1`] = `
     expand="md"
     tag="nav"
   >
-    <NavbarBrand
-      tag="a"
+    <NavLink
+      className="nav-title"
+      to="/dashboard"
     >
-      <Link
-        className="nav-title"
-        to="/"
-      >
-        Questioner
-      </Link>
-    </NavbarBrand>
+      Questioner
+    </NavLink>
     <NavbarToggler
       className="toggle"
       onClick={[Function]}
@@ -51,12 +47,12 @@ exports[`Nav bar component should render nav bar correctly 1`] = `
         <NavItem
           tag="li"
         >
-          <Link
+          <NavLink
             className="nav-link"
             to="/dashboard"
           >
             Dashboard
-          </Link>
+          </NavLink>
         </NavItem>
         <UncontrolledDropdown
           inNavbar={true}
@@ -108,16 +104,12 @@ exports[`Nav bar component should render nav bar correctly 2`] = `
     expand="md"
     tag="nav"
   >
-    <NavbarBrand
-      tag="a"
+    <NavLink
+      className="nav-title"
+      to="/dashboard"
     >
-      <Link
-        className="nav-title"
-        to="/"
-      >
-        Questioner
-      </Link>
-    </NavbarBrand>
+      Questioner
+    </NavLink>
     <NavbarToggler
       className="toggle"
       onClick={[Function]}
@@ -151,12 +143,12 @@ exports[`Nav bar component should render nav bar correctly 2`] = `
         <NavItem
           tag="li"
         >
-          <Link
+          <NavLink
             className="nav-link"
             to="/dashboard"
           >
             Dashboard
-          </Link>
+          </NavLink>
         </NavItem>
         <UncontrolledDropdown
           inNavbar={true}
