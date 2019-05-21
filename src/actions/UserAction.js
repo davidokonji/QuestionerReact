@@ -45,9 +45,9 @@ const LoginAction = data => async (dispatch) => {
       username: res.data.data[0].user.username,
       email: res.data.data[0].user.email,
     }));
-    return dispatch(authSuccess(''));
+    return dispatch(authSuccess(`Welcome back ${res.data.data[0].user.username}`));
   } catch (error) {
-    return dispatch(authFailure(error.message));
+    return dispatch(authFailure('Invalid Credentials'));
   }
 };
 
@@ -55,15 +55,14 @@ const RegisterAction = data => async (dispatch) => {
   try {
     const res = await axios.post('/auth/signup', data);
     localStorage.setItem('token', res.data.data[0].token);
-    // TODO:this.setState({ message: `Thank you for registering ${res.data.data[0].user.username}` });
-    dispatch(authSuccess(''));
-    return dispatch(LoginUser({
+    dispatch(RegisterUser({
       id: res.data.data[0].user.id,
       firstname: res.data.data[0].user.firstname,
       lastname: res.data.data[0].user.lastname,
       username: res.data.data[0].user.username,
       email: res.data.data[0].user.email,
     }));
+    return dispatch(authSuccess(`Thank you for registering ${res.data.data[0].user.username}`));
   } catch (error) {
     // TODO: put valid error messages here
     return dispatch(authFailure(error.message));

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 import Header from '../components/Landingheader';
 import Login from '../components/LoginAuth';
 import { Register } from '../components/RegAuth';
@@ -33,8 +34,8 @@ class authPage extends Component {
       <React.Fragment>
         <Header navClass='nav_header_light' />
         <div className='wrapper'>
+          <ToastContainer hideProgressBar autoClose={1000} closeButton={false} />
           <div className='wrapper_container'>
-            {/* <div className='showalert'>something</div> */}
             <div
               className='signup'
               id='signup'

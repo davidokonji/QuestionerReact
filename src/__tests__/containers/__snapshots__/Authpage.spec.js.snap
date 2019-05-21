@@ -8,6 +8,26 @@ exports[`Auth page should render auth page correctly 1`] = `
   <div
     className="wrapper"
   >
+    <ToastContainer
+      autoClose={1000}
+      bodyClassName={null}
+      className={null}
+      closeButton={false}
+      closeOnClick={true}
+      draggable={true}
+      draggablePercent={80}
+      hideProgressBar={true}
+      newestOnTop={false}
+      pauseOnFocusLoss={true}
+      pauseOnHover={true}
+      position="top-right"
+      progressClassName={null}
+      progressStyle={null}
+      rtl={false}
+      style={null}
+      toastClassName={null}
+      transition={[Function]}
+    />
     <div
       className="wrapper_container"
     >
@@ -51,6 +71,26 @@ exports[`Auth page should render with state changes 1`] = `
   <div
     className="wrapper"
   >
+    <ToastContainer
+      autoClose={1000}
+      bodyClassName={null}
+      className={null}
+      closeButton={false}
+      closeOnClick={true}
+      draggable={true}
+      draggablePercent={80}
+      hideProgressBar={true}
+      newestOnTop={false}
+      pauseOnFocusLoss={true}
+      pauseOnHover={true}
+      position="top-right"
+      progressClassName={null}
+      progressStyle={null}
+      rtl={false}
+      style={null}
+      toastClassName={null}
+      transition={[Function]}
+    />
     <div
       className="wrapper_container"
     >
@@ -80,7 +120,7 @@ exports[`Auth page should render with state changes 1`] = `
       >
         Sign In
       </div>
-      <ConnectFunction />
+      <withRouter(Connect(LoginComponent)) />
     </div>
   </div>
 </Fragment>

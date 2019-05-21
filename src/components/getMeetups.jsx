@@ -13,7 +13,7 @@ export class GetMeetups extends Component {
     const { meetups: { data = [] } } = this.props;
     return (
       <div className='container-fluid mb-5 mx-md-5 mx-0'>
-        <div className='row mb-5'>
+        <div className='row mb-5 my-5'>
           {
           data.map(meetup => (
             <Card
@@ -28,7 +28,6 @@ export class GetMeetups extends Component {
           ))
       }
         </div>
-        <div className='mb-5'> button </div>
       </div>
     );
   }

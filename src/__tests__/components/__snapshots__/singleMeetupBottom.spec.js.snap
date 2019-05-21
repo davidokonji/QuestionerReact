@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Single Meetup Top Component should render component correctly 1`] = `
+<div
+  className="py-5"
+>
+  <div>
+    <h2>
+      Questions
+    </h2>
+  </div>
+  <div
+    className="py-5"
+  >
+    <p>
+       You have no comments 
+    </p>
+  </div>
+</div>
+`;

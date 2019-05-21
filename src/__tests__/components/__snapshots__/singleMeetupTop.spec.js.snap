@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Single Meetup Top Component should render component correctly 1`] = `
+<Fragment>
+  <div
+    className="d-flex flex-md-row flex-column justify-content-center col-12"
+  >
+    <div
+      className="col-12 col-md p-0 m-0"
+    >
+      <img
+        alt="meetupImage"
+        className="mt-md-3 m-0 p-0 meetup-img col-12"
+      />
+    </div>
+    <div
+      className="meetup-info ml-4 mt-md-5 mt-2 col"
+    >
+      <div
+        className="my-5"
+      >
+        <h2
+          className="meetup-title"
+        />
+      </div>
+      <div
+        className="meetup-date my-4 row"
+      >
+        <p
+          className="col-2 mr-0"
+        >
+          <img
+            alt="date"
+            className="h-75 icon"
+            src={
+              Object {
+                "canInstrument": true,
+                "createTransformer": [Function],
+                "getCacheKey": [Function],
+                "process": [Function],
+              }
+            }
+          />
+        </p>
+        <p
+          className="col-9"
+        />
+      </div>
+      <div
+        className="meetup-location my-4 row"
+      >
+        <p
+          className="col-2"
+        >
+          <img
+            alt="location"
+            className="h-75 icon"
+            src={
+              Object {
+                "canInstrument": true,
+                "createTransformer": [Function],
+                "getCacheKey": [Function],
+                "process": [Function],
+              }
+            }
+          />
+        </p>
+        <p
+          className="col-9"
+        />
+      </div>
+      <div
+        className="meetup-rsvp my-4 row"
+      >
+        <p
+          className="col-2"
+        >
+          RSVP
+        </p>
+        <div
+          className="col-1"
+        >
+          Yes
+        </div>
+      </div>
+      <div
+        className="meetup-tags my-4"
+      >
+        Tags
+      </div>
+      <div
+        className="meetup-question my-4"
+      >
+        <Button
+          styles="btn col-md-8 my-4 col-10"
+          text=" Ask Question"
+        />
+      </div>
+    </div>
+  </div>
+  <ModalComponent
+    className="my-5 shadow-sm"
+  >
+    <form
+      className="my-5"
+    >
+      <div
+        className="form-group mx-3 my-3"
+      >
+        <small
+          className="form-text text-muted"
+          id="subject"
+        >
+          Question Subject
+        </small>
+        <input
+          aria-describedby="questionTitle"
+          className="form-control p-4 shadow-none "
+          placeholder="Add a question title"
+          style={
+            Object {
+              "fontSize": "1rem",
+            }
+          }
+          type="email"
+        />
+      </div>
+      <div
+        className="form-group my-3 mx-3 "
+      >
+        <textarea
+          className="form-control form-control-lg p-2 shadow-none "
+          placeholder="Talk about the question..."
+          rows="4"
+        />
+      </div>
+      <p>
+        <Button
+          styles="btn my-2 py-0 col-12"
+          text="POST"
+        />
+      </p>
+    </form>
+  </ModalComponent>
+</Fragment>
+`;
+
+exports[`Single Meetup Top Component should render component correctly with props 1`] = `
+<Fragment>
+  <div
+    className="d-flex flex-md-row flex-column justify-content-center col-12"
+  >
+    <div
+      className="col-12 col-md p-0 m-0"
+    >
+      <img
+        alt="meetupImage"
+        className="mt-md-3 m-0 p-0 meetup-img col-12"
+      />
+    </div>
+    <div
+      className="meetup-info ml-4 mt-md-5 mt-2 col"
+    >
+      <div
+        className="my-5"
+      >
+        <h2
+          className="meetup-title"
+        />
+      </div>
+      <div
+        className="meetup-date my-4 row"
+      >
+        <p
+          className="col-2 mr-0"
+        >
+          <img
+            alt="date"
+            className="h-75 icon"
+            src={
+              Object {
+                "canInstrument": true,
+                "createTransformer": [Function],
+                "getCacheKey": [Function],
+                "process": [Function],
+              }
+            }
+          />
+        </p>
+        <p
+          className="col-9"
+        />
+      </div>
+      <div
+        className="meetup-location my-4 row"
+      >
+        <p
+          className="col-2"
+        >
+          <img
+            alt="location"
+            className="h-75 icon"
+            src={
+              Object {
+                "canInstrument": true,
+                "createTransformer": [Function],
+                "getCacheKey": [Function],
+                "process": [Function],
+              }
+            }
+          />
+        </p>
+        <p
+          className="col-9"
+        >
+          lagos
+        </p>
+      </div>
+      <div
+        className="meetup-rsvp my-4 row"
+      >
+        <p
+          className="col-2"
+        >
+          RSVP
+        </p>
+        <div
+          className="col-1"
+        >
+          Yes
+        </div>
+      </div>
+      <div
+        className="meetup-tags my-4"
+      >
+        Tags
+      </div>
+      <div
+        className="meetup-question my-4"
+      >
+        <Button
+          event={[MockFunction]}
+          styles="btn col-md-8 my-4 col-10"
+          text=" Ask Question"
+        />
+      </div>
+    </div>
+  </div>
+  <ModalComponent
+    className="my-5 shadow-sm"
+    open={false}
+    toggle={[MockFunction]}
+  >
+    <form
+      className="my-5"
+    >
+      <div
+        className="form-group mx-3 my-3"
+      >
+        <small
+          className="form-text text-muted"
+          id="subject"
+        >
+          Question Subject
+        </small>
+        <input
+          aria-describedby="questionTitle"
+          className="form-control p-4 shadow-none "
+          placeholder="Add a question title"
+          style={
+            Object {
+              "fontSize": "1rem",
+            }
+          }
+          type="email"
+        />
+      </div>
+      <div
+        className="form-group my-3 mx-3 "
+      >
+        <textarea
+          className="form-control form-control-lg p-2 shadow-none "
+          placeholder="Talk about the question..."
+          rows="4"
+        />
+      </div>
+      <p>
+        <Button
+          event={[MockFunction]}
+          styles="btn my-2 py-0 col-12"
+          text="POST"
+        />
+      </p>
+    </form>
+  </ModalComponent>
+</Fragment>
+`;

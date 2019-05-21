@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { toast } from 'react-toastify';
 import { LoginAction } from '../actions';
 
 export class LoginComponent extends Component {
@@ -9,8 +10,8 @@ export class LoginComponent extends Component {
     this.state = {
       email: '',
       password: '',
-      // error: '',
       message: '',
+      disable: false,
     };
   }
 
@@ -18,7 +19,6 @@ export class LoginComponent extends Component {
     const { target } = event;
     const { value } = target;
     const { name } = target;
-
     this.setState({
       [name]: value,
     });
@@ -35,22 +35,24 @@ export class LoginComponent extends Component {
     await userLogin(data);
   }
 
+
   render() {
     const {
       email,
       password,
-      redirect,
-      // error,
       message,
+      disable
     } = this.state;
-
-    // if (redirect) {
-    //   return <Redirect to='/dashboard' />;
-    // }
+    const { user = '', redirect = false, history: { push } } = this.props;
+    if (redirect) {
+      toast(user.message, {
+        position: toast.POSITION.TOP_CENTER,
+        type: toast.TYPE.SUCCESS,
+        onClose: () => push('/dashboard')
+      });
+    }
     return (
       <React.Fragment>
-        {/* error.length === 0 ? '' : <div>{error}</div> */}
-        {/* message.length === 0 ? '' : <div>{message}</div> */}
         <form method='post' onSubmit={this.handleSignin}>
           <div className='login-form' id='login-form'>
             <input
@@ -73,7 +75,14 @@ export class LoginComponent extends Component {
               required
             />
             <div>
-              <button className='btn' id='login' type='submit'>Sign in</button>
+              <button
+                className='btn'
+                id='login'
+                type='submit'
+                disabled={disable}
+              >
+              Sign in
+              </button>
             </div>
           </div>
         </form>
@@ -82,8 +91,13 @@ export class LoginComponent extends Component {
   }
 }
 
+export const mapStateToProps = state => ({
+  user: state.auth,
+  redirect: state.auth.redirect
+});
+
 const mapDispatchToProps = {
   userLogin: LoginAction
 };
 
-export default connect(null, mapDispatchToProps)(LoginComponent);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LoginComponent));

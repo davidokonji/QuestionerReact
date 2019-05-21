@@ -18,7 +18,14 @@ exports[`Landing Page should render landing page correctly 1`] = `
         <img
           alt="landingimage"
           className="top_img"
-          src="../Assets/svg/undraw_teaching_f1cm.svg"
+          src={
+            Object {
+              "canInstrument": true,
+              "createTransformer": [Function],
+              "getCacheKey": [Function],
+              "process": [Function],
+            }
+          }
         />
       </div>
       <Steps />
@@ -34,7 +41,14 @@ exports[`Landing Page should render landing page correctly 1`] = `
         >
           <img
             alt=""
-            src="../Assets/svg/undraw_mind_map_cwng.svg"
+            src={
+              Object {
+                "canInstrument": true,
+                "createTransformer": [Function],
+                "getCacheKey": [Function],
+                "process": [Function],
+              }
+            }
           />
         </div>
         <div

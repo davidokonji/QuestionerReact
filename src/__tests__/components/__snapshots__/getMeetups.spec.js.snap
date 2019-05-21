@@ -5,13 +5,8 @@ exports[`Get meetups Compnent should render get meetups component correctly 1`] 
   className="container-fluid mb-5 mx-md-5 mx-0"
 >
   <div
-    className="row mb-5"
+    className="row mb-5 my-5"
   />
-  <div
-    className="mb-5"
-  >
-     button 
-  </div>
 </div>
 `;
 
@@ -20,7 +15,7 @@ exports[`Get meetups Compnent should render get meetups component correctly 2`] 
   className="container-fluid mb-5 mx-md-5 mx-0"
 >
   <div
-    className="row mb-5"
+    className="row mb-5 my-5"
   >
     <Card
       happeningOn=""
@@ -35,11 +30,6 @@ exports[`Get meetups Compnent should render get meetups component correctly 2`] 
       }
       title="this is a test"
     />
-  </div>
-  <div
-    className="mb-5"
-  >
-     button 
   </div>
 </div>
 `;
