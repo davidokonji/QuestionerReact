@@ -13,7 +13,7 @@ exports[`Single Meetup Top Component should render component correctly 1`] = `
     className="py-5"
   >
     <p>
-       You have no comments 
+       You have no Question 
     </p>
   </div>
 </div>

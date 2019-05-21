@@ -4,6 +4,7 @@ export default [{
   lastname: 'okonji',
   username: 'david',
   email: 'david@gmail.com',
+  redirect: true
 }, {
   email: 'david@gmail.com',
   password: 'password'

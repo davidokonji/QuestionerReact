@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
-import userReducer from './UserReducers';
+import { loginReducer, RegisterReducer } from './UserReducers';
 import getMeetups from './getMeetups';
 import getSingleMeetup from './singleMeetupReducer';
 
 const reducers = combineReducers({
-  auth: userReducer,
+  auth: loginReducer,
+  register: RegisterReducer,
   meetups: getMeetups,
   meetup: getSingleMeetup
 });
@@ -12,6 +13,7 @@ const reducers = combineReducers({
 export {
   reducers,
   getMeetups,
-  userReducer,
+  loginReducer,
+  RegisterReducer,
   getSingleMeetup
 };

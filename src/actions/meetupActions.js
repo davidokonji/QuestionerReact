@@ -16,17 +16,25 @@ const meetupNotFound = (message = '') => ({
   message
 });
 
-const getOneMeetup = id => async (dispatch) => {
+const getOneMeetup = (id, token) => async (dispatch) => {
   try {
-    const res = await axios.get(`meetups/${id}`);
+    const res = await axios.get(`meetups/${id}`, {
+      headers: {
+        'x-access-token': token
+      }
+    });
     return dispatch(singleMeetup(res.data.data[0]));
   } catch (error) {
     return dispatch(meetupNotFound(error.message));
   }
 };
 
-const getMeetups = () => async (dispatch) => {
-  const res = await axios.get('/meetups');
+const getMeetups = token => async (dispatch) => {
+  const res = await axios.get('/meetups', {
+    headers: {
+      'x-access-token': token
+    }
+  });
 
   return dispatch(allMeetups(res.data.data));
 };

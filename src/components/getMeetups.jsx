@@ -6,7 +6,8 @@ import Card from './common/Card';
 export class GetMeetups extends Component {
   async componentDidMount() {
     const { allMeetups } = this.props;
-    await allMeetups();
+    const token = localStorage.getItem('token');
+    await allMeetups(token);
   }
 
   render() {

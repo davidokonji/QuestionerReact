@@ -5,9 +5,16 @@ import {
   AUTHENTICATION_SUCCESS
 } from '../action-types';
 
-const defaultUserState = {};
+const defaultUserState = {
+  id: '',
+  firstname: '',
+  lastname: '',
+  username: '',
+  email: '',
+  redirect: false
+};
 
-const UserReducer = (state = defaultUserState, action) => {
+const loginReducer = (state = defaultUserState, action) => {
   const { type } = action;
 
   switch (type) {
@@ -15,11 +22,6 @@ const UserReducer = (state = defaultUserState, action) => {
       return {
         ...state,
         ...action.user,
-      };
-    case USER_REGISTER:
-      return {
-        ...state,
-        ...action.payload
       };
     case AUTHENTICATION_SUCCESS:
       return {
@@ -38,4 +40,21 @@ const UserReducer = (state = defaultUserState, action) => {
   }
 };
 
-export default UserReducer;
+const RegisterReducer = (state = defaultUserState, action) => {
+  const { type } = action;
+
+  switch (type) {
+    case USER_REGISTER:
+      return {
+        ...state,
+        ...action.payload
+      };
+
+    default:
+      return state;
+  }
+};
+export {
+  loginReducer,
+  RegisterReducer
+};
