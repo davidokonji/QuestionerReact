@@ -1,177 +1,169 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Login Compnent should handle email change 1`] = `
-<Fragment>
-  <form
-    method="post"
-    onSubmit={[Function]}
+<form
+  method="post"
+  onSubmit={[Function]}
+>
+  <div
+    className="login-form"
+    id="login-form"
   >
-    <div
-      className="login-form"
-      id="login-form"
-    >
-      <input
-        className="input form_lg"
-        name="email"
-        onChange={[Function]}
-        placeholder="Email"
-        required={true}
-        type="text"
-        value=""
-      />
-      <input
-        className="input form_lg"
-        id="password"
-        name="password"
-        onChange={[Function]}
-        placeholder="Password"
-        required={true}
-        type="password"
-        value=""
-      />
-      <div>
-        <button
-          className="btn"
-          disabled={false}
-          id="login"
-          type="submit"
-        >
-          Sign in
-        </button>
-      </div>
+    <input
+      className="input form_lg"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email"
+      required={true}
+      type="text"
+      value=""
+    />
+    <input
+      className="input form_lg"
+      id="password"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+      value=""
+    />
+    <div>
+      <button
+        className="btn"
+        disabled={false}
+        id="login"
+        type="submit"
+      >
+        Sign in
+      </button>
     </div>
-  </form>
-</Fragment>
+  </div>
+</form>
 `;
 
 exports[`Login Compnent should handle form submit 1`] = `
-<Fragment>
-  <form
-    method="post"
-    onSubmit={[Function]}
+<form
+  method="post"
+  onSubmit={[Function]}
+>
+  <div
+    className="login-form"
+    id="login-form"
   >
-    <div
-      className="login-form"
-      id="login-form"
-    >
-      <input
-        className="input form_lg"
-        name="email"
-        onChange={[Function]}
-        placeholder="Email"
-        required={true}
-        type="text"
-        value=""
-      />
-      <input
-        className="input form_lg"
-        id="password"
-        name="password"
-        onChange={[Function]}
-        placeholder="Password"
-        required={true}
-        type="password"
-        value=""
-      />
-      <div>
-        <button
-          className="btn"
-          disabled={false}
-          id="login"
-          type="submit"
-        >
-          Sign in
-        </button>
-      </div>
+    <input
+      className="input form_lg"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email"
+      required={true}
+      type="text"
+      value=""
+    />
+    <input
+      className="input form_lg"
+      id="password"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+      value=""
+    />
+    <div>
+      <button
+        className="btn"
+        disabled={false}
+        id="login"
+        type="submit"
+      >
+        Sign in
+      </button>
     </div>
-  </form>
-</Fragment>
+  </div>
+</form>
 `;
 
 exports[`Login Compnent should handle password change 1`] = `
-<Fragment>
-  <form
-    method="post"
-    onSubmit={[Function]}
+<form
+  method="post"
+  onSubmit={[Function]}
+>
+  <div
+    className="login-form"
+    id="login-form"
   >
-    <div
-      className="login-form"
-      id="login-form"
-    >
-      <input
-        className="input form_lg"
-        name="email"
-        onChange={[Function]}
-        placeholder="Email"
-        required={true}
-        type="text"
-        value=""
-      />
-      <input
-        className="input form_lg"
-        id="password"
-        name="password"
-        onChange={[Function]}
-        placeholder="Password"
-        required={true}
-        type="password"
-        value=""
-      />
-      <div>
-        <button
-          className="btn"
-          disabled={false}
-          id="login"
-          type="submit"
-        >
-          Sign in
-        </button>
-      </div>
+    <input
+      className="input form_lg"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email"
+      required={true}
+      type="text"
+      value=""
+    />
+    <input
+      className="input form_lg"
+      id="password"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+      value=""
+    />
+    <div>
+      <button
+        className="btn"
+        disabled={false}
+        id="login"
+        type="submit"
+      >
+        Sign in
+      </button>
     </div>
-  </form>
-</Fragment>
+  </div>
+</form>
 `;
 
 exports[`Login Compnent should render Login component correctly 1`] = `
-<Fragment>
-  <form
-    method="post"
-    onSubmit={[Function]}
+<form
+  method="post"
+  onSubmit={[Function]}
+>
+  <div
+    className="login-form"
+    id="login-form"
   >
-    <div
-      className="login-form"
-      id="login-form"
-    >
-      <input
-        className="input form_lg"
-        name="email"
-        onChange={[Function]}
-        placeholder="Email"
-        required={true}
-        type="text"
-        value=""
-      />
-      <input
-        className="input form_lg"
-        id="password"
-        name="password"
-        onChange={[Function]}
-        placeholder="Password"
-        required={true}
-        type="password"
-        value=""
-      />
-      <div>
-        <button
-          className="btn"
-          disabled={false}
-          id="login"
-          type="submit"
-        >
-          Sign in
-        </button>
-      </div>
+    <input
+      className="input form_lg"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email"
+      required={true}
+      type="text"
+      value=""
+    />
+    <input
+      className="input form_lg"
+      id="password"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+      value=""
+    />
+    <div>
+      <button
+        className="btn"
+        disabled={false}
+        id="login"
+        type="submit"
+      >
+        Sign in
+      </button>
     </div>
-  </form>
-</Fragment>
+  </div>
+</form>
 `;

@@ -1,4 +1,3 @@
-import { Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { RegisterAction } from '../actions/UserAction';
@@ -12,9 +11,6 @@ export class Register extends Component {
       email: '',
       username: '',
       password: '',
-      // error: '',
-      // redirect: false,
-      message: '',
     };
   }
 
@@ -29,7 +25,7 @@ export class Register extends Component {
     }
   };
 
-  handleSignup = async (e) => {
+  handleSignup = (e) => {
     e.preventDefault();
 
     const {
@@ -48,14 +44,11 @@ export class Register extends Component {
       email,
       password,
     };
-    await userRegister(data);
+    userRegister(data);
   }
 
   handleInputChange = (event) => {
-    const { target } = event;
-    const { value } = target;
-    const { name } = target;
-
+    const { value, name } = event.target;
     this.setState({
       [name]: value,
     });
@@ -68,77 +61,67 @@ export class Register extends Component {
       email,
       username,
       password,
-      // error,
-      message,
     } = this.state;
-    // const { redirect } = this.state;
 
-    // if (redirect) {
-    //   return <Redirect to='/dashboard' />;
-    // }
     return (
-      <React.Fragment>
-        {/* error.length === 0 ? '' : <div>{error}</div> */}
-        {/* message.length === 0 ? '' : <div>{message}</div> */}
-        <form method='post' onSubmit={this.handleSignup}>
-          <div className='signup-form' id='signup-form'>
-            <div className='double'>
-              <input
-                type='text'
-                placeholder='First Name'
-                name='firstname'
-                value={firstname}
-                onChange={this.handleInputChange}
-                className='input form_sm'
-                required
-              />
-              <input
-                type='text'
-                placeholder='Last Name'
-                name='lastname'
-                value={lastname}
-                onChange={this.handleInputChange}
-                className='input form_sm'
-                required
-              />
-            </div>
-            <div className='double'>
-              <input
-                type='text'
-                placeholder='Username'
-                value={username}
-                onChange={this.handleInputChange}
-                name='username'
-                className='input form_sm'
-                required
-              />
-            </div>
+      <form method='post' onSubmit={this.handleSignup}>
+        <div className='signup-form' id='signup-form'>
+          <div className='double'>
             <input
-              type='email'
-              placeholder='Email Address'
-              name='email'
-              value={email}
+              type='text'
+              placeholder='First Name'
+              name='firstname'
+              value={firstname}
               onChange={this.handleInputChange}
-              className='input form_lg'
+              className='input form_sm'
               required
             />
             <input
-              type='password'
-              placeholder='Password'
-              name='password'
-              value={password}
-              onChange={this.onPasswordChange}
-              className='input form_lg'
+              type='text'
+              placeholder='Last Name'
+              name='lastname'
+              value={lastname}
+              onChange={this.handleInputChange}
+              className='input form_sm'
               required
             />
-            <div>
-              <button className='btn' type='submit'>
-                    Create account
-              </button>
-            </div>
           </div>
-        </form>
-      </React.Fragment>
+          <div className='double'>
+            <input
+              type='text'
+              placeholder='Username'
+              value={username}
+              onChange={this.handleInputChange}
+              name='username'
+              className='input form_sm'
+              required
+            />
+          </div>
+          <input
+            type='email'
+            placeholder='Email Address'
+            name='email'
+            value={email}
+            onChange={this.handleInputChange}
+            className='input form_lg'
+            required
+          />
+          <input
+            type='password'
+            placeholder='Password'
+            name='password'
+            value={password}
+            onChange={this.onPasswordChange}
+            className='input form_lg'
+            required
+          />
+          <div>
+            <button className='btn' type='submit'>
+                    Create account
+            </button>
+          </div>
+        </div>
+      </form>
     );
   }
 }

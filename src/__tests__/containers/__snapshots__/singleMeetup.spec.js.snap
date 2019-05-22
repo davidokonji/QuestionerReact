@@ -12,5 +12,6 @@ exports[`Single Meetup container should  render Single Meetup container with pro
     />
     <SingleMeetupBottom />
   </div>
+  <Footer />
 </div>
 `;

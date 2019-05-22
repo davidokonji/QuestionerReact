@@ -8,5 +8,6 @@ exports[`Dashboard container should  render dashboard container 1`] = `
   >
     <ConnectFunction />
   </div>
+  <Footer />
 </Fragment>
 `;

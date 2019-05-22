@@ -4,10 +4,10 @@ import { getMeetups } from '../actions';
 import Card from './common/Card';
 
 export class GetMeetups extends Component {
-  async componentDidMount() {
+  componentDidMount() {
     const { allMeetups } = this.props;
     const token = localStorage.getItem('token');
-    await allMeetups(token);
+    allMeetups(token);
   }
 
   render() {

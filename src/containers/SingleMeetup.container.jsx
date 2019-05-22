@@ -4,8 +4,9 @@ import Navbar from '../components/common/NavBar';
 import { getOneMeetup } from '../actions';
 import SingleMeetupTop from '../components/singleMeetupTop';
 import SingleMeetupBottom from '../components/singleMeetupBottom';
+import Footer from '../components/footer.component';
 
-export class SingleMeetup extends Component {
+class SingleMeetup extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -44,6 +45,7 @@ export class SingleMeetup extends Component {
           <SingleMeetupTop {...meetup} toggle={this.toggle} open={open} />
           <SingleMeetupBottom />
         </div>
+        <Footer />
       </div>
     );
   }
@@ -56,4 +58,8 @@ const mapDispatchToProps = {
   singleMeetup: getOneMeetup
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SingleMeetup);
+const OneMeetup = connect(mapStateToProps, mapDispatchToProps)(SingleMeetup);
+export {
+  OneMeetup,
+  SingleMeetup
+};

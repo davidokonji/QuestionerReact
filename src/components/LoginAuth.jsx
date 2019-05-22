@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { toast } from 'react-toastify';
 import { LoginAction } from '../actions';
@@ -10,21 +10,18 @@ export class LoginComponent extends Component {
     this.state = {
       email: '',
       password: '',
-      message: '',
       disable: false,
     };
   }
 
   handleInputChange = (event) => {
-    const { target } = event;
-    const { value } = target;
-    const { name } = target;
+    const { value, name } = event.target;
     this.setState({
       [name]: value,
     });
   }
 
-  handleSignin = async (e) => {
+  handleSignin = (e) => {
     e.preventDefault();
     const { email, password } = this.state;
     const { userLogin } = this.props;
@@ -32,7 +29,7 @@ export class LoginComponent extends Component {
       email,
       password
     };
-    await userLogin(data);
+    userLogin(data);
   }
 
 
@@ -40,7 +37,6 @@ export class LoginComponent extends Component {
     const {
       email,
       password,
-      message,
       disable
     } = this.state;
     const { user = '', redirect = false, history: { push } } = this.props;
@@ -52,41 +48,39 @@ export class LoginComponent extends Component {
       });
     }
     return (
-      <React.Fragment>
-        <form method='post' onSubmit={this.handleSignin}>
-          <div className='login-form' id='login-form'>
-            <input
-              type='text'
-              name='email'
-              value={email}
-              onChange={this.handleInputChange}
-              placeholder='Email'
-              className='input form_lg'
-              required
-            />
-            <input
-              type='password'
-              name='password'
-              value={password}
-              onChange={this.handleInputChange}
-              placeholder='Password'
-              id='password'
-              className='input form_lg'
-              required
-            />
-            <div>
-              <button
-                className='btn'
-                id='login'
-                type='submit'
-                disabled={disable}
-              >
+      <form method='post' onSubmit={this.handleSignin}>
+        <div className='login-form' id='login-form'>
+          <input
+            type='text'
+            name='email'
+            value={email}
+            onChange={this.handleInputChange}
+            placeholder='Email'
+            className='input form_lg'
+            required
+          />
+          <input
+            type='password'
+            name='password'
+            value={password}
+            onChange={this.handleInputChange}
+            placeholder='Password'
+            id='password'
+            className='input form_lg'
+            required
+          />
+          <div>
+            <button
+              className='btn'
+              id='login'
+              type='submit'
+              disabled={disable}
+            >
               Sign in
-              </button>
-            </div>
+            </button>
           </div>
-        </form>
-      </React.Fragment>
+        </div>
+      </form>
     );
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Landingheader';
 import Steps from '../components/utils/steps';
 import { teaching, mindMap } from '../Assets';
+import Footer from '../components/footer.component';
 
 const LandingPage = () => (
   <div>
@@ -32,6 +33,7 @@ const LandingPage = () => (
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 );
 
