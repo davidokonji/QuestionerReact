@@ -60,6 +60,7 @@ exports[`Auth page should render auth page correctly 1`] = `
       <Register />
     </div>
   </div>
+  <Footer />
 </Fragment>
 `;
 
@@ -123,5 +124,6 @@ exports[`Auth page should render with state changes 1`] = `
       <withRouter(Connect(LoginComponent)) />
     </div>
   </div>
+  <Footer />
 </Fragment>
 `;

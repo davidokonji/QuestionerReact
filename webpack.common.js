@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: path.join(__dirname, 'index.js'),
@@ -23,6 +23,7 @@ module.exports = {
       dry: true,
       verbose: true
     }),
+    new Dotenv()
   ],
   // adding webpack babel support
   module: {

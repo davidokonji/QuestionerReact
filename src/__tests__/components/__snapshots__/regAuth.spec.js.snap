@@ -1,457 +1,445 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Register Compnent should handle firstname change 1`] = `
-<Fragment>
-  <form
-    method="post"
-    onSubmit={[Function]}
+<form
+  method="post"
+  onSubmit={[Function]}
+>
+  <div
+    className="signup-form"
+    id="signup-form"
   >
     <div
-      className="signup-form"
-      id="signup-form"
+      className="double"
     >
-      <div
-        className="double"
-      >
-        <input
-          className="input form_sm"
-          name="firstname"
-          onChange={[Function]}
-          placeholder="First Name"
-          required={true}
-          type="text"
-          value=""
-        />
-        <input
-          className="input form_sm"
-          name="lastname"
-          onChange={[Function]}
-          placeholder="Last Name"
-          required={true}
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        className="double"
-      >
-        <input
-          className="input form_sm"
-          name="username"
-          onChange={[Function]}
-          placeholder="Username"
-          required={true}
-          type="text"
-          value=""
-        />
-      </div>
       <input
-        className="input form_lg"
-        name="email"
+        className="input form_sm"
+        name="firstname"
         onChange={[Function]}
-        placeholder="Email Address"
+        placeholder="First Name"
         required={true}
-        type="email"
+        type="text"
         value=""
       />
       <input
-        className="input form_lg"
-        name="password"
+        className="input form_sm"
+        name="lastname"
         onChange={[Function]}
-        placeholder="Password"
+        placeholder="Last Name"
         required={true}
-        type="password"
+        type="text"
         value=""
       />
-      <div>
-        <button
-          className="btn"
-          type="submit"
-        >
-          Create account
-        </button>
-      </div>
     </div>
-  </form>
-</Fragment>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="username"
+        onChange={[Function]}
+        placeholder="Username"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <input
+      className="input form_lg"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email Address"
+      required={true}
+      type="email"
+      value=""
+    />
+    <input
+      className="input form_lg"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+      value=""
+    />
+    <div>
+      <button
+        className="btn"
+        type="submit"
+      >
+        Create account
+      </button>
+    </div>
+  </div>
+</form>
 `;
 
 exports[`Register Compnent should handle firstname change 2`] = `
-<Fragment>
-  <form
-    method="post"
-    onSubmit={[Function]}
+<form
+  method="post"
+  onSubmit={[Function]}
+>
+  <div
+    className="signup-form"
+    id="signup-form"
   >
     <div
-      className="signup-form"
-      id="signup-form"
+      className="double"
     >
-      <div
-        className="double"
-      >
-        <input
-          className="input form_sm"
-          name="firstname"
-          onChange={[Function]}
-          placeholder="First Name"
-          required={true}
-          type="text"
-          value=""
-        />
-        <input
-          className="input form_sm"
-          name="lastname"
-          onChange={[Function]}
-          placeholder="Last Name"
-          required={true}
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        className="double"
-      >
-        <input
-          className="input form_sm"
-          name="username"
-          onChange={[Function]}
-          placeholder="Username"
-          required={true}
-          type="text"
-          value=""
-        />
-      </div>
       <input
-        className="input form_lg"
-        name="email"
+        className="input form_sm"
+        name="firstname"
         onChange={[Function]}
-        placeholder="Email Address"
+        placeholder="First Name"
         required={true}
-        type="email"
+        type="text"
         value=""
       />
       <input
-        className="input form_lg"
-        name="password"
+        className="input form_sm"
+        name="lastname"
         onChange={[Function]}
-        placeholder="Password"
+        placeholder="Last Name"
         required={true}
-        type="password"
+        type="text"
         value=""
       />
-      <div>
-        <button
-          className="btn"
-          type="submit"
-        >
-          Create account
-        </button>
-      </div>
     </div>
-  </form>
-</Fragment>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="username"
+        onChange={[Function]}
+        placeholder="Username"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <input
+      className="input form_lg"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email Address"
+      required={true}
+      type="email"
+      value=""
+    />
+    <input
+      className="input form_lg"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+      value=""
+    />
+    <div>
+      <button
+        className="btn"
+        type="submit"
+      >
+        Create account
+      </button>
+    </div>
+  </div>
+</form>
 `;
 
 exports[`Register Compnent should handle form submit 1`] = `
-<Fragment>
-  <form
-    method="post"
-    onSubmit={[Function]}
+<form
+  method="post"
+  onSubmit={[Function]}
+>
+  <div
+    className="signup-form"
+    id="signup-form"
   >
     <div
-      className="signup-form"
-      id="signup-form"
+      className="double"
     >
-      <div
-        className="double"
-      >
-        <input
-          className="input form_sm"
-          name="firstname"
-          onChange={[Function]}
-          placeholder="First Name"
-          required={true}
-          type="text"
-          value=""
-        />
-        <input
-          className="input form_sm"
-          name="lastname"
-          onChange={[Function]}
-          placeholder="Last Name"
-          required={true}
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        className="double"
-      >
-        <input
-          className="input form_sm"
-          name="username"
-          onChange={[Function]}
-          placeholder="Username"
-          required={true}
-          type="text"
-          value=""
-        />
-      </div>
       <input
-        className="input form_lg"
-        name="email"
+        className="input form_sm"
+        name="firstname"
         onChange={[Function]}
-        placeholder="Email Address"
+        placeholder="First Name"
         required={true}
-        type="email"
+        type="text"
         value=""
       />
       <input
-        className="input form_lg"
-        name="password"
+        className="input form_sm"
+        name="lastname"
         onChange={[Function]}
-        placeholder="Password"
+        placeholder="Last Name"
         required={true}
-        type="password"
+        type="text"
         value=""
       />
-      <div>
-        <button
-          className="btn"
-          type="submit"
-        >
-          Create account
-        </button>
-      </div>
     </div>
-  </form>
-</Fragment>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="username"
+        onChange={[Function]}
+        placeholder="Username"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <input
+      className="input form_lg"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email Address"
+      required={true}
+      type="email"
+      value=""
+    />
+    <input
+      className="input form_lg"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+      value=""
+    />
+    <div>
+      <button
+        className="btn"
+        type="submit"
+      >
+        Create account
+      </button>
+    </div>
+  </div>
+</form>
 `;
 
 exports[`Register Compnent should handle password change 1`] = `
-<Fragment>
-  <form
-    method="post"
-    onSubmit={[Function]}
+<form
+  method="post"
+  onSubmit={[Function]}
+>
+  <div
+    className="signup-form"
+    id="signup-form"
   >
     <div
-      className="signup-form"
-      id="signup-form"
+      className="double"
     >
-      <div
-        className="double"
-      >
-        <input
-          className="input form_sm"
-          name="firstname"
-          onChange={[Function]}
-          placeholder="First Name"
-          required={true}
-          type="text"
-          value=""
-        />
-        <input
-          className="input form_sm"
-          name="lastname"
-          onChange={[Function]}
-          placeholder="Last Name"
-          required={true}
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        className="double"
-      >
-        <input
-          className="input form_sm"
-          name="username"
-          onChange={[Function]}
-          placeholder="Username"
-          required={true}
-          type="text"
-          value=""
-        />
-      </div>
       <input
-        className="input form_lg"
-        name="email"
+        className="input form_sm"
+        name="firstname"
         onChange={[Function]}
-        placeholder="Email Address"
+        placeholder="First Name"
         required={true}
-        type="email"
+        type="text"
         value=""
       />
       <input
-        className="input form_lg"
-        name="password"
+        className="input form_sm"
+        name="lastname"
         onChange={[Function]}
-        placeholder="Password"
+        placeholder="Last Name"
         required={true}
-        type="password"
-        value="password1234"
+        type="text"
+        value=""
       />
-      <div>
-        <button
-          className="btn"
-          type="submit"
-        >
-          Create account
-        </button>
-      </div>
     </div>
-  </form>
-</Fragment>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="username"
+        onChange={[Function]}
+        placeholder="Username"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <input
+      className="input form_lg"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email Address"
+      required={true}
+      type="email"
+      value=""
+    />
+    <input
+      className="input form_lg"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+      value="password1234"
+    />
+    <div>
+      <button
+        className="btn"
+        type="submit"
+      >
+        Create account
+      </button>
+    </div>
+  </div>
+</form>
 `;
 
 exports[`Register Compnent should handle password change 2`] = `
-<Fragment>
-  <form
-    method="post"
-    onSubmit={[Function]}
+<form
+  method="post"
+  onSubmit={[Function]}
+>
+  <div
+    className="signup-form"
+    id="signup-form"
   >
     <div
-      className="signup-form"
-      id="signup-form"
+      className="double"
     >
-      <div
-        className="double"
-      >
-        <input
-          className="input form_sm"
-          name="firstname"
-          onChange={[Function]}
-          placeholder="First Name"
-          required={true}
-          type="text"
-          value=""
-        />
-        <input
-          className="input form_sm"
-          name="lastname"
-          onChange={[Function]}
-          placeholder="Last Name"
-          required={true}
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        className="double"
-      >
-        <input
-          className="input form_sm"
-          name="username"
-          onChange={[Function]}
-          placeholder="Username"
-          required={true}
-          type="text"
-          value=""
-        />
-      </div>
       <input
-        className="input form_lg"
-        name="email"
+        className="input form_sm"
+        name="firstname"
         onChange={[Function]}
-        placeholder="Email Address"
+        placeholder="First Name"
         required={true}
-        type="email"
+        type="text"
         value=""
       />
       <input
-        className="input form_lg"
-        name="password"
+        className="input form_sm"
+        name="lastname"
         onChange={[Function]}
-        placeholder="Password"
+        placeholder="Last Name"
         required={true}
-        type="password"
-        value="password"
+        type="text"
+        value=""
       />
-      <div>
-        <button
-          className="btn"
-          type="submit"
-        >
-          Create account
-        </button>
-      </div>
     </div>
-  </form>
-</Fragment>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="username"
+        onChange={[Function]}
+        placeholder="Username"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <input
+      className="input form_lg"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email Address"
+      required={true}
+      type="email"
+      value=""
+    />
+    <input
+      className="input form_lg"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+      value="password"
+    />
+    <div>
+      <button
+        className="btn"
+        type="submit"
+      >
+        Create account
+      </button>
+    </div>
+  </div>
+</form>
 `;
 
 exports[`Register Compnent should render register component correctly 1`] = `
-<Fragment>
-  <form
-    method="post"
-    onSubmit={[Function]}
+<form
+  method="post"
+  onSubmit={[Function]}
+>
+  <div
+    className="signup-form"
+    id="signup-form"
   >
     <div
-      className="signup-form"
-      id="signup-form"
+      className="double"
     >
-      <div
-        className="double"
-      >
-        <input
-          className="input form_sm"
-          name="firstname"
-          onChange={[Function]}
-          placeholder="First Name"
-          required={true}
-          type="text"
-          value=""
-        />
-        <input
-          className="input form_sm"
-          name="lastname"
-          onChange={[Function]}
-          placeholder="Last Name"
-          required={true}
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        className="double"
-      >
-        <input
-          className="input form_sm"
-          name="username"
-          onChange={[Function]}
-          placeholder="Username"
-          required={true}
-          type="text"
-          value=""
-        />
-      </div>
       <input
-        className="input form_lg"
-        name="email"
+        className="input form_sm"
+        name="firstname"
         onChange={[Function]}
-        placeholder="Email Address"
+        placeholder="First Name"
         required={true}
-        type="email"
+        type="text"
         value=""
       />
       <input
-        className="input form_lg"
-        name="password"
+        className="input form_sm"
+        name="lastname"
         onChange={[Function]}
-        placeholder="Password"
+        placeholder="Last Name"
         required={true}
-        type="password"
+        type="text"
         value=""
       />
-      <div>
-        <button
-          className="btn"
-          type="submit"
-        >
-          Create account
-        </button>
-      </div>
     </div>
-  </form>
-</Fragment>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="username"
+        onChange={[Function]}
+        placeholder="Username"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <input
+      className="input form_lg"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email Address"
+      required={true}
+      type="email"
+      value=""
+    />
+    <input
+      className="input form_lg"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+      value=""
+    />
+    <div>
+      <button
+        className="btn"
+        type="submit"
+      >
+        Create account
+      </button>
+    </div>
+  </div>
+</form>
 `;

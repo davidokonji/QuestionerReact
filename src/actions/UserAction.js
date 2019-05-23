@@ -47,7 +47,7 @@ const LoginAction = data => async (dispatch) => {
     }));
     return dispatch(authSuccess(`Welcome back ${res.data.data[0].user.username}`));
   } catch (error) {
-    return dispatch(authFailure('Invalid Credentials'));
+    return dispatch(authFailure(error.message));
   }
 };
 

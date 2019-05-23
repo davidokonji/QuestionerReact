@@ -3,6 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Header from '../components/Landingheader';
 import Login from '../components/LoginAuth';
 import { Register } from '../components/RegAuth';
+import Footer from '../components/footer.component';
 
 class authPage extends Component {
   constructor(props) {
@@ -61,6 +62,7 @@ class authPage extends Component {
               : <Login />}
           </div>
         </div>
+        <Footer />
       </React.Fragment>
     );
   }

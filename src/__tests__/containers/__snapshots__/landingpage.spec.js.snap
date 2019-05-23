@@ -68,5 +68,6 @@ exports[`Landing Page should render landing page correctly 1`] = `
       </div>
     </div>
   </div>
+  <Footer />
 </div>
 `;
