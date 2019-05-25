@@ -5,6 +5,7 @@ import AuthPage from '../containers/AuthPage.container';
 import NotFound from '../components/404page';
 import Dashboard from '../containers/Dashboard.container';
 import { OneMeetup } from '../containers/SingleMeetup.container';
+import { Admin } from '../containers/AdminDashboard.container';
 
 const Routes = () => (
   <BrowserRouter>
@@ -13,6 +14,7 @@ const Routes = () => (
       <Route path='/auth' component={AuthPage} exact />
       <Route path='/dashboard' component={Dashboard} />
       <Route path='/meetup/:id' component={OneMeetup} exact />
+      <Route path='/admin' component={Admin} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>

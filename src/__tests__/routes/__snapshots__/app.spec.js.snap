@@ -31,6 +31,18 @@ exports[`Routes should render routes jsx 1`] = `
       path="/meetup/:id"
     />
     <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(AdminDashboard)",
+          "type": [Function],
+        }
+      }
+      path="/admin"
+    />
+    <Route
       component={[Function]}
     />
   </Switch>

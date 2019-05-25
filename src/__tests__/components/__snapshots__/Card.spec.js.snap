@@ -32,7 +32,7 @@ exports[`Card component should render card component 1`] = `
         <span
           className="mt-2 side-card-value mx-auto"
         >
-          23
+          25
         </span>
       </div>
       <div
@@ -49,7 +49,7 @@ exports[`Card component should render card component 1`] = `
         <div
           className="col-12 my-3"
         >
-          Thursday, May 23rd 2019
+          Saturday, May 25th 2019
         </div>
         <div
           className="col-12 my-3"

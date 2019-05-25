@@ -14,6 +14,11 @@ import {
   authSuccess
 } from './UserAction';
 
+import {
+  getMeetupById,
+  getMeetupAction
+} from './AdminActions';
+
 export {
   allMeetups,
   getMeetups,
@@ -25,5 +30,7 @@ export {
   authSuccess,
   singleMeetup,
   meetupNotFound,
-  getOneMeetup
+  getOneMeetup,
+  getMeetupById,
+  getMeetupAction
 };

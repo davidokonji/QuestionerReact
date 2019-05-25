@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 import {
   Collapse,
   Navbar,
@@ -29,6 +30,7 @@ class NavBar extends React.Component {
 
   render() {
     const { isOpen } = this.state;
+    const { isAdmin } = this.props;
     return (
       <div>
         <Navbar expand='md' dark className='p-3 nav-bar'>
@@ -38,6 +40,13 @@ class NavBar extends React.Component {
           <NavbarToggler onClick={this.toggle} className='toggle' />
           <Collapse isOpen={isOpen} navbar>
             <Nav className='ml-auto' navbar>
+              {
+              isAdmin && (
+                <NavItem>
+                  <NavLink to='/admin' className='nav-link'>Admin</NavLink>
+                </NavItem>
+              )
+            }
               <NavItem>
                 <NavLink to='/dashboard' className='nav-link'>Dashboard</NavLink>
               </NavItem>
@@ -63,4 +72,12 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+const mapStateToProps = state => ({
+  isAdmin: state.auth.isAdmin
+});
+
+const NavBarConnected = connect(mapStateToProps)(NavBar);
+export {
+  NavBar,
+  NavBarConnected
+};
