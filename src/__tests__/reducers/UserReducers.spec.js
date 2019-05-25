@@ -3,7 +3,8 @@ import {
   USER_LOGIN,
   USER_REGISTER,
   AUTHENTICATION_ERROR,
-  AUTHENTICATION_SUCCESS
+  AUTHENTICATION_SUCCESS,
+  USER_LOGOUT
 } from '../../action-types';
 import UserMocks from '../../Fixtures/User.fixture';
 
@@ -72,5 +73,13 @@ describe('User reducers', () => {
       message: 'error',
       redirect: false
     });
+  });
+
+  it('should should return user logout object', () => {
+    const reducer = loginReducer(defaultUserState, {
+      type: USER_LOGOUT,
+    });
+
+    expect(reducer).toEqual(defaultUserState);
   });
 });

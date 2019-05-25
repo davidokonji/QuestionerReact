@@ -13,6 +13,8 @@ import {
   DropdownItem
 } from 'reactstrap';
 
+import { logoutUser } from '../../actions';
+
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -26,6 +28,12 @@ class NavBar extends React.Component {
     this.setState({
       isOpen: !isOpen
     });
+  }
+
+  logout = () => {
+    const { Logout } = this.props;
+    Logout();
+    window.location.assign('/');
   }
 
   render() {
@@ -52,14 +60,14 @@ class NavBar extends React.Component {
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                      Options
+                      user
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
                         Your profile
                   </DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>
+                  <DropdownItem onClick={this.logout} className='logout'>
                        Sign Out
                   </DropdownItem>
                 </DropdownMenu>
@@ -76,7 +84,11 @@ const mapStateToProps = state => ({
   isAdmin: state.auth.isAdmin
 });
 
-const NavBarConnected = connect(mapStateToProps)(NavBar);
+const mapDispatchToProps = {
+  Logout: logoutUser
+};
+
+const NavBarConnected = connect(mapStateToProps, mapDispatchToProps)(NavBar);
 export {
   NavBar,
   NavBarConnected

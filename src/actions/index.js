@@ -11,7 +11,9 @@ import {
   RegisterAction,
   RegisterUser,
   authFailure,
-  authSuccess
+  authSuccess,
+  logoutUser,
+  logoutHandler
 } from './UserAction';
 
 import {
@@ -32,5 +34,7 @@ export {
   meetupNotFound,
   getOneMeetup,
   getMeetupById,
-  getMeetupAction
+  getMeetupAction,
+  logoutUser,
+  logoutHandler
 };

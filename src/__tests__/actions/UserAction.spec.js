@@ -7,14 +7,16 @@ import {
   RegisterAction,
   authFailure,
   authSuccess,
-  LoginAction
+  LoginAction,
+  logoutUser
 } from '../../actions';
 
 import {
   USER_LOGIN,
   USER_REGISTER,
   AUTHENTICATION_ERROR,
-  AUTHENTICATION_SUCCESS
+  AUTHENTICATION_SUCCESS,
+  USER_LOGOUT
 } from '../../action-types';
 
 const userData = {
@@ -155,5 +157,15 @@ describe('Authentication Actions', () => {
       type: AUTHENTICATION_ERROR,
       message: message.message
     });
+  });
+
+  it('should return logout user action creator', () => {
+    const store = mockedStore({});
+
+    return store.dispatch(logoutUser())
+      .then(() => {
+        const actions = store.getActions();
+        expect(actions[0].type).toEqual(USER_LOGOUT);
+      });
   });
 });

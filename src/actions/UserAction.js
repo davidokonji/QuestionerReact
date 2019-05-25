@@ -2,7 +2,8 @@ import {
   USER_LOGIN,
   USER_REGISTER,
   AUTHENTICATION_ERROR,
-  AUTHENTICATION_SUCCESS
+  AUTHENTICATION_SUCCESS,
+  USER_LOGOUT
 } from '../action-types';
 import axios from '../config/axiosConfig';
 
@@ -34,6 +35,10 @@ const authFailure = (message = '') => ({
 const authSuccess = (message = '') => ({
   type: AUTHENTICATION_SUCCESS,
   message
+});
+
+const logoutHandler = () => ({
+  type: USER_LOGOUT,
 });
 
 const LoginAction = data => async (dispatch) => {
@@ -74,11 +79,18 @@ const RegisterAction = data => async (dispatch) => {
   }
 };
 
+const logoutUser = () => async (dispatch) => {
+  window.localStorage.removeItem('token');
+  await dispatch(logoutHandler());
+};
+
 export {
   LoginUser,
   LoginAction,
   RegisterUser,
   RegisterAction,
   authFailure,
-  authSuccess
+  authSuccess,
+  logoutUser,
+  logoutHandler
 };
