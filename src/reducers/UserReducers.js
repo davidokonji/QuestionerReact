@@ -2,7 +2,8 @@ import {
   USER_LOGIN,
   USER_REGISTER,
   AUTHENTICATION_ERROR,
-  AUTHENTICATION_SUCCESS
+  AUTHENTICATION_SUCCESS,
+  USER_LOGOUT
 } from '../action-types';
 
 const defaultUserState = {
@@ -35,6 +36,10 @@ const loginReducer = (state = defaultUserState, action) => {
       return {
         message: action.message,
         redirect: false
+      };
+    case USER_LOGOUT:
+      return {
+        ...defaultUserState
       };
 
     default:

@@ -49,6 +49,16 @@ exports[`Nav bar component should render nav bar correctly 1`] = `
         >
           <NavLink
             className="nav-link"
+            to="/admin"
+          >
+            Admin
+          </NavLink>
+        </NavItem>
+        <NavItem
+          tag="li"
+        >
+          <NavLink
+            className="nav-link"
             to="/dashboard"
           >
             Dashboard
@@ -64,7 +74,7 @@ exports[`Nav bar component should render nav bar correctly 1`] = `
             color="secondary"
             nav={true}
           >
-            Options
+            user
           </DropdownToggle>
           <DropdownMenu
             flip={true}
@@ -83,6 +93,8 @@ exports[`Nav bar component should render nav bar correctly 1`] = `
               toggle={true}
             />
             <DropdownItem
+              className="logout"
+              onClick={[Function]}
               tag="button"
               toggle={true}
             >
@@ -160,7 +172,7 @@ exports[`Nav bar component should render nav bar correctly 2`] = `
             color="secondary"
             nav={true}
           >
-            Options
+            user
           </DropdownToggle>
           <DropdownMenu
             flip={true}
@@ -179,6 +191,8 @@ exports[`Nav bar component should render nav bar correctly 2`] = `
               toggle={true}
             />
             <DropdownItem
+              className="logout"
+              onClick={[Function]}
               tag="button"
               toggle={true}
             >
