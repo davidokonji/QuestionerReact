@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Navbar from '../components/common/NavBar';
+import { NavBarConnected } from '../components/common/NavBar';
 import { getOneMeetup } from '../actions';
 import SingleMeetupTop from '../components/singleMeetupTop';
 import SingleMeetupBottom from '../components/singleMeetupBottom';
@@ -40,7 +40,7 @@ class SingleMeetup extends Component {
     const { open } = this.state;
     return (
       <div>
-        <Navbar />
+        <NavBarConnected />
         <div className='container mt-5 shadow-sm'>
           <SingleMeetupTop {...meetup} toggle={this.toggle} open={open} />
           <SingleMeetupBottom />

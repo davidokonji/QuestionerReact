@@ -7,7 +7,7 @@ import {
 import axios from '../config/axiosConfig';
 
 const LoginUser = ({
-  id = '', firstname = '', lastname = '', username = '', email = '',
+  id = '', firstname = '', lastname = '', username = '', email = '', isAdmin = false
 } = {}) => ({
   type: USER_LOGIN,
   user: {
@@ -16,6 +16,7 @@ const LoginUser = ({
     lastname,
     username,
     email,
+    isAdmin
   },
 });
 
@@ -44,6 +45,7 @@ const LoginAction = data => async (dispatch) => {
       lastname: res.data.data[0].user.lastname,
       username: res.data.data[0].user.username,
       email: res.data.data[0].user.email,
+      isAdmin: res.data.data[0].user.isadmin
     }));
     return dispatch(authSuccess(`Welcome back ${res.data.data[0].user.username}`));
   } catch (error) {
@@ -61,6 +63,7 @@ const RegisterAction = data => async (dispatch) => {
       lastname: res.data.data[0].user.lastname,
       username: res.data.data[0].user.username,
       email: res.data.data[0].user.email,
+      isAdmin: res.data.data[0].user.isadmin
     }));
     return dispatch(authSuccess(`Thank you for registering ${res.data.data[0].user.username}`));
   } catch (error) {

@@ -2,7 +2,7 @@
 
 exports[`Single Meetup container should  render Single Meetup container with props 1`] = `
 <div>
-  <NavBar />
+  <ConnectFunction />
   <div
     className="container mt-5 shadow-sm"
   >

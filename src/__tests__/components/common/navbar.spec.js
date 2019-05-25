@@ -1,16 +1,16 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import Navbar from '../../../components/common/NavBar';
+import { NavBar } from '../../../components/common/NavBar';
 
 describe('Nav bar component', () => {
   it('should render nav bar correctly', () => {
-    const wrapper = shallow(<Navbar />);
+    const wrapper = shallow(<NavBar />);
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render nav bar correctly', () => {
-    const wrapper = shallow(<Navbar />);
+    const wrapper = shallow(<NavBar />);
 
     wrapper.setState({
       isOpen: false
