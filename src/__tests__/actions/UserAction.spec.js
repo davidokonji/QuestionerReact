@@ -62,7 +62,8 @@ describe('User login action', () => {
         lastname: 'okonji',
         username: 'david',
         email: 'david@gmail.com',
-        isAdmin: false
+        isAdmin: false,
+        token: ''
       },
     });
   });
@@ -77,7 +78,8 @@ describe('User login action', () => {
         lastname: '',
         username: '',
         email: '',
-        isAdmin: false
+        isAdmin: false,
+        token: ''
       },
     });
   });

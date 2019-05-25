@@ -6,8 +6,7 @@ import Card from './common/Card';
 export class GetMeetups extends Component {
   componentDidMount() {
     const { allMeetups } = this.props;
-    const token = localStorage.getItem('token');
-    allMeetups(token);
+    allMeetups();
   }
 
   render() {
