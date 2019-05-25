@@ -13,11 +13,11 @@ exports[`Routes should render routes jsx 1`] = `
       exact={true}
       path="/auth"
     />
-    <Route
+    <Protected
       component={[Function]}
       path="/dashboard"
     />
-    <Route
+    <Protected
       component={
         Object {
           "$$typeof": Symbol(react.memo),
@@ -30,7 +30,7 @@ exports[`Routes should render routes jsx 1`] = `
       exact={true}
       path="/meetup/:id"
     />
-    <Route
+    <Protected
       component={
         Object {
           "$$typeof": Symbol(react.memo),

@@ -7,7 +7,7 @@ import {
 import axios from '../config/axiosConfig';
 
 const LoginUser = ({
-  id = '', firstname = '', lastname = '', username = '', email = '', isAdmin = false
+  id = '', firstname = '', lastname = '', username = '', email = '', isAdmin = false, token = ''
 } = {}) => ({
   type: USER_LOGIN,
   user: {
@@ -16,7 +16,8 @@ const LoginUser = ({
     lastname,
     username,
     email,
-    isAdmin
+    isAdmin,
+    token
   },
 });
 
@@ -45,7 +46,8 @@ const LoginAction = data => async (dispatch) => {
       lastname: res.data.data[0].user.lastname,
       username: res.data.data[0].user.username,
       email: res.data.data[0].user.email,
-      isAdmin: res.data.data[0].user.isadmin
+      isAdmin: res.data.data[0].user.isadmin,
+      token: res.data.data[0].token
     }));
     return dispatch(authSuccess(`Welcome back ${res.data.data[0].user.username}`));
   } catch (error) {

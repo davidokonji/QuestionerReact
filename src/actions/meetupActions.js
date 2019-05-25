@@ -1,7 +1,7 @@
 import { GET_ALL_MEETUPS, GET_SINGLE_MEETUP, MEETUP_NOTFOUND } from '../action-types';
 import axios from '../config/axiosConfig';
 
-const allMeetups = (data = [], message = '') => ({
+const allMeetups = (data = []) => ({
   type: GET_ALL_MEETUPS,
   payload: data,
 });
@@ -16,25 +16,17 @@ const meetupNotFound = (message = '') => ({
   message
 });
 
-const getOneMeetup = (id, token) => async (dispatch) => {
+const getOneMeetup = id => async (dispatch) => {
   try {
-    const res = await axios.get(`meetups/${id}`, {
-      headers: {
-        'x-access-token': token
-      }
-    });
+    const res = await axios.get(`meetups/${id}`);
     return dispatch(singleMeetup(res.data.data[0]));
   } catch (error) {
     return dispatch(meetupNotFound(error.message));
   }
 };
 
-const getMeetups = token => async (dispatch) => {
-  const res = await axios.get('/meetups', {
-    headers: {
-      'x-access-token': token
-    }
-  });
+const getMeetups = () => async (dispatch) => {
+  const res = await axios.get('/meetups');
 
   return dispatch(allMeetups(res.data.data));
 };

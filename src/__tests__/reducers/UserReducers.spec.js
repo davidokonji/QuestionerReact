@@ -13,6 +13,8 @@ const defaultUserState = {
   lastname: '',
   username: '',
   email: '',
+  isAdmin: false,
+  token: '',
   redirect: false
 };
 

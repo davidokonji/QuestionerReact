@@ -23,8 +23,7 @@ class SingleMeetup extends Component {
       },
       singleMeetup,
     } = this.props;
-    const token = localStorage.getItem('token');
-    await singleMeetup(id, token);
+    await singleMeetup(id);
   }
 
   toggle = () => {

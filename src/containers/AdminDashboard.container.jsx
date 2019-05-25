@@ -17,8 +17,7 @@ class AdminDashboard extends Component {
 
   componentDidMount() {
     const { allMeetups } = this.props;
-    const token = localStorage.getItem('token');
-    allMeetups(token);
+    allMeetups();
   }
 
   toggle = () => {
