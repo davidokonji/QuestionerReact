@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Admin sidebar component should render component correctly 1`] = `
+<Fragment>
+  <div
+    className="col-12 col-md-3"
+  >
+    <div
+      className="p-5 shadow-sm"
+    >
+      <Button
+        event={[MockFunction]}
+        styles="button p-3"
+        text="Create Meetup"
+      />
+    </div>
+  </div>
+  <ModalComponent
+    className="mt-5"
+    open={false}
+    toggle={[MockFunction]}
+  >
+    <Form
+      encType="multipart/form-data"
+      method="post"
+      onSubmit={[Function]}
+      tag="form"
+    >
+      <FormGroup
+        tag="div"
+      >
+        <Input
+          accept="image/*"
+          max={1}
+          name="image"
+          onChange={[Function]}
+          type="file"
+        />
+        <FormText
+          color="muted"
+          tag="small"
+        >
+          Add meetup images
+        </FormText>
+      </FormGroup>
+      <FormGroup
+        tag="div"
+      >
+        <Input
+          className="px-3"
+          name="topic"
+          onChange={[Function]}
+          placeholder="Add Topic"
+          type="text"
+        />
+      </FormGroup>
+      <FormGroup
+        tag="div"
+      >
+        <Input
+          name="location"
+          onChange={[Function]}
+          placeholder="Add Location"
+          type="text"
+        />
+      </FormGroup>
+      <FormGroup
+        tag="div"
+      >
+        <Input
+          name="happeningOn"
+          onChange={[Function]}
+          placeholder="Add Date"
+          type="date"
+        />
+      </FormGroup>
+      <FormGroup
+        tag="div"
+      >
+        <div
+          id="app"
+        >
+          <DragDropContext(ReactTags)
+            delimiters={
+              Array [
+                188,
+                13,
+              ]
+            }
+            handleAddition={[Function]}
+            handleDelete={[Function]}
+            handleDrag={[Function]}
+            inline={false}
+            placeholder="Add meetup Tags"
+            suggestions={
+              Array [
+                Object {
+                  "id": "technology",
+                  "text": "technology",
+                },
+                Object {
+                  "id": "social",
+                  "text": "social",
+                },
+              ]
+            }
+            tags={Array []}
+          />
+        </div>
+      </FormGroup>
+      <button
+        className="btn"
+        onClick={[MockFunction]}
+        type="submit"
+      >
+        Create Meetup
+      </button>
+    </Form>
+  </ModalComponent>
+</Fragment>
+`;

@@ -2,14 +2,14 @@ import { combineReducers } from 'redux';
 import { loginReducer, RegisterReducer } from './UserReducers';
 import getMeetups from './getMeetups';
 import getSingleMeetup from './singleMeetupReducer';
-import getArticleById from './AdminReducers';
+import createMeetup from './createMeetupReducer';
 
 const reducers = combineReducers({
   auth: loginReducer,
   register: RegisterReducer,
   meetups: getMeetups,
   meetup: getSingleMeetup,
-  meetupId: getArticleById
+  newMeetup: createMeetup
 });
 
 export {
@@ -17,5 +17,6 @@ export {
   getMeetups,
   loginReducer,
   RegisterReducer,
-  getSingleMeetup
+  getSingleMeetup,
+  createMeetup
 };

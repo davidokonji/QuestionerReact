@@ -74,7 +74,6 @@ const RegisterAction = data => async (dispatch) => {
     }));
     return dispatch(authSuccess(`Thank you for registering ${res.data.data[0].user.username}`));
   } catch (error) {
-    // TODO: put valid error messages here
     return dispatch(authFailure(error.message));
   }
 };

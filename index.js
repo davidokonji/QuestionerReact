@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import 'normalize.css/normalize.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 import storeConfig from './src/store/store.config';
 import Route from './src/routes/App.routes';
 import './src/styles/styles.scss';

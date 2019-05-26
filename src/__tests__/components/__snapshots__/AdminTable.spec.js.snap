@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Admin table component should render component correctly 1`] = `
+<div
+  className="col-11 mx-4 mx-md-0 mt-4 mt-md-0 col-md-9 shadow p-0 table-responsive-sm"
+>
+  <table
+    className="table table-hover p-0"
+  >
+    <thead
+      className="row mx-0"
+    >
+      <div
+        className="col-10 bg-light p-3"
+      >
+        Available Meetup(s)
+      </div>
+      <div
+        className="col-2 bg-light p-3"
+      >
+        Operation
+      </div>
+    </thead>
+    <tbody
+      className="row p-2 col-12 ml-0 "
+    />
+  </table>
+</div>
+`;
