@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Meetup list component should render component correctly 1`] = `
+<Fragment>
+  <div
+    className="col-10 border border-left-0 border-right-0"
+  >
+    <div
+      className="row"
+    >
+      <p
+        className="col-12 ml-3"
+      />
+    </div>
+    <div
+      className="row"
+    >
+      <p
+        className="col-1"
+      >
+        <img
+          alt="date"
+          className="h-75 icon"
+          src={
+            Object {
+              "canInstrument": true,
+              "createTransformer": [Function],
+              "getCacheKey": [Function],
+              "process": [Function],
+            }
+          }
+        />
+      </p>
+      <p
+        className="col-9"
+      >
+        Invalid date
+      </p>
+    </div>
+    <div
+      className="row"
+    >
+      <p
+        className="col-1"
+      >
+        <img
+          alt="location"
+          className="h-75 icon"
+          src={
+            Object {
+              "canInstrument": true,
+              "createTransformer": [Function],
+              "getCacheKey": [Function],
+              "process": [Function],
+            }
+          }
+        />
+      </p>
+      <p
+        className="col-9"
+      />
+    </div>
+  </div>
+  <div
+    className="col-2 mt-3"
+  >
+    <Button
+      styles="px-3 py-1 my-2 btn-danger col-10 rounded-top rounder-bottom"
+      text="Delete"
+    />
+    <Button
+      styles="px-3 py-1 my-2 btn-info col-10 rounded-top rounder-bottom"
+      text="View"
+    />
+  </div>
+</Fragment>
+`;

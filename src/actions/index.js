@@ -3,7 +3,10 @@ import {
   getMeetups,
   singleMeetup,
   meetupNotFound,
-  getOneMeetup
+  getOneMeetup,
+  createMeetup,
+  addMeetup,
+  meetupCreationError
 } from './meetupActions';
 import {
   LoginAction,
@@ -16,10 +19,6 @@ import {
   logoutHandler
 } from './UserAction';
 
-import {
-  getMeetupById,
-  getMeetupAction
-} from './AdminActions';
 
 export {
   allMeetups,
@@ -33,8 +32,9 @@ export {
   singleMeetup,
   meetupNotFound,
   getOneMeetup,
-  getMeetupById,
-  getMeetupAction,
   logoutUser,
-  logoutHandler
+  logoutHandler,
+  createMeetup,
+  addMeetup,
+  meetupCreationError
 };

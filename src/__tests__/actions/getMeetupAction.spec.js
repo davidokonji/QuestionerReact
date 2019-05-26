@@ -1,18 +1,25 @@
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
-import { GET_ALL_MEETUPS, GET_SINGLE_MEETUP, MEETUP_NOTFOUND } from '../../action-types';
+import {
+  GET_ALL_MEETUPS,
+  GET_SINGLE_MEETUP,
+  MEETUP_NOTFOUND,
+  CREATE_MEETUP,
+  ERROR_MEETUP
+} from '../../action-types';
 import {
   allMeetups,
   getMeetups,
   singleMeetup,
   meetupNotFound,
-  getOneMeetup
+  getOneMeetup,
+  addMeetup
 } from '../../actions/meetupActions';
 import axios from '../../config/axiosConfig';
 
 const data = [{
   id: '1',
-  title: 'this is a test',
+  topic: 'this is a test',
   location: 'lagos',
   happeningOn: '',
   tags: ['test']
@@ -118,4 +125,19 @@ describe('Get Meetups', () => {
       expect(store.getActions()[0].type).toEqual(expected.type);
     });
   });
+
+
+  // it('should return create meetup action creator', () => {
+  //   const store = mockedStore({});
+  //   axios.get = jest.fn().mockReturnValue(Promise.resolve({ data: newMeetup }));
+  //   const expected = {
+  //     type: CREATE_MEETUP,
+  //     payload: data[0]
+  //   };
+
+  //   return store.dispatch(addMeetup(newMeetup)).then(() => {
+  //     console.log(store.getActions());
+  //     expect(store.getActions()[0].type).toEqual(expected.type);
+  //   });
+  // });
 });

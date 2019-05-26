@@ -20,4 +20,21 @@ describe('Auth page', () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.state('formType')).toBe('login');
   });
+
+  it('should get onclick signup', () => {
+    const wrapper = shallow(<AuthPage />);
+
+    wrapper.find('.signup').simulate('click');
+    wrapper.find('.login').simulate('click');
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should get onclick login', () => {
+    const wrapper = shallow(<AuthPage />);
+
+    wrapper.find('.signup').simulate('click');
+    wrapper.find('.login').simulate('click');
+    expect(wrapper).toMatchSnapshot();
+  });
 });

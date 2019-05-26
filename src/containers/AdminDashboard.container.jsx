@@ -5,7 +5,6 @@ import { NavBarConnected } from '../components/common/NavBar';
 import AdminSideBar from '../components/AdminSidebar';
 import AdminTable from '../components/AdminTable';
 import { getMeetups } from '../actions';
-import Dialog from '../components/common/dialog';
 
 class AdminDashboard extends Component {
   constructor(props) {
@@ -37,11 +36,10 @@ class AdminDashboard extends Component {
         <NavBarConnected />
         <div className='container'>
           <div className='row mt-5'>
-            <AdminSideBar />
-            <AdminTable data={data} toggle={this.toggle} />
+            <AdminSideBar open={open} toggle={this.toggle} />
+            <AdminTable data={data} />
           </div>
         </div>
-        <Dialog open={open} toggle={this.toggle} className='mt-5' />
         <Footer />
       </div>
     );

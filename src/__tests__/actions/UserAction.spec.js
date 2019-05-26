@@ -37,11 +37,15 @@ const errorlogin = {
 };
 
 const Register = {
+  id: '1',
   firstname: 'david',
   lastname: 'okonji',
-  username: 'david',
-  email: 'david@gmail.com',
-  password: 'password'
+  othername: 'devl',
+  username: 'davidsdkbsdj',
+  email: 'daviddihsoidhsd@gmail.com',
+  password: 'password1234',
+  phonenumber: '08109991112',
+  isadmin: false
 };
 
 const message = {
@@ -128,9 +132,21 @@ describe('Registration Actions', () => {
     });
   });
 
+  // it('should return registration action creator error object', () => {
+  //   const store = mockedStore({});
+  //   axios.post = jest.fn().mockReturnValue(Promise.resolve({ Register }));
+  //   const expected = [USER_REGISTER];
+
+  //   return store.dispatch(RegisterAction(Register))
+  //     .then(() => {
+  //       console.log(store.getActions());
+  //       expect(store.getActions()[0].type).toEqual(expected[0]);
+  //     });
+  // });
+
   it('should return registration action creator error object', () => {
     const store = mockedStore({});
-    axios.get = jest.fn().mockReturnValue(Promise.resolve({ Register }));
+    axios.post = jest.fn().mockReturnValue(Promise.reject({ Register }));
     const expected = [AUTHENTICATION_ERROR];
 
     return store.dispatch(RegisterAction(Register))
@@ -149,6 +165,14 @@ describe('Authentication Actions', () => {
       message: message.message
     });
   });
+  it('should return success object', () => {
+    const action = authSuccess();
+
+    expect(action).toEqual({
+      type: AUTHENTICATION_SUCCESS,
+      message: ''
+    });
+  });
 
   it('should return error object', () => {
     const action = authFailure(message.message);
@@ -156,6 +180,14 @@ describe('Authentication Actions', () => {
     expect(action).toEqual({
       type: AUTHENTICATION_ERROR,
       message: message.message
+    });
+  });
+  it('should return error object', () => {
+    const action = authFailure();
+
+    expect(action).toEqual({
+      type: AUTHENTICATION_ERROR,
+      message: ''
     });
   });
 

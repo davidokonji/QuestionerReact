@@ -1,5 +1,133 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Auth page should get onclick login 1`] = `
+<Fragment>
+  <Header
+    navClass="nav_header_light"
+  />
+  <div
+    className="wrapper"
+  >
+    <ToastContainer
+      autoClose={1000}
+      bodyClassName={null}
+      className={null}
+      closeButton={false}
+      closeOnClick={true}
+      draggable={true}
+      draggablePercent={80}
+      hideProgressBar={true}
+      newestOnTop={false}
+      pauseOnFocusLoss={true}
+      pauseOnHover={true}
+      position="top-right"
+      progressClassName={null}
+      progressStyle={null}
+      rtl={false}
+      style={null}
+      toastClassName={null}
+      transition={[Function]}
+    />
+    <div
+      className="wrapper_container"
+    >
+      <div
+        className="signup"
+        id="signup"
+        onClick={[Function]}
+        role="presentation"
+        style={
+          Object {
+            "backgroundColor": "#fff",
+          }
+        }
+      >
+        Sign Up
+      </div>
+      <div
+        className="login"
+        id="login"
+        onClick={[Function]}
+        role="presentation"
+        style={
+          Object {
+            "backgroundColor": "#e9eaea",
+          }
+        }
+      >
+        Sign In
+      </div>
+      <Register />
+    </div>
+  </div>
+  <Footer />
+</Fragment>
+`;
+
+exports[`Auth page should get onclick signup 1`] = `
+<Fragment>
+  <Header
+    navClass="nav_header_light"
+  />
+  <div
+    className="wrapper"
+  >
+    <ToastContainer
+      autoClose={1000}
+      bodyClassName={null}
+      className={null}
+      closeButton={false}
+      closeOnClick={true}
+      draggable={true}
+      draggablePercent={80}
+      hideProgressBar={true}
+      newestOnTop={false}
+      pauseOnFocusLoss={true}
+      pauseOnHover={true}
+      position="top-right"
+      progressClassName={null}
+      progressStyle={null}
+      rtl={false}
+      style={null}
+      toastClassName={null}
+      transition={[Function]}
+    />
+    <div
+      className="wrapper_container"
+    >
+      <div
+        className="signup"
+        id="signup"
+        onClick={[Function]}
+        role="presentation"
+        style={
+          Object {
+            "backgroundColor": "#fff",
+          }
+        }
+      >
+        Sign Up
+      </div>
+      <div
+        className="login"
+        id="login"
+        onClick={[Function]}
+        role="presentation"
+        style={
+          Object {
+            "backgroundColor": "#e9eaea",
+          }
+        }
+      >
+        Sign In
+      </div>
+      <Register />
+    </div>
+  </div>
+  <Footer />
+</Fragment>
+`;
+
 exports[`Auth page should render auth page correctly 1`] = `
 <Fragment>
   <Header
