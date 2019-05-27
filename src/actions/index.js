@@ -8,7 +8,10 @@ import {
   addMeetup,
   meetupError,
   deleteMeetup,
-  deleteMeetupHandler
+  deleteMeetupHandler,
+  meetupRsvp,
+  meetupRsvpHandler,
+  rsvpError
 } from './meetupActions';
 import {
   LoginAction,
@@ -48,5 +51,8 @@ export {
   deleteMeetupHandler,
   createQuestionHandler,
   questionErrorHandeler,
-  createQuestion
+  createQuestion,
+  meetupRsvp,
+  meetupRsvpHandler,
+  rsvpError
 };

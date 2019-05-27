@@ -6,8 +6,64 @@ exports[`Single Meetup container should  render Single Meetup container with pro
   <div
     className="container mt-5 shadow-sm"
   >
+    <ToastContainer
+      autoClose={1000}
+      bodyClassName={null}
+      className={null}
+      closeButton={false}
+      closeOnClick={true}
+      draggable={true}
+      draggablePercent={80}
+      hideProgressBar={true}
+      newestOnTop={false}
+      pauseOnFocusLoss={true}
+      pauseOnHover={true}
+      position="top-right"
+      progressClassName={null}
+      progressStyle={null}
+      rtl={false}
+      style={null}
+      toastClassName={null}
+      transition={[Function]}
+    />
     <SingleMeetupTop
-      open={false}
+      open={true}
+      toggle={[Function]}
+    />
+    <SingleMeetupBottom />
+  </div>
+  <Footer />
+</div>
+`;
+
+exports[`Single Meetup container should  render Single Meetup container with props 2`] = `
+<div>
+  <ConnectFunction />
+  <div
+    className="container mt-5 shadow-sm"
+  >
+    <ToastContainer
+      autoClose={1000}
+      bodyClassName={null}
+      className={null}
+      closeButton={false}
+      closeOnClick={true}
+      draggable={true}
+      draggablePercent={80}
+      hideProgressBar={true}
+      newestOnTop={false}
+      pauseOnFocusLoss={true}
+      pauseOnHover={true}
+      position="top-right"
+      progressClassName={null}
+      progressStyle={null}
+      rtl={false}
+      style={null}
+      toastClassName={null}
+      transition={[Function]}
+    />
+    <SingleMeetupTop
+      open={true}
       toggle={[Function]}
     />
     <SingleMeetupBottom />

@@ -1,5 +1,10 @@
 import { getSingleMeetup } from '../../reducers';
-import { GET_SINGLE_MEETUP, MEETUP_NOTFOUND } from '../../action-types';
+import {
+  GET_SINGLE_MEETUP,
+  MEETUP_NOTFOUND,
+  MEETUP_RSVP,
+  RSVP_ERROR
+} from '../../action-types';
 
 const payload = {
   id: '',
@@ -33,6 +38,32 @@ describe('single meetup reducer', () => {
 
     expect(reducer).toEqual({
       message
+    });
+  });
+
+  it('should return rsvp object', () => {
+    const reducer = getSingleMeetup(undefined, {
+      type: MEETUP_RSVP,
+      payload,
+      message: 'Thanks for the Rsvp'
+    });
+
+    expect(reducer).toEqual({
+      rsvp: payload,
+      message: 'Thanks for the Rsvp',
+      successful: true
+    });
+  });
+
+  it('should return rsvp error object', () => {
+    const reducer = getSingleMeetup(undefined, {
+      type: RSVP_ERROR,
+      message: 'Thanks already rsvp for meetup'
+    });
+
+    expect(reducer).toEqual({
+      message: 'Thanks already rsvp for meetup',
+      successful: false
     });
   });
 });

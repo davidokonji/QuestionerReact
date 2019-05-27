@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
 import Button from './Button';
 import { calendar, location } from '../Assets';
 import Modal from './common/modal';
@@ -31,6 +30,15 @@ class SingleMeetupTop extends Component {
       body
     };
     addQuestion(data);
+  }
+
+  rsvpHandler = (response) => {
+    const { rsvp, id } = this.props;
+
+    const data = {
+      response
+    };
+    rsvp(id, data);
   }
 
   render() {
@@ -77,8 +85,26 @@ class SingleMeetupTop extends Component {
               <p className='col-2'>
                   RSVP
               </p>
-              <div className='col-1'>
-                  Yes
+              <div className='col-2'>
+                <Button
+                  text='Yes'
+                  styles='btn-info px-4 py-1 rounded shadow-sm yes'
+                  event={() => this.rsvpHandler('yes')}
+                />
+              </div>
+              <div className='col-2'>
+                <Button
+                  text='No'
+                  styles='btn-info px-4 py-1 rounded shadow-sm no'
+                  event={() => this.rsvpHandler('no')}
+                />
+              </div>
+              <div className='col-2'>
+                <Button
+                  text='Maybe'
+                  styles='btn-info px-4 py-1 rounded shadow-sm maybe'
+                  event={() => this.rsvpHandler('maybe')}
+                />
               </div>
             </div>
             <div className='meetup-tags my-4'>

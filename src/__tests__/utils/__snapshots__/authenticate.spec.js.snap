@@ -1,9 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Authenticate HOC should render HOC component correctly 1`] = `
-<Route
-  exact={true}
-  path="/"
-  render={[Function]}
-/>
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/",
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "REPLACE",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "from": Object {
+              "hash": "",
+              "key": "j5bwaa",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+            "hash": "",
+            "key": "t1gu6g",
+            "pathname": "/auth",
+            "search": "",
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "from": Object {
+            "hash": "",
+            "key": "j5bwaa",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "hash": "",
+          "key": "t1gu6g",
+          "pathname": "/auth",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Protected
+      component={[Function]}
+      exact={true}
+      path="/"
+    >
+      <Route
+        exact={true}
+        path="/"
+        render={[Function]}
+      />
+    </Protected>
+  </Router>
+</MemoryRouter>
 `;
