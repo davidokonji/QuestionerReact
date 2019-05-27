@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import AdminTable from '../../components/AdminTable';
+import { AdminTable } from '../../components/AdminTable';
 
 describe('Admin table component', () => {
   it('should render component correctly', () => {

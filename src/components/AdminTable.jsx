@@ -1,11 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import MeetupList from './MeetupList';
+import { deleteMeetup } from '../actions';
 
-const AdminTable = ({ data, toggle }) => (
-
-  // const deleteMeeteps = ( id) => {
-  //     this.props.delete(id)
-  // }
+export const AdminTable = ({ data, deleteOne }) => (
   <div className='col-11 mx-4 mx-md-0 mt-4 mt-md-0 col-md-9 shadow p-0 table-responsive-sm'>
     <table className='table table-hover p-0'>
       <thead className='row mx-0'>
@@ -27,8 +25,7 @@ const AdminTable = ({ data, toggle }) => (
               happeningOn={meetup.happeningOn}
               images={meetup.images}
               key={meetup.id}
-              // delete={delteMeetups}
-            //   deleteDialog={toggle}
+              deleteOne={deleteOne}
             />
           ))
       }
@@ -36,5 +33,8 @@ const AdminTable = ({ data, toggle }) => (
     </table>
   </div>
 );
+const mapDispatchToProps = {
+  deleteOne: deleteMeetup
+};
 
-export default AdminTable;
+export default connect(null, mapDispatchToProps)(AdminTable);

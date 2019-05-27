@@ -65,10 +65,12 @@ exports[`Meetup list component should render component correctly 1`] = `
     className="col-2 mt-3"
   >
     <Button
+      event={[Function]}
       styles="px-3 py-1 my-2 btn-danger col-10 rounded-top rounder-bottom"
       text="Delete"
     />
     <Button
+      event={[Function]}
       styles="px-3 py-1 my-2 btn-info col-10 rounded-top rounder-bottom"
       text="View"
     />

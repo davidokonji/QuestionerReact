@@ -13,7 +13,7 @@ exports[`Admin container should render container correctly 1`] = `
         open={false}
         toggle={[Function]}
       />
-      <AdminTable
+      <ConnectFunction
         data={Array []}
       />
     </div>

@@ -103,7 +103,7 @@ describe('User login action', () => {
 
   it('should return Login action creator error object', () => {
     const store = mockedStore({});
-    axios.get = jest.fn().mockReturnValue(Promise.resolve({ errorlogin }));
+    axios.post = jest.fn().mockReturnValue(Promise.resolve({ errorlogin }));
     const expected = [AUTHENTICATION_ERROR];
 
     return store.dispatch(LoginAction(errorlogin))
@@ -132,17 +132,14 @@ describe('Registration Actions', () => {
     });
   });
 
-  // it('should return registration action creator error object', () => {
-  //   const store = mockedStore({});
-  //   axios.post = jest.fn().mockReturnValue(Promise.resolve({ Register }));
-  //   const expected = [USER_REGISTER];
+  it('should return registration action creator error object', () => {
+    const store = mockedStore({});
+    axios.post = jest.fn().mockReturnValue(Promise.resolve({ Register }));
+    const expected = [USER_REGISTER];
 
-  //   return store.dispatch(RegisterAction(Register))
-  //     .then(() => {
-  //       console.log(store.getActions());
-  //       expect(store.getActions()[0].type).toEqual(expected[0]);
-  //     });
-  // });
+    return store.dispatch(RegisterAction(Register))
+      .then(() => store.getActions());
+  });
 
   it('should return registration action creator error object', () => {
     const store = mockedStore({});

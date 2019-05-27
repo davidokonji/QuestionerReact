@@ -5,7 +5,8 @@ import {
   GET_SINGLE_MEETUP,
   MEETUP_NOTFOUND,
   CREATE_MEETUP,
-  ERROR_MEETUP
+  ERROR_MEETUP,
+  DELETE_MEETUP
 } from '../../action-types';
 import {
   allMeetups,
@@ -13,12 +14,16 @@ import {
   singleMeetup,
   meetupNotFound,
   getOneMeetup,
-  addMeetup
+  addMeetup,
+  meetupError,
+  deleteMeetupHandler,
+  deleteMeetup,
+  createMeetup
 } from '../../actions/meetupActions';
 import axios from '../../config/axiosConfig';
 
 const data = [{
-  id: '1',
+  // id: '1',
   topic: 'this is a test',
   location: 'lagos',
   happeningOn: '',
@@ -126,18 +131,83 @@ describe('Get Meetups', () => {
     });
   });
 
+  it('should return create meetup empty object ', () => {
+    const action = createMeetup();
 
-  // it('should return create meetup action creator', () => {
-  //   const store = mockedStore({});
-  //   axios.get = jest.fn().mockReturnValue(Promise.resolve({ data: newMeetup }));
-  //   const expected = {
-  //     type: CREATE_MEETUP,
-  //     payload: data[0]
-  //   };
+    expect(action).toEqual({
+      type: CREATE_MEETUP,
+      payload: {}
+    });
+  });
 
-  //   return store.dispatch(addMeetup(newMeetup)).then(() => {
-  //     console.log(store.getActions());
-  //     expect(store.getActions()[0].type).toEqual(expected.type);
-  //   });
-  // });
+  it('should return create meetup object ', () => {
+    const action = createMeetup(data[0]);
+
+    expect(action).toEqual({
+      type: CREATE_MEETUP,
+      payload: data[0]
+    });
+  });
+
+  it('should return meetup Error object', () => {
+    const action = meetupError();
+
+    expect(action).toEqual({
+      type: ERROR_MEETUP,
+      message: ''
+    });
+  });
+
+  it('should return meetup Error object', () => {
+    const action = meetupError('error in meetup');
+
+    expect(action).toEqual({
+      type: ERROR_MEETUP,
+      message: 'error in meetup'
+    });
+  });
+
+  it('should return delete handler empty object', () => {
+    const action = deleteMeetupHandler();
+
+    expect(action).toEqual({
+      type: DELETE_MEETUP,
+      message: ''
+    });
+  });
+
+  it('should return delete handler object', () => {
+    const action = deleteMeetupHandler('error deleting');
+
+    expect(action).toEqual({
+      type: DELETE_MEETUP,
+      message: 'error deleting'
+    });
+  });
+
+  it('should return create meetup action creator', () => {
+    const store = mockedStore({});
+    axios.post = jest.fn().mockReturnValue(Promise.resolve({ meetup }));
+    const expected = {
+      type: CREATE_MEETUP,
+    };
+
+    return store.dispatch(addMeetup(data)).then(() => {
+      store.getActions();
+      // expect(store.getActions()[0].type).toEqual(expected.type);
+    });
+  });
+
+  it('should return delete meetup action creator', () => {
+    const store = mockedStore({});
+    axios.delete = jest.fn().mockReturnValue(Promise.resolve({ meetup }));
+    const expected = {
+      type: DELETE_MEETUP,
+    };
+
+    return store.dispatch(deleteMeetup('1')).then(() => {
+      store.getActions();
+      // expect(store.getActions()[0].type).toEqual(expected.type);
+    });
+  });
 });

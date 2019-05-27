@@ -2,6 +2,8 @@
 
 exports[`Authenticate HOC should render HOC component correctly 1`] = `
 <Route
+  exact={true}
+  path="/"
   render={[Function]}
 />
 `;
