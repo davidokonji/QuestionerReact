@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import MeetupList from './MeetupList';
 import { deleteMeetup } from '../actions';
 
-export const AdminTable = ({ data, deleteOne }) => (
+const AdminTable = ({ data, deleteOne }) => (
   <div className='col-11 mx-4 mx-md-0 mt-4 mt-md-0 col-md-9 shadow p-0 table-responsive-sm'>
     <table className='table table-hover p-0'>
       <thead className='row mx-0'>
@@ -37,4 +37,9 @@ const mapDispatchToProps = {
   deleteOne: deleteMeetup
 };
 
-export default connect(null, mapDispatchToProps)(AdminTable);
+const AdminDash = connect(null, mapDispatchToProps)(AdminTable);
+
+export {
+  AdminDash,
+  AdminTable
+};

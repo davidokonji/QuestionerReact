@@ -10,14 +10,6 @@ exports[`Landing Header component should render header component correctly 1`] =
     >
       Questioner
     </NavLink>
-    <NavLink
-      to="/auth"
-    >
-      <Button
-        styles="button rn_button sm_button"
-        text="ADMIN"
-      />
-    </NavLink>
   </nav>
 </div>
 `;

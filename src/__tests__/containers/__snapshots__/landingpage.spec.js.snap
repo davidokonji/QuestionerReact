@@ -71,3 +71,9 @@ exports[`Landing Page should render landing page correctly 1`] = `
   <Footer />
 </div>
 `;
+
+exports[`Landing Page should return to dashboard if already logged in 1`] = `
+<Redirect
+  to="/dashboard"
+/>
+`;
