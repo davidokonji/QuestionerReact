@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavBarConnected } from '../components/common/NavBar';
-import { getOneMeetup } from '../actions';
+import { getOneMeetup, createQuestion } from '../actions';
 import SingleMeetupTop from '../components/singleMeetupTop';
 import SingleMeetupBottom from '../components/singleMeetupBottom';
 import Footer from '../components/footer.component';
@@ -10,7 +10,7 @@ class SingleMeetup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: false,
     };
   }
 
@@ -34,14 +34,20 @@ class SingleMeetup extends Component {
 
   render() {
     const {
-      meetup
+      meetup,
+      addQuestion
     } = this.props;
     const { open } = this.state;
     return (
       <div>
         <NavBarConnected />
         <div className='container mt-5 shadow-sm'>
-          <SingleMeetupTop {...meetup} toggle={this.toggle} open={open} />
+          <SingleMeetupTop
+            {...meetup}
+            toggle={this.toggle}
+            open={open}
+            addQuestion={addQuestion}
+          />
           <SingleMeetupBottom />
         </div>
         <Footer />
@@ -54,7 +60,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  singleMeetup: getOneMeetup
+  singleMeetup: getOneMeetup,
+  addQuestion: createQuestion
 };
 
 const OneMeetup = connect(mapStateToProps, mapDispatchToProps)(SingleMeetup);

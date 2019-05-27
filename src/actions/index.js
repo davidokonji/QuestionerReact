@@ -21,6 +21,11 @@ import {
   logoutHandler
 } from './UserAction';
 
+import {
+  createQuestionHandler,
+  questionErrorHandeler,
+  createQuestion
+} from './QuestionActions';
 
 export {
   allMeetups,
@@ -40,5 +45,8 @@ export {
   addMeetup,
   meetupError,
   deleteMeetup,
-  deleteMeetupHandler
+  deleteMeetupHandler,
+  createQuestionHandler,
+  questionErrorHandeler,
+  createQuestion
 };

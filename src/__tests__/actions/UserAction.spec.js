@@ -47,6 +47,7 @@ const Register = {
   phonenumber: '08109991112',
   isadmin: false
 };
+const data = [Register];
 
 const message = {
   message: 'message test',
@@ -132,9 +133,9 @@ describe('Registration Actions', () => {
     });
   });
 
-  it('should return registration action creator error object', () => {
+  it('should return registration action creator object', () => {
     const store = mockedStore({});
-    axios.post = jest.fn().mockReturnValue(Promise.resolve({ Register }));
+    axios.post = jest.fn().mockReturnValue(Promise.resolve({ data: { data } }));
     const expected = [USER_REGISTER];
 
     return store.dispatch(RegisterAction(Register))
@@ -143,7 +144,7 @@ describe('Registration Actions', () => {
 
   it('should return registration action creator error object', () => {
     const store = mockedStore({});
-    axios.post = jest.fn().mockReturnValue(Promise.reject({ Register }));
+    axios.post = jest.fn().mockReturnValue(Promise.resolve({ Register }));
     const expected = [AUTHENTICATION_ERROR];
 
     return store.dispatch(RegisterAction(Register))

@@ -12,3 +12,7 @@ export const GET_MEETUP_ID = 'GET_MEETUP_ID';
 export const CREATE_MEETUP = 'CREATE_MEETUP';
 export const ERROR_MEETUP = 'ERROR_MEETUP';
 export const DELETE_MEETUP = 'DELETE_MEETUP';
+
+// Question Action Types
+export const CREATE_QUESTION = 'CREATE_QUESTION';
+export const QUESTION_ERROR = 'QUESTION_ERROR';

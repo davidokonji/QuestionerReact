@@ -103,6 +103,8 @@ exports[`Single Meetup Top Component should render component correctly 1`] = `
   >
     <form
       className="my-5"
+      method="post"
+      onSubmit={[Function]}
     >
       <div
         className="form-group mx-3 my-3"
@@ -116,13 +118,16 @@ exports[`Single Meetup Top Component should render component correctly 1`] = `
         <input
           aria-describedby="questionTitle"
           className="form-control p-4 shadow-none "
+          name="title"
+          onChange={[Function]}
           placeholder="Add a question title"
           style={
             Object {
               "fontSize": "1rem",
             }
           }
-          type="email"
+          type="text"
+          value=""
         />
       </div>
       <div
@@ -130,15 +135,20 @@ exports[`Single Meetup Top Component should render component correctly 1`] = `
       >
         <textarea
           className="form-control form-control-lg p-2 shadow-none "
+          name="body"
+          onChange={[Function]}
           placeholder="Talk about the question..."
           rows="4"
+          value=""
         />
       </div>
       <p>
-        <Button
-          styles="btn my-2 py-0 col-12"
-          text="POST"
-        />
+        <button
+          className="btn my-2 py-0 col-12"
+          type="submit"
+        >
+           POST 
+        </button>
       </p>
     </form>
   </ModalComponent>
@@ -253,6 +263,8 @@ exports[`Single Meetup Top Component should render component correctly with prop
   >
     <form
       className="my-5"
+      method="post"
+      onSubmit={[Function]}
     >
       <div
         className="form-group mx-3 my-3"
@@ -266,13 +278,16 @@ exports[`Single Meetup Top Component should render component correctly with prop
         <input
           aria-describedby="questionTitle"
           className="form-control p-4 shadow-none "
+          name="title"
+          onChange={[Function]}
           placeholder="Add a question title"
           style={
             Object {
               "fontSize": "1rem",
             }
           }
-          type="email"
+          type="text"
+          value=""
         />
       </div>
       <div
@@ -280,16 +295,21 @@ exports[`Single Meetup Top Component should render component correctly with prop
       >
         <textarea
           className="form-control form-control-lg p-2 shadow-none "
+          name="body"
+          onChange={[Function]}
           placeholder="Talk about the question..."
           rows="4"
+          value=""
         />
       </div>
       <p>
-        <Button
-          event={[MockFunction]}
-          styles="btn my-2 py-0 col-12"
-          text="POST"
-        />
+        <button
+          className="btn my-2 py-0 col-12"
+          onClick={[MockFunction]}
+          type="submit"
+        >
+           POST 
+        </button>
       </p>
     </form>
   </ModalComponent>
