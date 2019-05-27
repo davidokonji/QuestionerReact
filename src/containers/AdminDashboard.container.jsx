@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Footer from '../components/footer.component';
 import { NavBarConnected } from '../components/common/NavBar';
 import AdminSideBar from '../components/AdminSidebar';
-import AdminTable from '../components/AdminTable';
+import { AdminDash } from '../components/AdminTable';
 import { getMeetups } from '../actions';
 
 class AdminDashboard extends Component {
@@ -20,24 +21,26 @@ class AdminDashboard extends Component {
   }
 
   toggle = () => {
-    //   this.props.delete(props.id).then(() => {
-
-    //   })
     this.setState(prevState => ({
       open: !prevState.open
     }));
   }
 
   render() {
-    const { meetups: { data = [] } } = this.props;
+    const { meetups: { data = [] }, isAdmin } = this.props;
     const { open } = this.state;
+
+    if (!isAdmin) {
+      return <Redirect to='/' />;
+    }
+
     return (
       <div>
         <NavBarConnected />
         <div className='container'>
           <div className='row mt-5'>
             <AdminSideBar open={open} toggle={this.toggle} />
-            <AdminTable data={data} />
+            <AdminDash data={data} />
           </div>
         </div>
         <Footer />
@@ -47,7 +50,8 @@ class AdminDashboard extends Component {
 }
 
 const mapStateToProps = state => ({
-  meetups: state.meetups
+  meetups: state.meetups,
+  admin: state.auth.isAdmin
 });
 
 const mapDispatchToProps = {

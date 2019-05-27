@@ -17,14 +17,7 @@ const Header = (props) => {
           </NavLink>
         )
           : (
-            <React.Fragment>
-              <NavLink to='/auth'>
-                <Button
-                  text='ADMIN'
-                  styles='button rn_button sm_button'
-                />
-              </NavLink>
-            </React.Fragment>
+            ''
           )
       }
       </nav>
