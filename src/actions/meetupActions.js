@@ -3,7 +3,8 @@ import {
   GET_SINGLE_MEETUP,
   MEETUP_NOTFOUND,
   CREATE_MEETUP,
-  ERROR_MEETUP
+  ERROR_MEETUP,
+  DELETE_MEETUP
 } from '../action-types';
 import axios from '../config/axiosConfig';
 
@@ -27,8 +28,13 @@ const createMeetup = (payload = {}) => ({
   payload
 });
 
-const meetupCreationError = (message = {}) => ({
+const meetupError = (message = '') => ({
   type: ERROR_MEETUP,
+  message
+});
+
+const deleteMeetupHandler = (message = '') => ({
+  type: DELETE_MEETUP,
   message
 });
 
@@ -58,7 +64,16 @@ const addMeetup = data => async (dispatch) => {
     });
     return dispatch(createMeetup(res.data.data[0]));
   } catch (error) {
-    return dispatch(meetupCreationError(error.message));
+    return dispatch(meetupError(error.message));
+  }
+};
+
+const deleteMeetup = data => async (dispatch) => {
+  try {
+    const res = await axios.delete(`meetups/${data}`);
+    return dispatch(deleteMeetup(res.data.data));
+  } catch (error) {
+    return dispatch(meetupError(error.message));
   }
 };
 
@@ -70,5 +85,7 @@ export {
   getOneMeetup,
   createMeetup,
   addMeetup,
-  meetupCreationError
+  meetupError,
+  deleteMeetupHandler,
+  deleteMeetup
 };

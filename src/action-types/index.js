@@ -11,3 +11,4 @@ export const MEETUP_NOTFOUND = 'MEETUP_NOTFOUND';
 export const GET_MEETUP_ID = 'GET_MEETUP_ID';
 export const CREATE_MEETUP = 'CREATE_MEETUP';
 export const ERROR_MEETUP = 'ERROR_MEETUP';
+export const DELETE_MEETUP = 'DELETE_MEETUP';

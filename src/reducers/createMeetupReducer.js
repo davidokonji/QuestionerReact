@@ -1,5 +1,6 @@
 import {
   CREATE_MEETUP,
+  DELETE_MEETUP,
   ERROR_MEETUP
 } from '../action-types';
 
@@ -15,6 +16,10 @@ const createMeetup = (state = defaultState, action) => {
         ...payload
       };
     case ERROR_MEETUP:
+      return {
+        message
+      };
+    case DELETE_MEETUP:
       return {
         message
       };

@@ -6,7 +6,9 @@ import {
   getOneMeetup,
   createMeetup,
   addMeetup,
-  meetupCreationError
+  meetupError,
+  deleteMeetup,
+  deleteMeetupHandler
 } from './meetupActions';
 import {
   LoginAction,
@@ -36,5 +38,7 @@ export {
   logoutHandler,
   createMeetup,
   addMeetup,
-  meetupCreationError
+  meetupError,
+  deleteMeetup,
+  deleteMeetupHandler
 };
