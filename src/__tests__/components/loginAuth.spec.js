@@ -6,19 +6,16 @@ let wrapper;
 describe('Login Compnent', () => {
   beforeAll(() => {
     const userLogin = jest.fn();
-    const push = jest.fn();
+    const user = {
+      message: ''
+    };
     const history = {
-      history: {
-        push
-      }
+      push: jest.fn()
     };
     const redirect = {
       redirect: true
     };
-    wrapper = shallow(<LoginComponent userLogin={userLogin} history={history} redirect={redirect} />);
-  });
-  it('should render Login component correctly', () => {
-    expect(wrapper).toMatchSnapshot();
+    wrapper = shallow(<LoginComponent userLogin={userLogin} history={history} redirect={redirect} user={user} />);
   });
 
   it('should handle email change', () => {
@@ -49,8 +46,4 @@ describe('Login Compnent', () => {
     });
     expect(wrapper).toMatchSnapshot();
   });
-
-  // it('should test mapStateToProps object', () => {
-    
-  // });
 });

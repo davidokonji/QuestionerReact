@@ -2,16 +2,20 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { NavBar } from '../../../components/common/NavBar';
 
+const history = {
+  push: jest.fn()
+};
+
 describe('Nav bar component', () => {
   it('should render nav bar correctly', () => {
-    const wrapper = shallow(<NavBar isAdmin />);
+    const wrapper = shallow(<NavBar isAdmin history={history} />);
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render nav bar correctly', () => {
     const Logout = jest.fn();
-    const wrapper = shallow(<NavBar Logout={Logout} isAdmin={false} />);
+    const wrapper = shallow(<NavBar Logout={Logout} isAdmin={false} history={history} />);
 
     wrapper.setState({
       isOpen: false

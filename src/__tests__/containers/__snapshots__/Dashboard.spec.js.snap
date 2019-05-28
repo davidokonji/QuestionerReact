@@ -2,7 +2,7 @@
 
 exports[`Dashboard container should  render dashboard container 1`] = `
 <Fragment>
-  <ConnectFunction />
+  <withRouter(Connect(NavBar)) />
   <div
     className=""
   >

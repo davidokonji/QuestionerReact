@@ -82,6 +82,7 @@ exports[`Nav bar component should render nav bar correctly 1`] = `
             tag="div"
           >
             <DropdownItem
+              onClick={[Function]}
               tag="button"
               toggle={true}
             >
@@ -180,6 +181,7 @@ exports[`Nav bar component should render nav bar correctly 2`] = `
             tag="div"
           >
             <DropdownItem
+              onClick={[Function]}
               tag="button"
               toggle={true}
             >

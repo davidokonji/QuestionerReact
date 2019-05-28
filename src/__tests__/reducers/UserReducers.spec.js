@@ -1,4 +1,4 @@
-import { loginReducer, RegisterReducer } from '../../reducers';
+import { loginReducer } from '../../reducers';
 import {
   USER_LOGIN,
   USER_REGISTER,
@@ -42,7 +42,7 @@ describe('User reducers', () => {
   });
 
   it('should return user registration object', () => {
-    const reducer = RegisterReducer(undefined, {
+    const reducer = loginReducer(undefined, {
       type: USER_REGISTER,
       payload: UserMocks[0]
     });

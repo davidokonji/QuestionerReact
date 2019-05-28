@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ToastContainer } from 'react-toastify';
 import Header from '../components/Landingheader';
 import Login from '../components/LoginAuth';
-import { Register } from '../components/RegAuth';
+import { RegisterConnected } from '../components/RegAuth';
 import Footer from '../components/footer.component';
 
 class authPage extends Component {
@@ -57,7 +57,7 @@ class authPage extends Component {
             </div>
             {visibility
               ? (
-                <Register />
+                <RegisterConnected />
               )
               : <Login />}
           </div>

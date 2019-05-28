@@ -21,7 +21,9 @@ import {
   authFailure,
   authSuccess,
   logoutUser,
-  logoutHandler
+  logoutHandler,
+  clearError,
+  clear
 } from './UserAction';
 
 import {
@@ -54,5 +56,7 @@ export {
   createQuestion,
   meetupRsvp,
   meetupRsvpHandler,
-  rsvpError
+  rsvpError,
+  clearError,
+  clear
 };

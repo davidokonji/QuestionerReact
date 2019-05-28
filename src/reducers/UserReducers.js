@@ -3,7 +3,8 @@ import {
   USER_REGISTER,
   AUTHENTICATION_ERROR,
   AUTHENTICATION_SUCCESS,
-  USER_LOGOUT
+  USER_LOGOUT,
+  CLEAR_AUTH_ERROR
 } from '../action-types';
 
 const defaultUserState = {
@@ -17,7 +18,7 @@ const defaultUserState = {
   redirect: false
 };
 
-const loginReducer = (state = defaultUserState, action) => {
+const authReducer = (state = defaultUserState, action) => {
   const { type } = action;
 
   switch (type) {
@@ -25,6 +26,11 @@ const loginReducer = (state = defaultUserState, action) => {
       return {
         ...state,
         ...action.user,
+      };
+    case USER_REGISTER:
+      return {
+        ...state,
+        ...action.payload
       };
     case AUTHENTICATION_SUCCESS:
       return {
@@ -37,6 +43,11 @@ const loginReducer = (state = defaultUserState, action) => {
         message: action.message,
         redirect: false
       };
+    case CLEAR_AUTH_ERROR:
+      return {
+        message: '',
+        redirect: false
+      };
     case USER_LOGOUT:
       return {
         ...defaultUserState
@@ -47,21 +58,4 @@ const loginReducer = (state = defaultUserState, action) => {
   }
 };
 
-const RegisterReducer = (state = defaultUserState, action) => {
-  const { type } = action;
-
-  switch (type) {
-    case USER_REGISTER:
-      return {
-        ...state,
-        ...action.payload
-      };
-
-    default:
-      return state;
-  }
-};
-export {
-  loginReducer,
-  RegisterReducer
-};
+export default authReducer;
