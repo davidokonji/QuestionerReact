@@ -3,7 +3,8 @@ import {
   USER_REGISTER,
   AUTHENTICATION_ERROR,
   AUTHENTICATION_SUCCESS,
-  USER_LOGOUT
+  USER_LOGOUT,
+  CLEAR_AUTH_ERROR
 } from '../action-types';
 import axios from '../config/axiosConfig';
 
@@ -37,6 +38,10 @@ const authSuccess = (message = '') => ({
   message
 });
 
+const clearError = () => ({
+  type: CLEAR_AUTH_ERROR
+});
+
 const logoutHandler = () => ({
   type: USER_LOGOUT,
 });
@@ -56,14 +61,14 @@ const LoginAction = data => async (dispatch) => {
     }));
     return dispatch(authSuccess(`Welcome back ${res.data.data[0].user.username}`));
   } catch (error) {
-    return dispatch(authFailure(error.message));
+    return dispatch(authFailure('invalid credentials' || error.response.data.message));
   }
 };
 
 const RegisterAction = data => async (dispatch) => {
   try {
     const res = await axios.post('/auth/signup', data);
-    localStorage.setItem('token', res.data.data[0].token);
+    localStorage.setItem('token', res.data.token);
     dispatch(RegisterUser({
       id: res.data.data[0].user.id,
       firstname: res.data.data[0].user.firstname,
@@ -74,13 +79,17 @@ const RegisterAction = data => async (dispatch) => {
     }));
     return dispatch(authSuccess(`Thank you for registering ${res.data.data[0].user.username}`));
   } catch (error) {
-    return dispatch(authFailure(error.message));
+    return dispatch(authFailure('incorrect credentials' || error.response.data.message));
   }
 };
 
 const logoutUser = () => async (dispatch) => {
   window.localStorage.removeItem('token');
   await dispatch(logoutHandler());
+};
+
+const clear = () => async (dispatch) => {
+  await dispatch(clearError());
 };
 
 export {
@@ -91,5 +100,7 @@ export {
   authFailure,
   authSuccess,
   logoutUser,
-  logoutHandler
+  logoutHandler,
+  clearError,
+  clear
 };

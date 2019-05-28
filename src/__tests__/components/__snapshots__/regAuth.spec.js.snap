@@ -1,5 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[` 1`] = `
+<form
+  method="post"
+  onSubmit={[Function]}
+>
+  <div
+    className="signup-form"
+    id="signup-form"
+  >
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="firstname"
+        onChange={[Function]}
+        placeholder="First Name"
+        required={true}
+        type="text"
+        value=""
+      />
+      <input
+        className="input form_sm"
+        name="lastname"
+        onChange={[Function]}
+        placeholder="Last Name"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="username"
+        onChange={[Function]}
+        placeholder="Username"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="othername"
+        onChange={[Function]}
+        placeholder="other name"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="phonenumber"
+        onChange={[Function]}
+        placeholder="Phone number"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <input
+      className="input form_lg"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email Address"
+      required={true}
+      type="email"
+      value=""
+    />
+    <input
+      className="input form_lg"
+      name="password"
+      onChange={[Function]}
+      placeholder="Password"
+      required={true}
+      type="password"
+      value=""
+    />
+    <div>
+      <button
+        className="btn"
+        type="submit"
+      >
+        Create account
+      </button>
+    </div>
+  </div>
+</form>
+`;
+
 exports[`Register Compnent should handle firstname change 1`] = `
 <form
   method="post"
@@ -39,6 +139,32 @@ exports[`Register Compnent should handle firstname change 1`] = `
         name="username"
         onChange={[Function]}
         placeholder="Username"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="othername"
+        onChange={[Function]}
+        placeholder="other name"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="phonenumber"
+        onChange={[Function]}
+        placeholder="Phone number"
         required={true}
         type="text"
         value=""
@@ -118,6 +244,32 @@ exports[`Register Compnent should handle firstname change 2`] = `
         value=""
       />
     </div>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="othername"
+        onChange={[Function]}
+        placeholder="other name"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="phonenumber"
+        onChange={[Function]}
+        placeholder="Phone number"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
     <input
       className="input form_lg"
       name="email"
@@ -187,6 +339,32 @@ exports[`Register Compnent should handle form submit 1`] = `
         name="username"
         onChange={[Function]}
         placeholder="Username"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="othername"
+        onChange={[Function]}
+        placeholder="other name"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="phonenumber"
+        onChange={[Function]}
+        placeholder="Phone number"
         required={true}
         type="text"
         value=""
@@ -266,6 +444,32 @@ exports[`Register Compnent should handle password change 1`] = `
         value=""
       />
     </div>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="othername"
+        onChange={[Function]}
+        placeholder="other name"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="double"
+    >
+      <input
+        className="input form_sm"
+        name="phonenumber"
+        onChange={[Function]}
+        placeholder="Phone number"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
     <input
       className="input form_lg"
       name="email"
@@ -282,7 +486,7 @@ exports[`Register Compnent should handle password change 1`] = `
       placeholder="Password"
       required={true}
       type="password"
-      value="password1234"
+      value=""
     />
     <div>
       <button
@@ -340,62 +544,14 @@ exports[`Register Compnent should handle password change 2`] = `
         value=""
       />
     </div>
-    <input
-      className="input form_lg"
-      name="email"
-      onChange={[Function]}
-      placeholder="Email Address"
-      required={true}
-      type="email"
-      value=""
-    />
-    <input
-      className="input form_lg"
-      name="password"
-      onChange={[Function]}
-      placeholder="Password"
-      required={true}
-      type="password"
-      value="password"
-    />
-    <div>
-      <button
-        className="btn"
-        type="submit"
-      >
-        Create account
-      </button>
-    </div>
-  </div>
-</form>
-`;
-
-exports[`Register Compnent should render register component correctly 1`] = `
-<form
-  method="post"
-  onSubmit={[Function]}
->
-  <div
-    className="signup-form"
-    id="signup-form"
-  >
     <div
       className="double"
     >
       <input
         className="input form_sm"
-        name="firstname"
+        name="othername"
         onChange={[Function]}
-        placeholder="First Name"
-        required={true}
-        type="text"
-        value=""
-      />
-      <input
-        className="input form_sm"
-        name="lastname"
-        onChange={[Function]}
-        placeholder="Last Name"
+        placeholder="other name"
         required={true}
         type="text"
         value=""
@@ -406,9 +562,9 @@ exports[`Register Compnent should render register component correctly 1`] = `
     >
       <input
         className="input form_sm"
-        name="username"
+        name="phonenumber"
         onChange={[Function]}
-        placeholder="Username"
+        placeholder="Phone number"
         required={true}
         type="text"
         value=""

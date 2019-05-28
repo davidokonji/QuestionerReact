@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {
   Collapse,
@@ -31,14 +31,14 @@ class NavBar extends React.Component {
   }
 
   logout = () => {
-    const { Logout } = this.props;
+    const { Logout, history: { push } } = this.props;
     Logout();
-    window.location.assign('/');
+    push('/');
   }
 
   render() {
     const { isOpen } = this.state;
-    const { isAdmin } = this.props;
+    const { isAdmin, history: { push } } = this.props;
     return (
       <div>
         <Navbar expand='md' dark className='p-3 nav-bar'>
@@ -63,7 +63,7 @@ class NavBar extends React.Component {
                       user
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>
+                  <DropdownItem onClick={() => push('/user')}>
                         Your profile
                   </DropdownItem>
                   <DropdownItem divider />
@@ -88,7 +88,7 @@ const mapDispatchToProps = {
   Logout: logoutUser
 };
 
-const NavBarConnected = connect(mapStateToProps, mapDispatchToProps)(NavBar);
+const NavBarConnected = withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar));
 export {
   NavBar,
   NavBarConnected

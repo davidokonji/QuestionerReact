@@ -2,7 +2,7 @@
 
 exports[`Single Meetup container should  render Single Meetup container with props 1`] = `
 <div>
-  <ConnectFunction />
+  <withRouter(Connect(NavBar)) />
   <div
     className="container mt-5 shadow-sm"
   >
@@ -38,7 +38,7 @@ exports[`Single Meetup container should  render Single Meetup container with pro
 
 exports[`Single Meetup container should  render Single Meetup container with props 2`] = `
 <div>
-  <ConnectFunction />
+  <withRouter(Connect(NavBar)) />
   <div
     className="container mt-5 shadow-sm"
   >

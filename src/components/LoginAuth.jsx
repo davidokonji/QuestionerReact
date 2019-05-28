@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { toast } from 'react-toastify';
-import { LoginAction } from '../actions';
+import { LoginAction, clear } from '../actions';
 
 export class LoginComponent extends Component {
   constructor(props) {
@@ -32,6 +32,13 @@ export class LoginComponent extends Component {
     userLogin(data);
   }
 
+  resetForm = () => {
+    this.setState({
+      email: '',
+      password: ''
+    });
+  }
+
 
   render() {
     const {
@@ -39,13 +46,28 @@ export class LoginComponent extends Component {
       password,
       disable
     } = this.state;
-    const { user = '', redirect = false, history: { push } } = this.props;
+    const {
+      user: {
+        message = ''
+      },
+      redirect = false,
+      history: { push },
+      clearError
+    } = this.props;
     if (redirect) {
-      toast(user.message, {
+      toast(message, {
         position: toast.POSITION.TOP_CENTER,
         type: toast.TYPE.SUCCESS,
         onClose: () => push('/dashboard')
       });
+    } else if (redirect === false && message.length !== 0) {
+      toast(message, {
+        position: toast.POSITION.TOP_CENTER,
+        type: toast.TYPE.WARNING,
+        className: 'rotateY animated'
+      });
+      this.resetForm();
+      clearError();
     }
     return (
       <form method='post' onSubmit={this.handleSignin}>
@@ -91,7 +113,8 @@ export const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  userLogin: LoginAction
+  userLogin: LoginAction,
+  clearError: clear
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LoginComponent));

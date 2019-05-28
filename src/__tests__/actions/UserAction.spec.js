@@ -16,7 +16,7 @@ import {
   USER_REGISTER,
   AUTHENTICATION_ERROR,
   AUTHENTICATION_SUCCESS,
-  USER_LOGOUT
+  USER_LOGOUT,
 } from '../../action-types';
 
 const userData = {
@@ -104,7 +104,7 @@ describe('User login action', () => {
 
   it('should return Login action creator error object', () => {
     const store = mockedStore({});
-    axios.post = jest.fn().mockReturnValue(Promise.resolve({ errorlogin }));
+    axios.post = jest.fn().mockReturnValue(Promise.resolve({ error: { response: { data: { message } } } }));
     const expected = [AUTHENTICATION_ERROR];
 
     return store.dispatch(LoginAction(errorlogin))
@@ -144,7 +144,7 @@ describe('Registration Actions', () => {
 
   it('should return registration action creator error object', () => {
     const store = mockedStore({});
-    axios.post = jest.fn().mockReturnValue(Promise.resolve({ Register }));
+    axios.post = jest.fn().mockReturnValue(Promise.resolve({ data: { message } }));
     const expected = [AUTHENTICATION_ERROR];
 
     return store.dispatch(RegisterAction(Register))

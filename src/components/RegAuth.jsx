@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { RegisterAction } from '../actions/UserAction';
+import { withRouter } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { RegisterAction, clear } from '../actions/UserAction';
 
-export class Register extends Component {
+class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,6 +13,8 @@ export class Register extends Component {
       email: '',
       username: '',
       password: '',
+      othername: '',
+      phonenumber: ''
     };
   }
 
@@ -34,6 +38,8 @@ export class Register extends Component {
       username,
       email,
       password,
+      phonenumber,
+      othername
     } = this.state;
     const { userRegister } = this.props;
 
@@ -43,6 +49,8 @@ export class Register extends Component {
       username,
       email,
       password,
+      phonenumber,
+      othername
     };
     userRegister(data);
   }
@@ -54,6 +62,18 @@ export class Register extends Component {
     });
   }
 
+  resetForm = () => {
+    this.setState({
+      firstname: '',
+      lastname: '',
+      email: '',
+      username: '',
+      password: '',
+      othername: '',
+      phonenumber: ''
+    });
+  }
+
   render() {
     const {
       firstname,
@@ -61,7 +81,33 @@ export class Register extends Component {
       email,
       username,
       password,
+      othername,
+      phonenumber
     } = this.state;
+
+    const {
+      user: {
+        message = ''
+      },
+      redirect = false,
+      history: { push },
+      clearError
+    } = this.props;
+    if (redirect) {
+      toast(message, {
+        position: toast.POSITION.TOP_CENTER,
+        type: toast.TYPE.SUCCESS,
+        onClose: () => push('/dashboard')
+      });
+    } else if (redirect === false && message.length !== 0) {
+      toast(message, {
+        position: toast.POSITION.TOP_CENTER,
+        type: toast.TYPE.WARNING,
+        className: 'rotateY animated'
+      });
+      this.resetForm();
+      clearError();
+    }
 
     return (
       <form method='post' onSubmit={this.handleSignup}>
@@ -97,6 +143,28 @@ export class Register extends Component {
               required
             />
           </div>
+          <div className='double'>
+            <input
+              type='text'
+              placeholder='other name'
+              value={othername}
+              onChange={this.handleInputChange}
+              name='othername'
+              className='input form_sm'
+              required
+            />
+          </div>
+          <div className='double'>
+            <input
+              type='text'
+              placeholder='Phone number'
+              value={phonenumber}
+              onChange={this.handleInputChange}
+              name='phonenumber'
+              className='input form_sm'
+              required
+            />
+          </div>
           <input
             type='email'
             placeholder='Email Address'
@@ -126,8 +194,18 @@ export class Register extends Component {
   }
 }
 
+export const mapStateToProps = state => ({
+  user: state.auth,
+  redirect: state.auth.redirect
+});
+
 const mapDispatchToProps = {
-  userRegister: RegisterAction
+  userRegister: RegisterAction,
+  clearError: clear
 };
 
-export default connect(null, mapDispatchToProps)(Register);
+const RegisterConnected = withRouter(connect(mapStateToProps, mapDispatchToProps)(Register));
+export {
+  Register,
+  RegisterConnected
+};
