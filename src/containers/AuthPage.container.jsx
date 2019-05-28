@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import Header from '../components/Landingheader';
 import Login from '../components/LoginAuth';
 import { Register } from '../components/RegAuth';

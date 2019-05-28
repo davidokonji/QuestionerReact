@@ -4,7 +4,9 @@ import {
   MEETUP_NOTFOUND,
   CREATE_MEETUP,
   ERROR_MEETUP,
-  DELETE_MEETUP
+  DELETE_MEETUP,
+  MEETUP_RSVP,
+  RSVP_ERROR
 } from '../action-types';
 import axios from '../config/axiosConfig';
 
@@ -35,6 +37,17 @@ const meetupError = (message = '') => ({
 
 const deleteMeetupHandler = (message = '') => ({
   type: DELETE_MEETUP,
+  message
+});
+
+const meetupRsvpHandler = (payload = {}, message = '') => ({
+  type: MEETUP_RSVP,
+  payload,
+  message
+});
+
+const rsvpError = (message = '') => ({
+  type: RSVP_ERROR,
   message
 });
 
@@ -77,6 +90,16 @@ const deleteMeetup = data => async (dispatch) => {
   }
 };
 
+const meetupRsvp = (id, data) => async (dispatch) => {
+  try {
+    const res = await axios.post(`/meetups/${id}/rsvps`, data);
+
+    return dispatch(meetupRsvpHandler(res.data.data[0], 'Thanks for the response'));
+  } catch (error) {
+    return dispatch(rsvpError('Thanks, Response already taken'));
+  }
+};
+
 export {
   allMeetups,
   getMeetups,
@@ -87,5 +110,8 @@ export {
   addMeetup,
   meetupError,
   deleteMeetupHandler,
-  deleteMeetup
+  deleteMeetup,
+  meetupRsvp,
+  meetupRsvpHandler,
+  rsvpError
 };

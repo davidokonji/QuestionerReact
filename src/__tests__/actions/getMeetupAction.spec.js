@@ -6,7 +6,9 @@ import {
   MEETUP_NOTFOUND,
   CREATE_MEETUP,
   ERROR_MEETUP,
-  DELETE_MEETUP
+  DELETE_MEETUP,
+  MEETUP_RSVP,
+  RSVP_ERROR
 } from '../../action-types';
 import {
   allMeetups,
@@ -18,7 +20,10 @@ import {
   meetupError,
   deleteMeetupHandler,
   deleteMeetup,
-  createMeetup
+  createMeetup,
+  meetupRsvp,
+  meetupRsvpHandler,
+  rsvpError
 } from '../../actions/meetupActions';
 import axios from '../../config/axiosConfig';
 
@@ -208,6 +213,44 @@ describe('Get Meetups', () => {
     return store.dispatch(deleteMeetup('1')).then(() => {
       store.getActions();
       // expect(store.getActions()[0].type).toEqual(expected.type);
+    });
+  });
+
+  it('should return rsvp handler empty object', () => {
+    const action = meetupRsvpHandler();
+
+    expect(action).toEqual({
+      type: MEETUP_RSVP,
+      payload: {},
+      message: ''
+    });
+  });
+
+  it('should return rsvp handler', () => {
+    const action = meetupRsvpHandler({}, 'successfull');
+
+    expect(action).toEqual({
+      type: MEETUP_RSVP,
+      payload: {},
+      message: 'successfull'
+    });
+  });
+
+  it('should return rsvp error object', () => {
+    const action = rsvpError('error rsvp');
+
+    expect(action).toEqual({
+      type: RSVP_ERROR,
+      message: 'error rsvp'
+    });
+  });
+
+  it('should return rsvp error object', () => {
+    const action = rsvpError();
+
+    expect(action).toEqual({
+      type: RSVP_ERROR,
+      message: ''
     });
   });
 });

@@ -7,7 +7,7 @@ import {
 import {
   createQuestion,
   questionErrorHandeler,
-  createQuestionHandler
+  createQuestionHandler,
 } from '../../actions';
 import axios from '../../config/axiosConfig';
 
@@ -49,6 +49,15 @@ describe('Questions Actions', () => {
     expect(action).toEqual({
       type: QUESTION_ERROR,
       message: 'error in question'
+    });
+  });
+
+  it('should return error question handler object', () => {
+    const action = questionErrorHandeler();
+
+    expect(action).toEqual({
+      type: QUESTION_ERROR,
+      message: ''
     });
   });
 

@@ -1,5 +1,1183 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Single Meetup Top Component should render component  1`] = `
+<SingleMeetupTop
+  addQuestion={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "body": "",
+            "meetupId": "1",
+            "title": "",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  happeningOn=""
+  id="1"
+  location="lagos"
+  open={true}
+  rsvp={[MockFunction]}
+  tags={
+    Array [
+      "test",
+    ]
+  }
+  title="this is a test"
+  toggle={[MockFunction]}
+>
+  <div
+    className="d-flex flex-md-row flex-column justify-content-center col-12"
+  >
+    <div
+      className="col-12 col-md p-0 m-0"
+    >
+      <img
+        alt="meetupImage"
+        className="mt-md-3 m-0 p-0 meetup-img col-12"
+      />
+    </div>
+    <div
+      className="meetup-info ml-4 mt-md-5 mt-2 col"
+    >
+      <div
+        className="my-5"
+      >
+        <h2
+          className="meetup-title"
+        />
+      </div>
+      <div
+        className="meetup-date my-4 row"
+      >
+        <p
+          className="col-2 mr-0"
+        >
+          <img
+            alt="date"
+            className="h-75 icon"
+            src={
+              Object {
+                "canInstrument": true,
+                "createTransformer": [Function],
+                "getCacheKey": [Function],
+                "process": [Function],
+              }
+            }
+          />
+        </p>
+        <p
+          className="col-9"
+        />
+      </div>
+      <div
+        className="meetup-location my-4 row"
+      >
+        <p
+          className="col-2"
+        >
+          <img
+            alt="location"
+            className="h-75 icon"
+            src={
+              Object {
+                "canInstrument": true,
+                "createTransformer": [Function],
+                "getCacheKey": [Function],
+                "process": [Function],
+              }
+            }
+          />
+        </p>
+        <p
+          className="col-9"
+        >
+          lagos
+        </p>
+      </div>
+      <div
+        className="meetup-rsvp my-4 row"
+      >
+        <p
+          className="col-2"
+        >
+          RSVP
+        </p>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm yes"
+            text="Yes"
+          >
+            <button
+              className="btn-info px-4 py-1 rounded shadow-sm yes"
+              onClick={[Function]}
+              type="button"
+            >
+              Yes
+            </button>
+          </Button>
+        </div>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm no"
+            text="No"
+          >
+            <button
+              className="btn-info px-4 py-1 rounded shadow-sm no"
+              onClick={[Function]}
+              type="button"
+            >
+              No
+            </button>
+          </Button>
+        </div>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm maybe"
+            text="Maybe"
+          >
+            <button
+              className="btn-info px-4 py-1 rounded shadow-sm maybe"
+              onClick={[Function]}
+              type="button"
+            >
+              Maybe
+            </button>
+          </Button>
+        </div>
+      </div>
+      <div
+        className="meetup-tags my-4"
+      >
+        Tags
+      </div>
+      <div
+        className="meetup-question my-4"
+      >
+        <Button
+          event={[MockFunction]}
+          styles="btn col-md-8 my-4 col-10"
+          text=" Ask Question"
+        >
+          <button
+            className="btn col-md-8 my-4 col-10"
+            onClick={[MockFunction]}
+            type="button"
+          >
+             Ask Question
+          </button>
+        </Button>
+      </div>
+    </div>
+  </div>
+  <ModalComponent
+    className="my-5 shadow-sm"
+    open={true}
+    toggle={[MockFunction]}
+  >
+    <div>
+      <Modal
+        autoFocus={true}
+        backdrop={true}
+        backdropTransition={
+          Object {
+            "mountOnEnter": true,
+            "timeout": 150,
+          }
+        }
+        centered={false}
+        className="my-5 shadow-sm"
+        external={
+          <button
+            className="close"
+            onClick={[MockFunction]}
+            style={
+              Object {
+                "position": "absolute",
+                "right": "15px",
+                "top": "15px",
+              }
+            }
+            type="button"
+          >
+            ×
+          </button>
+        }
+        fade={true}
+        isOpen={true}
+        keyboard={true}
+        modalTransition={
+          Object {
+            "timeout": 300,
+          }
+        }
+        onClosed={[Function]}
+        onOpened={[Function]}
+        role="dialog"
+        toggle={[MockFunction]}
+        zIndex={1050}
+      >
+        <Portal
+          node={
+            <div
+              style="position: relative; z-index: 1050;"
+              tabindex="-1"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="modal fade"
+                  role="dialog"
+                  style="display: block;"
+                  tabindex="-1"
+                >
+                  <button
+                    class="close"
+                    style="position: absolute; top: 15px; right: 15px;"
+                    type="button"
+                  >
+                    ×
+                  </button>
+                  <div
+                    class="modal-dialog my-5 shadow-sm"
+                    role="document"
+                  >
+                    <div
+                      class="modal-content"
+                    >
+                      <div
+                        class="modal-body"
+                      >
+                        <form
+                          class="my-5"
+                          method="post"
+                        >
+                          <div
+                            class="form-group mx-3 my-3"
+                          >
+                            <small
+                              class="form-text text-muted"
+                              id="subject"
+                            >
+                              Question Subject
+                            </small>
+                            <input
+                              aria-describedby="questionTitle"
+                              class="form-control p-4 shadow-none "
+                              name="title"
+                              placeholder="Add a question title"
+                              style="font-size: 1rem;"
+                              type="text"
+                              value=""
+                            />
+                          </div>
+                          <div
+                            class="form-group my-3 mx-3 "
+                          >
+                            <textarea
+                              class="form-control form-control-lg p-2 shadow-none "
+                              name="body"
+                              placeholder="Talk about the question..."
+                              rows="4"
+                            />
+                          </div>
+                          <p>
+                            <button
+                              class="btn my-2 py-0 col-12"
+                              type="submit"
+                            >
+                               POST 
+                            </button>
+                          </p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="modal-backdrop fade"
+                />
+              </div>
+            </div>
+          }
+        >
+          <Portal
+            containerInfo={
+              <div
+                style="position: relative; z-index: 1050;"
+                tabindex="-1"
+              >
+                <div
+                  class=""
+                >
+                  <div
+                    class="modal fade"
+                    role="dialog"
+                    style="display: block;"
+                    tabindex="-1"
+                  >
+                    <button
+                      class="close"
+                      style="position: absolute; top: 15px; right: 15px;"
+                      type="button"
+                    >
+                      ×
+                    </button>
+                    <div
+                      class="modal-dialog my-5 shadow-sm"
+                      role="document"
+                    >
+                      <div
+                        class="modal-content"
+                      >
+                        <div
+                          class="modal-body"
+                        >
+                          <form
+                            class="my-5"
+                            method="post"
+                          >
+                            <div
+                              class="form-group mx-3 my-3"
+                            >
+                              <small
+                                class="form-text text-muted"
+                                id="subject"
+                              >
+                                Question Subject
+                              </small>
+                              <input
+                                aria-describedby="questionTitle"
+                                class="form-control p-4 shadow-none "
+                                name="title"
+                                placeholder="Add a question title"
+                                style="font-size: 1rem;"
+                                type="text"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              class="form-group my-3 mx-3 "
+                            >
+                              <textarea
+                                class="form-control form-control-lg p-2 shadow-none "
+                                name="body"
+                                placeholder="Talk about the question..."
+                                rows="4"
+                              />
+                            </div>
+                            <p>
+                              <button
+                                class="btn my-2 py-0 col-12"
+                                type="submit"
+                              >
+                                 POST 
+                              </button>
+                            </p>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="modal-backdrop fade"
+                  />
+                </div>
+              </div>
+            }
+          >
+            <div
+              className=""
+            >
+              <Fade
+                appear={true}
+                baseClass="fade"
+                baseClassActive="show"
+                className="modal"
+                enter={true}
+                exit={true}
+                in={true}
+                mountOnEnter={false}
+                onClick={[Function]}
+                onEnter={[Function]}
+                onEntered={[Function]}
+                onEntering={[Function]}
+                onExit={[Function]}
+                onExited={[Function]}
+                onExiting={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                role="dialog"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                tabIndex="-1"
+                tag="div"
+                timeout={300}
+                unmountOnExit={false}
+              >
+                <Transition
+                  appear={true}
+                  enter={true}
+                  exit={true}
+                  in={true}
+                  mountOnEnter={false}
+                  onEnter={[Function]}
+                  onEntered={[Function]}
+                  onEntering={[Function]}
+                  onExit={[Function]}
+                  onExited={[Function]}
+                  onExiting={[Function]}
+                  timeout={300}
+                  unmountOnExit={false}
+                >
+                  <div
+                    className="modal fade"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    role="dialog"
+                    style={
+                      Object {
+                        "display": "block",
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <button
+                      className="close"
+                      onClick={[MockFunction]}
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "15px",
+                          "top": "15px",
+                        }
+                      }
+                      type="button"
+                    >
+                      ×
+                    </button>
+                    <div
+                      className="modal-dialog my-5 shadow-sm"
+                      role="document"
+                    >
+                      <div
+                        className="modal-content"
+                      >
+                        <ModalBody
+                          tag="div"
+                        >
+                          <div
+                            className="modal-body"
+                          >
+                            <form
+                              className="my-5"
+                              method="post"
+                              onSubmit={[Function]}
+                            >
+                              <div
+                                className="form-group mx-3 my-3"
+                              >
+                                <small
+                                  className="form-text text-muted"
+                                  id="subject"
+                                >
+                                  Question Subject
+                                </small>
+                                <input
+                                  aria-describedby="questionTitle"
+                                  className="form-control p-4 shadow-none "
+                                  name="title"
+                                  onChange={[Function]}
+                                  placeholder="Add a question title"
+                                  style={
+                                    Object {
+                                      "fontSize": "1rem",
+                                    }
+                                  }
+                                  type="text"
+                                  value=""
+                                />
+                              </div>
+                              <div
+                                className="form-group my-3 mx-3 "
+                              >
+                                <textarea
+                                  className="form-control form-control-lg p-2 shadow-none "
+                                  name="body"
+                                  onChange={[Function]}
+                                  placeholder="Talk about the question..."
+                                  rows="4"
+                                  value=""
+                                />
+                              </div>
+                              <p>
+                                <button
+                                  className="btn my-2 py-0 col-12"
+                                  onClick={[MockFunction]}
+                                  type="submit"
+                                >
+                                   POST 
+                                </button>
+                              </p>
+                            </form>
+                          </div>
+                        </ModalBody>
+                      </div>
+                    </div>
+                  </div>
+                </Transition>
+              </Fade>
+              <Fade
+                appear={true}
+                baseClass="fade"
+                baseClassActive="show"
+                className="modal-backdrop"
+                enter={true}
+                exit={true}
+                in={true}
+                mountOnEnter={true}
+                onEnter={[Function]}
+                onEntered={[Function]}
+                onEntering={[Function]}
+                onExit={[Function]}
+                onExited={[Function]}
+                onExiting={[Function]}
+                tag="div"
+                timeout={150}
+                unmountOnExit={false}
+              >
+                <Transition
+                  appear={true}
+                  enter={true}
+                  exit={true}
+                  in={true}
+                  mountOnEnter={true}
+                  onEnter={[Function]}
+                  onEntered={[Function]}
+                  onEntering={[Function]}
+                  onExit={[Function]}
+                  onExited={[Function]}
+                  onExiting={[Function]}
+                  timeout={150}
+                  unmountOnExit={false}
+                >
+                  <div
+                    className="modal-backdrop fade"
+                  />
+                </Transition>
+              </Fade>
+            </div>
+          </Portal>
+        </Portal>
+      </Modal>
+    </div>
+  </ModalComponent>
+</SingleMeetupTop>
+`;
+
+exports[`Single Meetup Top Component should render component  2`] = `
+<SingleMeetupTop
+  happeningOn=""
+  id="1"
+  location="lagos"
+  open={true}
+  tags={
+    Array [
+      "test",
+    ]
+  }
+  title="this is a test"
+  toggle={[MockFunction]}
+>
+  <div
+    className="d-flex flex-md-row flex-column justify-content-center col-12"
+  >
+    <div
+      className="col-12 col-md p-0 m-0"
+    >
+      <img
+        alt="meetupImage"
+        className="mt-md-3 m-0 p-0 meetup-img col-12"
+      />
+    </div>
+    <div
+      className="meetup-info ml-4 mt-md-5 mt-2 col"
+    >
+      <div
+        className="my-5"
+      >
+        <h2
+          className="meetup-title"
+        />
+      </div>
+      <div
+        className="meetup-date my-4 row"
+      >
+        <p
+          className="col-2 mr-0"
+        >
+          <img
+            alt="date"
+            className="h-75 icon"
+            src={
+              Object {
+                "canInstrument": true,
+                "createTransformer": [Function],
+                "getCacheKey": [Function],
+                "process": [Function],
+              }
+            }
+          />
+        </p>
+        <p
+          className="col-9"
+        />
+      </div>
+      <div
+        className="meetup-location my-4 row"
+      >
+        <p
+          className="col-2"
+        >
+          <img
+            alt="location"
+            className="h-75 icon"
+            src={
+              Object {
+                "canInstrument": true,
+                "createTransformer": [Function],
+                "getCacheKey": [Function],
+                "process": [Function],
+              }
+            }
+          />
+        </p>
+        <p
+          className="col-9"
+        >
+          lagos
+        </p>
+      </div>
+      <div
+        className="meetup-rsvp my-4 row"
+      >
+        <p
+          className="col-2"
+        >
+          RSVP
+        </p>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm yes"
+            text="Yes"
+          >
+            <button
+              className="btn-info px-4 py-1 rounded shadow-sm yes"
+              onClick={[Function]}
+              type="button"
+            >
+              Yes
+            </button>
+          </Button>
+        </div>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm no"
+            text="No"
+          >
+            <button
+              className="btn-info px-4 py-1 rounded shadow-sm no"
+              onClick={[Function]}
+              type="button"
+            >
+              No
+            </button>
+          </Button>
+        </div>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm maybe"
+            text="Maybe"
+          >
+            <button
+              className="btn-info px-4 py-1 rounded shadow-sm maybe"
+              onClick={[Function]}
+              type="button"
+            >
+              Maybe
+            </button>
+          </Button>
+        </div>
+      </div>
+      <div
+        className="meetup-tags my-4"
+      >
+        Tags
+      </div>
+      <div
+        className="meetup-question my-4"
+      >
+        <Button
+          event={[MockFunction]}
+          styles="btn col-md-8 my-4 col-10"
+          text=" Ask Question"
+        >
+          <button
+            className="btn col-md-8 my-4 col-10"
+            onClick={[MockFunction]}
+            type="button"
+          >
+             Ask Question
+          </button>
+        </Button>
+      </div>
+    </div>
+  </div>
+  <ModalComponent
+    className="my-5 shadow-sm"
+    open={true}
+    toggle={[MockFunction]}
+  >
+    <div>
+      <Modal
+        autoFocus={true}
+        backdrop={true}
+        backdropTransition={
+          Object {
+            "mountOnEnter": true,
+            "timeout": 150,
+          }
+        }
+        centered={false}
+        className="my-5 shadow-sm"
+        external={
+          <button
+            className="close"
+            onClick={[MockFunction]}
+            style={
+              Object {
+                "position": "absolute",
+                "right": "15px",
+                "top": "15px",
+              }
+            }
+            type="button"
+          >
+            ×
+          </button>
+        }
+        fade={true}
+        isOpen={true}
+        keyboard={true}
+        modalTransition={
+          Object {
+            "timeout": 300,
+          }
+        }
+        onClosed={[Function]}
+        onOpened={[Function]}
+        role="dialog"
+        toggle={[MockFunction]}
+        zIndex={1050}
+      >
+        <Portal
+          node={
+            <div
+              style="position: relative; z-index: 1050;"
+              tabindex="-1"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="modal fade"
+                  role="dialog"
+                  style="display: block;"
+                  tabindex="-1"
+                >
+                  <button
+                    class="close"
+                    style="position: absolute; top: 15px; right: 15px;"
+                    type="button"
+                  >
+                    ×
+                  </button>
+                  <div
+                    class="modal-dialog my-5 shadow-sm"
+                    role="document"
+                  >
+                    <div
+                      class="modal-content"
+                    >
+                      <div
+                        class="modal-body"
+                      >
+                        <form
+                          class="my-5"
+                          method="post"
+                        >
+                          <div
+                            class="form-group mx-3 my-3"
+                          >
+                            <small
+                              class="form-text text-muted"
+                              id="subject"
+                            >
+                              Question Subject
+                            </small>
+                            <input
+                              aria-describedby="questionTitle"
+                              class="form-control p-4 shadow-none "
+                              name="title"
+                              placeholder="Add a question title"
+                              style="font-size: 1rem;"
+                              type="text"
+                              value=""
+                            />
+                          </div>
+                          <div
+                            class="form-group my-3 mx-3 "
+                          >
+                            <textarea
+                              class="form-control form-control-lg p-2 shadow-none "
+                              name="body"
+                              placeholder="Talk about the question..."
+                              rows="4"
+                            />
+                          </div>
+                          <p>
+                            <button
+                              class="btn my-2 py-0 col-12"
+                              type="submit"
+                            >
+                               POST 
+                            </button>
+                          </p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="modal-backdrop fade"
+                />
+              </div>
+            </div>
+          }
+        >
+          <Portal
+            containerInfo={
+              <div
+                style="position: relative; z-index: 1050;"
+                tabindex="-1"
+              >
+                <div
+                  class=""
+                >
+                  <div
+                    class="modal fade"
+                    role="dialog"
+                    style="display: block;"
+                    tabindex="-1"
+                  >
+                    <button
+                      class="close"
+                      style="position: absolute; top: 15px; right: 15px;"
+                      type="button"
+                    >
+                      ×
+                    </button>
+                    <div
+                      class="modal-dialog my-5 shadow-sm"
+                      role="document"
+                    >
+                      <div
+                        class="modal-content"
+                      >
+                        <div
+                          class="modal-body"
+                        >
+                          <form
+                            class="my-5"
+                            method="post"
+                          >
+                            <div
+                              class="form-group mx-3 my-3"
+                            >
+                              <small
+                                class="form-text text-muted"
+                                id="subject"
+                              >
+                                Question Subject
+                              </small>
+                              <input
+                                aria-describedby="questionTitle"
+                                class="form-control p-4 shadow-none "
+                                name="title"
+                                placeholder="Add a question title"
+                                style="font-size: 1rem;"
+                                type="text"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              class="form-group my-3 mx-3 "
+                            >
+                              <textarea
+                                class="form-control form-control-lg p-2 shadow-none "
+                                name="body"
+                                placeholder="Talk about the question..."
+                                rows="4"
+                              />
+                            </div>
+                            <p>
+                              <button
+                                class="btn my-2 py-0 col-12"
+                                type="submit"
+                              >
+                                 POST 
+                              </button>
+                            </p>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="modal-backdrop fade"
+                  />
+                </div>
+              </div>
+            }
+          >
+            <div
+              className=""
+            >
+              <Fade
+                appear={true}
+                baseClass="fade"
+                baseClassActive="show"
+                className="modal"
+                enter={true}
+                exit={true}
+                in={true}
+                mountOnEnter={false}
+                onClick={[Function]}
+                onEnter={[Function]}
+                onEntered={[Function]}
+                onEntering={[Function]}
+                onExit={[Function]}
+                onExited={[Function]}
+                onExiting={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                role="dialog"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                tabIndex="-1"
+                tag="div"
+                timeout={300}
+                unmountOnExit={false}
+              >
+                <Transition
+                  appear={true}
+                  enter={true}
+                  exit={true}
+                  in={true}
+                  mountOnEnter={false}
+                  onEnter={[Function]}
+                  onEntered={[Function]}
+                  onEntering={[Function]}
+                  onExit={[Function]}
+                  onExited={[Function]}
+                  onExiting={[Function]}
+                  timeout={300}
+                  unmountOnExit={false}
+                >
+                  <div
+                    className="modal fade"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseDown={[Function]}
+                    role="dialog"
+                    style={
+                      Object {
+                        "display": "block",
+                      }
+                    }
+                    tabIndex="-1"
+                  >
+                    <button
+                      className="close"
+                      onClick={[MockFunction]}
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "15px",
+                          "top": "15px",
+                        }
+                      }
+                      type="button"
+                    >
+                      ×
+                    </button>
+                    <div
+                      className="modal-dialog my-5 shadow-sm"
+                      role="document"
+                    >
+                      <div
+                        className="modal-content"
+                      >
+                        <ModalBody
+                          tag="div"
+                        >
+                          <div
+                            className="modal-body"
+                          >
+                            <form
+                              className="my-5"
+                              method="post"
+                              onSubmit={[Function]}
+                            >
+                              <div
+                                className="form-group mx-3 my-3"
+                              >
+                                <small
+                                  className="form-text text-muted"
+                                  id="subject"
+                                >
+                                  Question Subject
+                                </small>
+                                <input
+                                  aria-describedby="questionTitle"
+                                  className="form-control p-4 shadow-none "
+                                  name="title"
+                                  onChange={[Function]}
+                                  placeholder="Add a question title"
+                                  style={
+                                    Object {
+                                      "fontSize": "1rem",
+                                    }
+                                  }
+                                  type="text"
+                                  value=""
+                                />
+                              </div>
+                              <div
+                                className="form-group my-3 mx-3 "
+                              >
+                                <textarea
+                                  className="form-control form-control-lg p-2 shadow-none "
+                                  name="body"
+                                  onChange={[Function]}
+                                  placeholder="Talk about the question..."
+                                  rows="4"
+                                  value=""
+                                />
+                              </div>
+                              <p>
+                                <button
+                                  className="btn my-2 py-0 col-12"
+                                  onClick={[MockFunction]}
+                                  type="submit"
+                                >
+                                   POST 
+                                </button>
+                              </p>
+                            </form>
+                          </div>
+                        </ModalBody>
+                      </div>
+                    </div>
+                  </div>
+                </Transition>
+              </Fade>
+              <Fade
+                appear={true}
+                baseClass="fade"
+                baseClassActive="show"
+                className="modal-backdrop"
+                enter={true}
+                exit={true}
+                in={true}
+                mountOnEnter={true}
+                onEnter={[Function]}
+                onEntered={[Function]}
+                onEntering={[Function]}
+                onExit={[Function]}
+                onExited={[Function]}
+                onExiting={[Function]}
+                tag="div"
+                timeout={150}
+                unmountOnExit={false}
+              >
+                <Transition
+                  appear={true}
+                  enter={true}
+                  exit={true}
+                  in={true}
+                  mountOnEnter={true}
+                  onEnter={[Function]}
+                  onEntered={[Function]}
+                  onEntering={[Function]}
+                  onExit={[Function]}
+                  onExited={[Function]}
+                  onExiting={[Function]}
+                  timeout={150}
+                  unmountOnExit={false}
+                >
+                  <div
+                    className="modal-backdrop fade"
+                  />
+                </Transition>
+              </Fade>
+            </div>
+          </Portal>
+        </Portal>
+      </Modal>
+    </div>
+  </ModalComponent>
+</SingleMeetupTop>
+`;
+
 exports[`Single Meetup Top Component should render component correctly 1`] = `
 <Fragment>
   <div
@@ -78,9 +1256,31 @@ exports[`Single Meetup Top Component should render component correctly 1`] = `
           RSVP
         </p>
         <div
-          className="col-1"
+          className="col-2"
         >
-          Yes
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm yes"
+            text="Yes"
+          />
+        </div>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm no"
+            text="No"
+          />
+        </div>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm maybe"
+            text="Maybe"
+          />
         </div>
       </div>
       <div
@@ -235,9 +1435,31 @@ exports[`Single Meetup Top Component should render component correctly with prop
           RSVP
         </p>
         <div
-          className="col-1"
+          className="col-2"
         >
-          Yes
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm yes"
+            text="Yes"
+          />
+        </div>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm no"
+            text="No"
+          />
+        </div>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm maybe"
+            text="Maybe"
+          />
         </div>
       </div>
       <div
@@ -314,4 +1536,261 @@ exports[`Single Meetup Top Component should render component correctly with prop
     </form>
   </ModalComponent>
 </Fragment>
+`;
+
+exports[`Single Meetup Top Component should render component correctly with props 2`] = `
+<SingleMeetupTop
+  happeningOn=""
+  id="1"
+  location="lagos"
+  open={false}
+  rsvp={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "1",
+          Object {
+            "response": "yes",
+          },
+        ],
+        Array [
+          "1",
+          Object {
+            "response": "no",
+          },
+        ],
+        Array [
+          "1",
+          Object {
+            "response": "maybe",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  tags={
+    Array [
+      "test",
+    ]
+  }
+  title="this is a test"
+  toggle={[MockFunction]}
+>
+  <div
+    className="d-flex flex-md-row flex-column justify-content-center col-12"
+  >
+    <div
+      className="col-12 col-md p-0 m-0"
+    >
+      <img
+        alt="meetupImage"
+        className="mt-md-3 m-0 p-0 meetup-img col-12"
+      />
+    </div>
+    <div
+      className="meetup-info ml-4 mt-md-5 mt-2 col"
+    >
+      <div
+        className="my-5"
+      >
+        <h2
+          className="meetup-title"
+        />
+      </div>
+      <div
+        className="meetup-date my-4 row"
+      >
+        <p
+          className="col-2 mr-0"
+        >
+          <img
+            alt="date"
+            className="h-75 icon"
+            src={
+              Object {
+                "canInstrument": true,
+                "createTransformer": [Function],
+                "getCacheKey": [Function],
+                "process": [Function],
+              }
+            }
+          />
+        </p>
+        <p
+          className="col-9"
+        />
+      </div>
+      <div
+        className="meetup-location my-4 row"
+      >
+        <p
+          className="col-2"
+        >
+          <img
+            alt="location"
+            className="h-75 icon"
+            src={
+              Object {
+                "canInstrument": true,
+                "createTransformer": [Function],
+                "getCacheKey": [Function],
+                "process": [Function],
+              }
+            }
+          />
+        </p>
+        <p
+          className="col-9"
+        >
+          lagos
+        </p>
+      </div>
+      <div
+        className="meetup-rsvp my-4 row"
+      >
+        <p
+          className="col-2"
+        >
+          RSVP
+        </p>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm yes"
+            text="Yes"
+          >
+            <button
+              className="btn-info px-4 py-1 rounded shadow-sm yes"
+              onClick={[Function]}
+              type="button"
+            >
+              Yes
+            </button>
+          </Button>
+        </div>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm no"
+            text="No"
+          >
+            <button
+              className="btn-info px-4 py-1 rounded shadow-sm no"
+              onClick={[Function]}
+              type="button"
+            >
+              No
+            </button>
+          </Button>
+        </div>
+        <div
+          className="col-2"
+        >
+          <Button
+            event={[Function]}
+            styles="btn-info px-4 py-1 rounded shadow-sm maybe"
+            text="Maybe"
+          >
+            <button
+              className="btn-info px-4 py-1 rounded shadow-sm maybe"
+              onClick={[Function]}
+              type="button"
+            >
+              Maybe
+            </button>
+          </Button>
+        </div>
+      </div>
+      <div
+        className="meetup-tags my-4"
+      >
+        Tags
+      </div>
+      <div
+        className="meetup-question my-4"
+      >
+        <Button
+          event={[MockFunction]}
+          styles="btn col-md-8 my-4 col-10"
+          text=" Ask Question"
+        >
+          <button
+            className="btn col-md-8 my-4 col-10"
+            onClick={[MockFunction]}
+            type="button"
+          >
+             Ask Question
+          </button>
+        </Button>
+      </div>
+    </div>
+  </div>
+  <ModalComponent
+    className="my-5 shadow-sm"
+    open={false}
+    toggle={[MockFunction]}
+  >
+    <div>
+      <Modal
+        autoFocus={true}
+        backdrop={true}
+        backdropTransition={
+          Object {
+            "mountOnEnter": true,
+            "timeout": 150,
+          }
+        }
+        centered={false}
+        className="my-5 shadow-sm"
+        external={
+          <button
+            className="close"
+            onClick={[MockFunction]}
+            style={
+              Object {
+                "position": "absolute",
+                "right": "15px",
+                "top": "15px",
+              }
+            }
+            type="button"
+          >
+            ×
+          </button>
+        }
+        fade={true}
+        isOpen={false}
+        keyboard={true}
+        modalTransition={
+          Object {
+            "timeout": 300,
+          }
+        }
+        onClosed={[Function]}
+        onOpened={[Function]}
+        role="dialog"
+        toggle={[MockFunction]}
+        zIndex={1050}
+      />
+    </div>
+  </ModalComponent>
+</SingleMeetupTop>
 `;
