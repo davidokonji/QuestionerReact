@@ -2,7 +2,7 @@
 
 exports[`Auth page should get onclick login 1`] = `
 <Fragment>
-  <Header
+  <withRouter(Header)
     navClass="nav_header_light"
   />
   <div
@@ -38,7 +38,7 @@ exports[`Auth page should get onclick login 1`] = `
         role="presentation"
         style={
           Object {
-            "backgroundColor": "#fff",
+            "backgroundColor": "#e9eaea",
           }
         }
       >
@@ -51,13 +51,13 @@ exports[`Auth page should get onclick login 1`] = `
         role="presentation"
         style={
           Object {
-            "backgroundColor": "#e9eaea",
+            "backgroundColor": "#fff",
           }
         }
       >
         Sign In
       </div>
-      <withRouter(Connect(Register)) />
+      <withRouter(Connect(LoginComponent)) />
     </div>
   </div>
   <Footer />
@@ -66,7 +66,7 @@ exports[`Auth page should get onclick login 1`] = `
 
 exports[`Auth page should get onclick signup 1`] = `
 <Fragment>
-  <Header
+  <withRouter(Header)
     navClass="nav_header_light"
   />
   <div
@@ -102,7 +102,7 @@ exports[`Auth page should get onclick signup 1`] = `
         role="presentation"
         style={
           Object {
-            "backgroundColor": "#fff",
+            "backgroundColor": "#e9eaea",
           }
         }
       >
@@ -115,13 +115,13 @@ exports[`Auth page should get onclick signup 1`] = `
         role="presentation"
         style={
           Object {
-            "backgroundColor": "#e9eaea",
+            "backgroundColor": "#fff",
           }
         }
       >
         Sign In
       </div>
-      <withRouter(Connect(Register)) />
+      <withRouter(Connect(LoginComponent)) />
     </div>
   </div>
   <Footer />
@@ -130,7 +130,7 @@ exports[`Auth page should get onclick signup 1`] = `
 
 exports[`Auth page should render auth page correctly 1`] = `
 <Fragment>
-  <Header
+  <withRouter(Header)
     navClass="nav_header_light"
   />
   <div
@@ -194,7 +194,7 @@ exports[`Auth page should render auth page correctly 1`] = `
 
 exports[`Auth page should render with state changes 1`] = `
 <Fragment>
-  <Header
+  <withRouter(Header)
     navClass="nav_header_light"
   />
   <div

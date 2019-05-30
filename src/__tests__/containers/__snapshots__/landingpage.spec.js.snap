@@ -2,7 +2,7 @@
 
 exports[`Landing Page should render landing page correctly 1`] = `
 <div>
-  <Header
+  <withRouter(Header)
     navClass="nav_header"
     page="landingpage"
   />

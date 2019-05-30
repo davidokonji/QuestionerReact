@@ -2,16 +2,21 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import AuthPage from '../../containers/AuthPage.container';
 
+let wrapper;
+const props = {
+  match: {
+    params: []
+  }
+};
 describe('Auth page', () => {
+  beforeAll(() => {
+    wrapper = shallow(<AuthPage {...props} />);
+  });
   test('should render auth page correctly', () => {
-    const wrapper = shallow(<AuthPage />);
-
     expect(wrapper).toMatchSnapshot();
   });
 
   test('should render with state changes', () => {
-    const wrapper = shallow(<AuthPage />);
-
     wrapper.setState({
       visibility: false,
       formType: 'login',
@@ -22,8 +27,6 @@ describe('Auth page', () => {
   });
 
   it('should get onclick signup', () => {
-    const wrapper = shallow(<AuthPage />);
-
     wrapper.find('.signup').simulate('click');
     wrapper.find('.login').simulate('click');
 
@@ -31,8 +34,6 @@ describe('Auth page', () => {
   });
 
   it('should get onclick login', () => {
-    const wrapper = shallow(<AuthPage />);
-
     wrapper.find('.signup').simulate('click');
     wrapper.find('.login').simulate('click');
     expect(wrapper).toMatchSnapshot();

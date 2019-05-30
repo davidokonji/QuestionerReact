@@ -19,7 +19,7 @@ exports[`Routes should render routes jsx 1`] = `
     <Route
       component={[Function]}
       exact={true}
-      path="/auth"
+      path="/(login|signup)/"
     />
     <Protected
       component={[Function]}

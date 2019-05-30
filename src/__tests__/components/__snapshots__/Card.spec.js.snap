@@ -3,8 +3,15 @@
 exports[`Card component should render card component 1`] = `
 <div
   className="card col-md-3 col-lg-3 my-3 shadow-sm p-0 mx-3"
+  onClick={[Function]}
   onKeyDown={null}
   role="button"
+  style={
+    Object {
+      "cursor": "pointer",
+      "maxHeight": "40rem",
+    }
+  }
   tabIndex="-1"
 >
   <div
@@ -19,7 +26,13 @@ exports[`Card component should render card component 1`] = `
       />
     </div>
     <div
-      className="row col-12 h-auto"
+      className="row col-12"
+      style={
+        Object {
+          "height": "18rem",
+          "maxHeight": "18rem",
+        }
+      }
     >
       <div
         className="col-2 col-md-2 d-flex flex-column side-card p-0"
@@ -70,8 +83,15 @@ exports[`Card component should render card component 1`] = `
 exports[`Card component should render card component with props 1`] = `
 <div
   className="card col-md-3 col-lg-3 my-3 shadow-sm p-0 mx-3"
+  onClick={[Function]}
   onKeyDown={null}
   role="button"
+  style={
+    Object {
+      "cursor": "pointer",
+      "maxHeight": "40rem",
+    }
+  }
   tabIndex="-1"
 >
   <div
@@ -87,7 +107,13 @@ exports[`Card component should render card component with props 1`] = `
       />
     </div>
     <div
-      className="row col-12 h-auto"
+      className="row col-12"
+      style={
+        Object {
+          "height": "18rem",
+          "maxHeight": "18rem",
+        }
+      }
     >
       <div
         className="col-2 col-md-2 d-flex flex-column side-card p-0"

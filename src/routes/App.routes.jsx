@@ -13,7 +13,7 @@ const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route path='/' component={Landing} exact />
-      <Route path='/auth' component={AuthPage} exact />
+      <Route path='/(login|signup)/' component={AuthPage} exact />
       <Protected path='/dashboard' component={Dashboard} />
       <Protected path='/meetup/:id' component={OneMeetup} exact />
       <Protected path='/admin' component={Admin} />

@@ -7,7 +7,10 @@ exports[`User Profile container should render component correctlt 1`] = `
     className="container-fluid row mt-5"
   >
     <UserSidebar />
-    <UserTabs />
+    <UserTabs
+      message=""
+      status=""
+    />
   </div>
   <Footer />
 </div>

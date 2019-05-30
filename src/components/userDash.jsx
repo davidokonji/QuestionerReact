@@ -6,10 +6,12 @@ import PlainCard from './common/plainCard';
 class UserTabs extends Component {
   render() {
     const {
-      comment,
-      count,
-      upcoming,
-      loading
+      comment = 0,
+      count = 0,
+      upcoming = [[{}]],
+      loading = false,
+      message,
+      status
     } = this.props;
     let data;
     if (loading) {
@@ -18,15 +20,10 @@ class UserTabs extends Component {
           <Loader />
         </div>
       );
-    } else {
+    } else if (loading === false && status !== 404) {
       data = (
         upcoming.map(meetup => (
           meetup.map((meet) => {
-            if (meet.length === 0) {
-              return (
-                <h2>RSVP for a meetup</h2>
-              );
-            }
             const date = moment(meet.happeningon).format('MMM D [at] h:mm a');
             return (
               <PlainCard
@@ -40,7 +37,10 @@ class UserTabs extends Component {
           })
         ))
       );
+    } else {
+      data = (<h2>You have no upcoming meetup</h2>);
     }
+
     return (
       <div className='col-12 col-md-8 mt-3'>
         <div className='m-2'>

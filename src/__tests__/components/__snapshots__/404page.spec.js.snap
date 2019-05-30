@@ -2,7 +2,7 @@
 
 exports[`404 page should render 404 page correctly 1`] = `
 <Fragment>
-  <Header
+  <withRouter(Header)
     navClass="nav_header"
     page="landingpage"
   />

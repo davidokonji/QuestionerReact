@@ -1,52 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Landing Header component should render header component correctly 1`] = `
-<div>
-  <nav>
-    <NavLink
-      className="header_link nav-title"
-      exact={true}
-      to="/"
-    >
-      Questioner
-    </NavLink>
-  </nav>
-</div>
-`;
-
-exports[`Landing Header component should render header component with props 1`] = `
-<div>
-  <nav
-    className="landing"
-  >
-    <NavLink
-      className="header_link nav-title"
-      exact={true}
-      to="/"
-    >
-      Questioner
-    </NavLink>
-    <NavLink
-      to="/auth"
-    >
-      <img
-        alt="user"
-        src={
-          Object {
-            "canInstrument": true,
-            "createTransformer": [Function],
-            "getCacheKey": [Function],
-            "process": [Function],
-          }
-        }
-        style={
-          Object {
-            "marginRight": "3rem",
-            "width": "3rem",
-          }
-        }
-      />
-    </NavLink>
-  </nav>
-</div>
+<Route>
+  <Component />
+</Route>
 `;

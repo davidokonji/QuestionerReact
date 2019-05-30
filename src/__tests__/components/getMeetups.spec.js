@@ -28,18 +28,27 @@ const meetups = {
     tags: ['test']
   }
 };
-
+const history = {
+  push: jest.fn()
+};
+const allMeetups = jest.fn();
+const getUser = jest.fn();
 describe('Get meetups Compnent', () => {
   it('should render get meetups component correctly', () => {
-    const allMeetups = jest.fn();
-    const wrapper = shallow(<GetMeetups meetups={dataEmpty} allMeetups={allMeetups} />);
+    const wrapper = shallow(
+      <GetMeetups
+        meetups={dataEmpty}
+        allMeetups={allMeetups}
+        history={history}
+        getUser={getUser}
+      />
+    );
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render get meetups component correctly', () => {
-    const allMeetups = jest.fn();
-    const wrapper = shallow(<GetMeetups meetups={data} allMeetups={allMeetups} />);
+    const wrapper = shallow(<GetMeetups meetups={data} allMeetups={allMeetups} history={history} getUser={getUser} />);
 
     expect(wrapper).toMatchSnapshot();
   });

@@ -14,6 +14,15 @@ class authPage extends Component {
     };
   }
 
+  componentDidMount() {
+    const { match: { params } } = this.props;
+    if (params[0] === 'login') {
+      this.setState({
+        visibility: false
+      });
+    }
+  }
+
   toggleSignupForms = () => {
     const { visibility, formType } = this.state;
     if (formType === 'signup') {

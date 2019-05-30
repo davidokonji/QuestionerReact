@@ -23,6 +23,7 @@ exports[`Get meetups Compnent should render get meetups component correctly 2`] 
       images=""
       key="1"
       location="lagos"
+      push={[MockFunction]}
       tags={
         Array [
           "test",
