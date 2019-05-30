@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Profile container should render component correctlt 1`] = `
+<div>
+  <withRouter(Connect(NavBar)) />
+  <div
+    className="container-fluid row mt-5"
+  >
+    <UserSidebar />
+    <UserTabs />
+  </div>
+  <Footer />
+</div>
+`;

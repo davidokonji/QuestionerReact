@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Sidebar should render component correctly 1`] = `
+<div
+  className="col-12 col-md-3 shadow-sm ml-md-5 ml-4 mt-3"
+>
+  <div
+    className="m-5"
+  >
+    <div
+      className="col-12"
+    >
+      <img
+        alt="profile"
+        className="rounded-circle my-3"
+        style={
+          Object {
+            "height": "18rem",
+            "objectFit": "cover",
+            "width": "18rem",
+          }
+        }
+      />
+    </div>
+    <div
+      className="my-3"
+    >
+      <h2>
+         
+      </h2>
+    </div>
+    <div
+      className="my-3"
+    />
+    <div
+      className="my-3"
+    />
+    <div
+      className="my-3"
+    >
+      <Button
+        styles="btn p-0"
+        text="edit profile"
+      />
+    </div>
+  </div>
+</div>
+`;

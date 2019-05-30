@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Upcoming Loader should render correctly 1`] = `
+<div
+  className="col-4 col-md-4"
+>
+  <ContentLoader
+    height={160}
+    primaryColor="#f3f3f3"
+    secondaryColor="#ecebeb"
+    speed={2}
+    width={350}
+  >
+    <rect
+      height="0"
+      rx="0"
+      ry="0"
+      width="0"
+      x="184"
+      y="123"
+    />
+    <rect
+      height="0"
+      rx="0"
+      ry="0"
+      width="0"
+      x="247"
+      y="60"
+    />
+    <rect
+      height="0"
+      rx="0"
+      ry="0"
+      width="0"
+      x="162"
+      y="80"
+    />
+    <rect
+      height="18"
+      rx="0"
+      ry="0"
+      width="249"
+      x="28"
+      y="15"
+    />
+    <rect
+      height="0"
+      rx="0"
+      ry="0"
+      width="0"
+      x="221"
+      y="60"
+    />
+    <rect
+      height="12"
+      rx="0"
+      ry="0"
+      width="249"
+      x="28"
+      y="50"
+    />
+    <rect
+      height="14"
+      rx="0"
+      ry="0"
+      width="249"
+      x="27"
+      y="97"
+    />
+    <rect
+      height="11"
+      rx="0"
+      ry="0"
+      width="187"
+      x="28"
+      y="75"
+    />
+  </ContentLoader>
+</div>
+`;

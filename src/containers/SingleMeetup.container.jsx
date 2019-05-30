@@ -73,7 +73,7 @@ class SingleMeetup extends Component {
     );
   }
 }
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   meetup: state.meetup,
   message: state.meetup.message,
   successful: state.meetup.successful

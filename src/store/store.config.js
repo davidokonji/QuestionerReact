@@ -37,7 +37,8 @@ export default () => {
 
   store.subscribe(() => {
     saveToLocalStorage({
-      auth: store.getState().auth
+      auth: store.getState().auth,
+      profile: store.getState().profile
     });
   });
 
