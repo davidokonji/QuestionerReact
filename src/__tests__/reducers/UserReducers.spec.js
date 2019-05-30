@@ -4,7 +4,8 @@ import {
   USER_REGISTER,
   AUTHENTICATION_ERROR,
   AUTHENTICATION_SUCCESS,
-  USER_LOGOUT
+  USER_LOGOUT,
+  CLEAR_AUTH_ERROR
 } from '../../action-types';
 import UserMocks from '../../Fixtures/User.fixture';
 
@@ -81,5 +82,16 @@ describe('User reducers', () => {
     });
 
     expect(reducer).toEqual(defaultUserState);
+  });
+
+  it('should should return intial cleared state', () => {
+    const reducer = loginReducer(defaultUserState, {
+      type: CLEAR_AUTH_ERROR,
+    });
+
+    expect(reducer).toEqual({
+      message: '',
+      redirect: false
+    });
   });
 });

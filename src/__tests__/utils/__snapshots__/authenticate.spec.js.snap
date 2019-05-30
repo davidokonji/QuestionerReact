@@ -19,13 +19,13 @@ exports[`Authenticate HOC should render HOC component correctly 1`] = `
           Object {
             "from": Object {
               "hash": "",
-              "key": "yboajd",
+              "key": "9ax17t",
               "pathname": "/",
               "search": "",
               "state": undefined,
             },
             "hash": "",
-            "key": "unfxtw",
+            "key": "ohllyg",
             "pathname": "/auth",
             "search": "",
           },
@@ -39,13 +39,13 @@ exports[`Authenticate HOC should render HOC component correctly 1`] = `
         "location": Object {
           "from": Object {
             "hash": "",
-            "key": "yboajd",
+            "key": "9ax17t",
             "pathname": "/",
             "search": "",
             "state": undefined,
           },
           "hash": "",
-          "key": "unfxtw",
+          "key": "ohllyg",
           "pathname": "/auth",
           "search": "",
         },

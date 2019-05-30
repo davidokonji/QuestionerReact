@@ -19,3 +19,10 @@ export const RSVP_ERROR = 'RSVP_ERROR';
 // Question Action Types
 export const CREATE_QUESTION = 'CREATE_QUESTION';
 export const QUESTION_ERROR = 'QUESTION_ERROR';
+
+// User Profile Action Types
+export const GET_SINGLE_USER = 'GET_SINGLE_USER';
+export const GET_UPCOMING_USER_MEETUP = 'GET_UPCOMING_USER_MEETUP';
+export const GET_UPCOMING_LOADING = 'GET_UPCOMING_LOADING';
+export const GET_QUESTION_COUNT = 'GET_QUESTION_COUNT';
+export const GET_COMMENT_COUNT = 'GET_COMMENT_COUNT';

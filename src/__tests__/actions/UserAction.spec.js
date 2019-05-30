@@ -8,7 +8,9 @@ import {
   authFailure,
   authSuccess,
   LoginAction,
-  logoutUser
+  logoutUser,
+  clear,
+  clearError
 } from '../../actions';
 
 import {
@@ -17,6 +19,7 @@ import {
   AUTHENTICATION_ERROR,
   AUTHENTICATION_SUCCESS,
   USER_LOGOUT,
+  CLEAR_AUTH_ERROR
 } from '../../action-types';
 
 const userData = {
@@ -37,7 +40,6 @@ const errorlogin = {
 };
 
 const Register = {
-  id: '1',
   firstname: 'david',
   lastname: 'okonji',
   othername: 'devl',
@@ -196,6 +198,16 @@ describe('Authentication Actions', () => {
       .then(() => {
         const actions = store.getActions();
         expect(actions[0].type).toEqual(USER_LOGOUT);
+      });
+  });
+
+  it('should return clear', () => {
+    const store = mockedStore({});
+
+    return store.dispatch(clear())
+      .then(() => {
+        const actions = store.getActions();
+        expect(actions[0].type).toEqual(CLEAR_AUTH_ERROR);
       });
   });
 });

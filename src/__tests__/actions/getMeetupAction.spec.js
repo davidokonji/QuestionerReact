@@ -253,4 +253,16 @@ describe('Get Meetups', () => {
       message: ''
     });
   });
+
+  it('should return meetup rsvp action creator', () => {
+    const store = mockedStore({});
+    axios.post = jest.fn().mockReturnValue(Promise.resolve({ meetup }));
+    const expected = {
+      type: MEETUP_RSVP,
+    };
+
+    return store.dispatch(meetupRsvp(1, {})).then(() => {
+      store.getActions();
+    });
+  });
 });

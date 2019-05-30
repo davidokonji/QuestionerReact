@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlainCard component should render correctly 1`] = `
+<div
+  className="col-12 col-md-4 mt-3 plaincard"
+  onClick={[Function]}
+  onKeyDown={null}
+  role="button"
+  tabIndex="-1"
+>
+  <div
+    className="card shadow-sm"
+  >
+    <div
+      className="card-body col-12"
+    >
+      <h3
+        className="mt-0"
+      />
+      <p
+        className="mt-0"
+      />
+      <p
+        className="mt-0"
+      />
+    </div>
+  </div>
+</div>
+`;

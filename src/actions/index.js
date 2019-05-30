@@ -32,6 +32,18 @@ import {
   createQuestion
 } from './QuestionActions';
 
+import {
+  getSingleUserHandler,
+  getUpcomingLoading,
+  getUserUpcomingHandler,
+  getUserCommentCountHandler,
+  getUserQuestionCountHandler,
+  getSingleUser,
+  getUserCommentCount,
+  getUserQuestionCount,
+  getUserUpcoming,
+} from './ProfileActions';
+
 export {
   allMeetups,
   getMeetups,
@@ -58,5 +70,14 @@ export {
   meetupRsvpHandler,
   rsvpError,
   clearError,
-  clear
+  clear,
+  getSingleUserHandler,
+  getUpcomingLoading,
+  getUserUpcomingHandler,
+  getUserCommentCountHandler,
+  getUserQuestionCountHandler,
+  getSingleUser,
+  getUserCommentCount,
+  getUserQuestionCount,
+  getUserUpcoming,
 };

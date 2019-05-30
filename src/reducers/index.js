@@ -4,13 +4,15 @@ import getMeetups from './getMeetups';
 import getSingleMeetup from './singleMeetupReducer';
 import createMeetup from './createMeetupReducer';
 import questionReducer from './questionReducers';
+import profileReducer from './ProfileReducers';
 
 const reducers = combineReducers({
   auth: loginReducer,
   meetups: getMeetups,
   meetup: getSingleMeetup,
   newMeetup: createMeetup,
-  question: questionReducer
+  question: questionReducer,
+  profile: profileReducer
 });
 
 export {
@@ -19,5 +21,6 @@ export {
   loginReducer,
   getSingleMeetup,
   createMeetup,
-  questionReducer
+  questionReducer,
+  profileReducer
 };
