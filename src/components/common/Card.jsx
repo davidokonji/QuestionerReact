@@ -2,18 +2,27 @@ import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 
-const Card = ({
-  id, images, title, location, tags, happeningOn
-}) => {
+const Card = (props) => {
+  const {
+    id,
+    images,
+    title,
+    location,
+    tags,
+    happeningOn,
+    push
+  } = props;
   const month = moment(happeningOn).format('MMM');
   const day = moment(happeningOn).format('D');
   const date = moment(happeningOn).format('dddd, MMMM Do YYYY');
   return (
     <div
       className='card col-md-3 col-lg-3 my-3 shadow-sm p-0 mx-3'
+      onClick={() => push(`/meetup/${id}`)}
       role='button'
       tabIndex='-1'
       onKeyDown={null}
+      style={{ cursor: 'pointer', maxHeight: '40rem' }}
     >
       <div className='card-body p-0'>
         <div
@@ -21,8 +30,10 @@ const Card = ({
         >
           <img src={images} alt='' className='card-img-top card-img' />
         </div>
-        <div className='row col-12 h-auto'>
-          <div className='col-2 col-md-2 d-flex flex-column side-card p-0'>
+        <div className='row col-12' style={{ maxHeight: '18rem', height: '18rem' }}>
+          <div
+            className='col-2 col-md-2 d-flex flex-column side-card p-0'
+          >
             <span className='mt-5 side-card-value mx-auto'>
               {month}
             </span>

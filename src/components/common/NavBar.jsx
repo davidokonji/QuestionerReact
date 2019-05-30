@@ -14,6 +14,7 @@ import {
 } from 'reactstrap';
 
 import { logoutUser } from '../../actions';
+import { user } from '../../Assets';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -38,7 +39,11 @@ class NavBar extends React.Component {
 
   render() {
     const { isOpen } = this.state;
-    const { isAdmin, history: { push } } = this.props;
+    const {
+      isAdmin,
+      history: { push },
+      profile
+    } = this.props;
     return (
       <div>
         <Navbar expand='md' dark className='p-3 nav-bar'>
@@ -60,9 +65,20 @@ class NavBar extends React.Component {
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                      user
+                  <span>
+                    <img
+                      src={
+                        profile === undefined
+                        || profile.images === null
+                          ? user
+                          : profile.images[0]}
+                      alt='user'
+                      style={{ width: '3.5rem', height: '3.5rem', objectFit: 'contain' }}
+                      className='rounded-circle'
+                    />
+                  </span>
                 </DropdownToggle>
-                <DropdownMenu right>
+                <DropdownMenu right className='p-3'>
                   <DropdownItem onClick={() => push('/user')}>
                         Your profile
                   </DropdownItem>
@@ -81,7 +97,8 @@ class NavBar extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  isAdmin: state.auth.isAdmin
+  isAdmin: state.auth.isAdmin,
+  profile: state.profile.user,
 });
 
 const mapDispatchToProps = {

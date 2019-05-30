@@ -112,10 +112,10 @@ exports[`User Dashboard should render when loading is false 1`] = `
         className="row ml-1 ml-md-0"
       >
         <PlainCard
-          date="May 30 at 10:35 am"
+          date="May 30 at 3:22 pm"
         />
         <PlainCard
-          date="May 30 at 10:35 am"
+          date="May 30 at 3:22 pm"
         />
       </div>
     </div>

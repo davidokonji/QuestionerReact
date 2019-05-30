@@ -4,6 +4,8 @@ import {
   GET_QUESTION_COUNT,
   GET_COMMENT_COUNT,
   GET_UPCOMING_LOADING,
+  USER_LOGOUT,
+  NO_UPCOMING_MEETUP
 } from '../action-types';
 
 const defaultState = {};
@@ -12,7 +14,9 @@ const ProfileReducer = (state = defaultState, action) => {
   const {
     type,
     payload,
-    count
+    count,
+    message,
+    status
   } = action;
 
   switch (type) {
@@ -42,6 +46,17 @@ const ProfileReducer = (state = defaultState, action) => {
       return {
         ...state,
         comments: count
+      };
+    case NO_UPCOMING_MEETUP:
+      return {
+        ...state,
+        message,
+        status,
+        loading: false
+      };
+    case USER_LOGOUT:
+      return {
+        ...defaultState
       };
 
     default:

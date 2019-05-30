@@ -74,9 +74,30 @@ exports[`Nav bar component should render nav bar correctly 1`] = `
             color="secondary"
             nav={true}
           >
-            user
+            <span>
+              <img
+                alt="user"
+                className="rounded-circle"
+                src={
+                  Object {
+                    "canInstrument": true,
+                    "createTransformer": [Function],
+                    "getCacheKey": [Function],
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Object {
+                    "height": "3.5rem",
+                    "objectFit": "contain",
+                    "width": "3.5rem",
+                  }
+                }
+              />
+            </span>
           </DropdownToggle>
           <DropdownMenu
+            className="p-3"
             flip={true}
             right={true}
             tag="div"
@@ -173,9 +194,30 @@ exports[`Nav bar component should render nav bar correctly 2`] = `
             color="secondary"
             nav={true}
           >
-            user
+            <span>
+              <img
+                alt="user"
+                className="rounded-circle"
+                src={
+                  Object {
+                    "canInstrument": true,
+                    "createTransformer": [Function],
+                    "getCacheKey": [Function],
+                    "process": [Function],
+                  }
+                }
+                style={
+                  Object {
+                    "height": "3.5rem",
+                    "objectFit": "contain",
+                    "width": "3.5rem",
+                  }
+                }
+              />
+            </span>
           </DropdownToggle>
           <DropdownMenu
+            className="p-3"
             flip={true}
             right={true}
             tag="div"

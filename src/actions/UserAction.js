@@ -85,7 +85,6 @@ const RegisterAction = data => async (dispatch) => {
 
 const logoutUser = () => async (dispatch) => {
   window.localStorage.removeItem('token');
-  window.localStorage.removeItem('state');
   await dispatch(logoutHandler());
 };
 

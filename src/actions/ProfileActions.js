@@ -3,7 +3,8 @@ import {
   GET_UPCOMING_USER_MEETUP,
   GET_QUESTION_COUNT,
   GET_COMMENT_COUNT,
-  GET_UPCOMING_LOADING
+  GET_UPCOMING_LOADING,
+  NO_UPCOMING_MEETUP
 } from '../action-types';
 import axios from '../config/axiosConfig';
 
@@ -19,6 +20,12 @@ const getUpcomingLoading = () => ({
 const getUserUpcomingHandler = payload => ({
   type: GET_UPCOMING_USER_MEETUP,
   payload
+});
+
+const noUpcomingMeetup = (message, status) => ({
+  type: NO_UPCOMING_MEETUP,
+  message,
+  status
 });
 
 const getUserCommentCountHandler = count => ({
@@ -51,11 +58,15 @@ const getUserQuestionCount = () => async (dispatch) => {
 };
 
 const getUserUpcoming = () => async (dispatch) => {
-  dispatch(getUpcomingLoading());
+  try {
+    dispatch(getUpcomingLoading());
 
-  const res = await axios.get('/user/upcomingmeetups');
+    const res = await axios.get('/user/upcomingmeetups');
 
-  return dispatch(getUserUpcomingHandler(res.data.data));
+    return dispatch(getUserUpcomingHandler(res.data.data));
+  } catch (error) {
+    return dispatch(noUpcomingMeetup(error.response.data.message, error.response.status));
+  }
 };
 
 export {
@@ -68,4 +79,5 @@ export {
   getUserCommentCount,
   getUserQuestionCount,
   getUserUpcoming,
+  noUpcomingMeetup
 };

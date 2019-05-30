@@ -27,10 +27,10 @@ class AdminDashboard extends Component {
   }
 
   render() {
-    const { meetups: { data = [] }, isAdmin } = this.props;
+    const { meetups: { data = [] }, admin } = this.props;
     const { open } = this.state;
 
-    if (!isAdmin) {
+    if (!admin) {
       return <Redirect to='/' />;
     }
 
@@ -38,7 +38,7 @@ class AdminDashboard extends Component {
       <div>
         <NavBarConnected />
         <div className='container'>
-          <div className='row mt-5'>
+          <div className='row mt-5 mb-5'>
             <AdminSideBar open={open} toggle={this.toggle} />
             <AdminDash data={data} />
           </div>

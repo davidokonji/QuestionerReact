@@ -1,28 +1,36 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import Button from './Button';
-import { user } from '../Assets';
 
 const Header = (props) => {
-  const { navClass, page } = props;
+  const { navClass, page, history: { push } } = props;
   return (
     <div>
       <nav className={navClass}>
         <NavLink to='/' className='header_link nav-title' exact>Questioner</NavLink>
 
         {
-        page === 'landingpage' ? (
-          <NavLink to='/auth'>
-            <img src={user} alt='user' style={{ width: '3rem', marginRight: '3rem' }} />
-          </NavLink>
+        page === 'landingpage' && (
+          <span
+            style={{ color: 'white', textDecoration: 'none' }}
+            className='mx-3'
+          >
+            <Button
+              text='signup'
+              styles='px-2 py-1 rounded'
+              event={() => push('/signup')}
+            />
+            <Button
+              text='Login'
+              styles='px-2 py-1 rounded mx-2'
+              event={() => push('/login')}
+            />
+          </span>
         )
-          : (
-            ''
-          )
       }
       </nav>
     </div>
   );
 };
 
-export default Header;
+export default withRouter(Header);

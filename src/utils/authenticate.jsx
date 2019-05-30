@@ -21,7 +21,7 @@ const Protected = ({ component: Component, ...rest }) => (
         return (
           <Redirect
             to={{
-              pathname: '/auth',
+              pathname: '/login',
               from: props.location
             }
                 }
@@ -31,7 +31,7 @@ const Protected = ({ component: Component, ...rest }) => (
       return (
         <Redirect
           to={{
-            pathname: '/auth',
+            pathname: '/login',
             from: props.location
           }
             }

@@ -31,13 +31,17 @@ class UserProfile extends Component {
       comment,
       questionCount,
       upcoming,
-      loading
+      loading,
+      message = '',
+      status = ''
     } = this.props;
     const dashProps = {
       comment,
       count: questionCount,
       upcoming,
-      loading
+      loading,
+      message,
+      status
     };
     return (
       <div>
@@ -64,7 +68,9 @@ export const mapStateToProps = state => ({
   comment: state.profile.comments,
   questionCount: state.profile.questionCount,
   upcoming: state.profile.upcoming,
-  loading: state.profile.loading
+  loading: state.profile.loading,
+  message: state.profile.message,
+  status: state.profile.status
 });
 
 const ProfileConnected = connect(mapStateToProps, mapDispatchToProps)(UserProfile);

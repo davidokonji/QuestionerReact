@@ -28,30 +28,30 @@ const MeetupList = ({
   };
   return (
     <Fragment>
-      <div className='col-10 border border-left-0 border-right-0'>
+      <div className='col-8 col-md-10 border border-left-0 border-right-0'>
         <div className='row'>
           <p className='col-12 ml-3'>
             { title }
           </p>
         </div>
         <div className='row'>
-          <p className='col-1'>
+          <p className='col-3 col-md-1'>
             <img src={calendar} alt='date' className='h-75 icon' />
           </p>
-          <p className='col-9'>
+          <p className='col-9 col-md-9'>
             { date }
           </p>
         </div>
         <div className='row'>
-          <p className='col-1'>
+          <p className='col-3 col-md-1'>
             <img src={location} alt='location' className='h-75 icon' />
           </p>
-          <p className='col-9'>
+          <p className='col-9 col-md-9'>
             { meetupLocation }
           </p>
         </div>
       </div>
-      <div className='col-2 mt-3'>
+      <div className='col-4 col-md-2 mt-3 p-0'>
         <Button
           text='Delete'
           styles='px-3 py-1 my-2 btn-danger col-10 rounded-top rounder-bottom'

@@ -30,7 +30,7 @@ const userData = {
   email: 'david@gmail.com',
 };
 const Login = {
-  email: 'davidokonji3@gmail.com',
+  email: 'adminuser@gmail.com',
   password: 'password'
 };
 

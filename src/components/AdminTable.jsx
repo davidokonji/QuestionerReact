@@ -4,13 +4,13 @@ import MeetupList from './MeetupList';
 import { deleteMeetup } from '../actions';
 
 const AdminTable = ({ data, deleteOne }) => (
-  <div className='col-11 mx-4 mx-md-0 mt-4 mt-md-0 col-md-9 shadow p-0 table-responsive-sm'>
+  <div className='col-11 mx-4 mx-md-0 mt-4 mt-md-0 col-md-9 shadow p-0 table-responsive-sm mb-5'>
     <table className='table table-hover p-0'>
       <thead className='row mx-0'>
-        <div className='col-10 bg-light p-3'>
+        <div className='col-10 col-md-10 bg-light p-3'>
             Available Meetup(s)
         </div>
-        <div className='col-2 bg-light p-3'>
+        <div className='col-2 col-md-2 bg-light p-3'>
             Operation
         </div>
       </thead>
