@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.3",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "clean-webpack-plugin": "^2.0.2",
     "cors": "^2.8.5",
